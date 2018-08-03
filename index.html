@@ -1,0 +1,115 @@
+<!--
+Okay look, I am not a fucking web developer.
+I am a Python prankster if anything.
+I am fucking amazed I even got this put together.
+-->
+
+<html>
+	<head>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<style>
+		.videoContainer {
+			 position: absolute;
+			 width: 100%;
+			 height: 100%;
+			 top: 0;
+			 left: 0;
+			 bottom: 0;
+			 right: 0;
+			 display: flex;
+			 flex-direction: column;
+			 justify-content: center;
+			 align-items: center;
+		}
+
+		player {
+			/* optional */
+			width: 100%;
+			height: 100%; 
+		}
+		</style>
+		<title>Interdimensional Cable Box</title>
+		
+		<script>
+			var noise = new Audio('noise.mp3');
+			function play_noise() {
+			  noise.play();
+			}
+			function stop_noise() {
+			  noise.pause();
+			  noise.currentTime = 0;
+			}
+		</script>
+	</head>
+	<body style="background-image:url(static.gif)" onload="play_noise()">
+		
+		<div id="player" class="videoContainer"></div>
+		
+		<script>
+		  var tag = document.createElement('script');
+
+		  tag.src = "https://www.youtube.com/iframe_api";
+		  var firstScriptTag = document.getElementsByTagName('script')[0];
+		  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		  var player;
+		  function onYouTubeIframeAPIReady() {
+			player = new YT.Player('player', {
+			  height: '100%',
+			  width: '100%',
+			  videoId: 'q0gN6MsliW0',
+			  playerVars: {
+			    wmode:'opaque',
+				autohide: 1,
+				vq:'highres',
+				modestbranding:1,
+				autoplay:1,
+				controls:0,
+				fs:0,
+				rel:0,
+				showinfo:0,
+				disablekb:1,
+				iv_load_policy:3,
+				enablejsapi:1,
+				playlist:'MuOvqeABHvQ,-BUXkQ7puw4,efD3nmwF-IM,L6IU8FmHWpg,DZCbIsFEveE,orEP78xtKmQ,aHW3kDeX52c,aoaDebK9-9I,p5I-TS0Fgd4,flt-8OxfIQQ,8qpyRMTbGno,IATW9Ay-wws,q4-FEeFn2g0,b5SD2UU_XYU,lMePJM86Ueo,S1CY33I8TmQ,9uuwbSUdW8M,ZvepivtcoZs,dRM9ZQCtKp0,QCqEjTYd2i4,9CyviFJ8zDs,E5UN0P0hmro,nu7IPXJrzAg,Yyk1qezYKXk,djo30pmHl3E,-IOKT_sC9ac,THG4mX_2veY,TeQi4zbT8fA,6plKMU0tTTk,6-1Ue0FFrHY,iMIf9HSvWT0,1BGxnLM8G-k,E6xOZ-MguTs,hiA0f0Aocgw,dP9Wp6QVbsk,wcehaxidJZk,qgB6XWwIFcU,1F8Lg17GM6M,YaxO6nFRE2A,QjBWG0KqzAw,eRHruSA2XEg,PgkijOPNx6Y,ZbM6WbUw7Bs,1wUFRmYU1BA,JGaBU5cKluU,_NT2ZiPIukw,cW7Guuk05Ns,Jlb7vqdNR9g,6joOVjEemh4,XSNbQToqrw0,CtKqpGFA1j8,G_rWl-jaAiU,8tqJx86xQJQ,CsWwb5gFla0,2WWn1SSWjQE,bqDTm2Av_Zg,rq1NOuNXTr4,IYI0bPnvzOY,YyKPJbYTxno,Eh8kDR6X1Xo,33mZ9UrGDMY,hSkT77010fE,9UWCQi5rmfM,XXg29KpIlwM,nwHSR7oW99o,aG2_lbUM_jc,Tbwx9mv9q34,ptKgRecPi1I,ZacJQuZ_4J4,KcxiMoVOa10,SZl3WNyGylM,CJP8J84vzTA,WQO-aOdJLiw,npu3VnYs3IA,VgOuUV6Ref8,me7seSKftcs,TTJI4MzLW30,_wtgPgFo4BQ,XhcSBjKAzLA,Ie4NMRC4oFw,SnaRPu2UEDE,UxBl73QX000,r7Cpw0CaltI,GJm8Ij-nze4,ltxLeLGozDk,mbnBYh-BJ1g,USE86UbsV8c,uqcyDA2L5L0,BgbOHxypyl0,euWeeZHZO2w,XlFd4WJz47o,R8PMIuPgoTU,uh8s8-LD5io,l1duqPeBy3E,pdQiSGb4Luw,G3yvBNWEsoM,EShUeudtaFg,AsqkzBQ1lSI,8GTo1zyQXmQ,vp0d18LT3os,vBkBS4O3yvY,3VJA1-dnhVg,sQKuwd1unv8,ODeCMJ3oDR8,hPmJWBurnlU,NqGdXPlk1Qw,Rz57DbGqut8,ndvFqZcAf9E,yVdxqWCKCcc,n7p39EyfQfI,s_8n2Qgguto,7Fe8Fm0QEfc,j1mm9J1vV2w,_xJ40Qshw20,P3i_xVxn6Uk,1eFDra1XimA,HCaoFj3oj-o,lXlhQSM0RSM,6EC9w0dVtn0,ODz2rUXpKWw,12HXd74txLw,Narg09bbnHE,bHjttHPK5z0,bEeHE-D6oRk,-Lcnib3ZWOQ,6aUqdXSnY7k,fxcX9RHkM5M,PmsrFSTjMXU,gDmcL3LBEo4,rp1ZxMWI7Ic,3NescTUILSI,qeyC75PcRCo,BJQfT9C5Adc,0yppbbVzX5o,HsbWwXaujp8,jSAcfnSFH-0,HYkjLUMx19I,8HE9OQ4FnkQ,O-53MzpDGAs,7u3isudIgrU,v0wmLMqumMU,vJjeesteTEg,HsWXQvIv3o4,Bs1UudPHGAI,PqQvYVMgXJc,_dvSAXEjP_U,NRo5suPV4R0,TIfAkOBMf5A,oHWtUxTHbok,Tr8nvvPV4As,j-W6y_riFE4,PvbL_5rH1QQ,BDMBtQjS1bQ,9mnVWJpMhuE,TEL4KfbJyGI,OOHc4vYuYfU,gbzh448CyrM,64ixCkz4kJ0,6piw3sCcFG8,p-PddOzKwOU,1X6OAucemtE,WzyUcXR05Z4,J3orfYynK7c,Jv5CuGnP1hA,YEDl4rdW41w,qdbCNXMRHmo,Z7LteZO76BI,xX7Jv_uplFE,CkMFLHy4wMo,giS0BrfXUmM,LfJTcP87hsU,Vqu9NuINKbc,IFe9wiDfb0E,fDiHUZ3mjxM,IP7IsdqdnRI,nD7WCQehkgo,n12lyKTAa50,in23anci2G0,N1oEFYRvxYg,FHrh_XFiXLI,s-7Yya_nmLs,ta8X3M3byMc,xGT0_ffg93g,aPDnKj6NkIk,RTeNFQf1H80,j58V2vC9EPc,rC8VzVmNPOI,PJ-JBFXh2IU,TZ96Tdih9ec,CHo0-Ilm-Wo,AI4rexHukPU,AdYPlWZ1fGg,XhGqjVk7mdg,l0gewuLwkhQ,xVPZ-WNiLqo,rnC0l6ktJw8,5PJddmfesaA,cnyJdoYBMdM,yBLdQ1a4-JI,i17pORf_iE4,VfdEaK8h2XE,ds2Ai6HAo7Y,MfwWTu2joVs,bqLMz3rM7Jc,ms_HlTuJx0s,gvnrQ1EMKtk,uq04SazQlEk,rnS-05XoXs4,TKf0Ccc4Rqc,5rz1TcLVFzY,pqs7857hksM,E1M0i7nrDig,shQFCo_cOjM,SEG92Z_NGJE,7bgCo7RVML0,V9rzMaAucI4,WcH9EDlTW8U,k59tMTVekd0,e-Hat2x1SlM,-uZXeF-Cnvo,P1WhcNlQIYM,O3gy_b2Ioo0,KtVbei504FA,jjEqsnuUN7k,li0rQm6exd4,zAwcj6d8XTQ,UEzvc2Pueq8,Tc_JWE_ypEk,h6EuSlzO4m0,Y7z2Tu3Cjas,VUaTACP4uxc,s76C3LmVwY8,eLfSUJBNo4c,mLRy_5U7rF8,3q7oJuyy5Ac,UAgUHqLEjEw,9VDvgL58h_Y,3-tOCV53KnQ,xqKPe9w5bUs,tvVoY-PTf6s,AQQfTqy8fZ0,zONW46d50A0,Ykn5w4c9Oy4,51q_tK3j8tY,uguXNL93fWg,MB08JWKVf_A,gRpW-iR1dGs,5Kplx0ylLHM,sUQ8iN841oU,2z9vlcy_ZJY,V01rC6PWT-A,sH4PaGd0OsQ,FEaRoEidnA8,qfrLR_RxHss,cE3YJjl5-g8,VwCdcF0OfHI,uZiuQboyKz0,HiT5BwG43eg,h9PNoJuP-mk,HZPQ4rJw33M,AAj4_1PLLL0,Xc9l7pygQRo,INt4GGr-EGU,muxc9r0V8fs,-mzR1jcZ_OI,9Rb4_Y1IhYI,WXvsl8xgRxc,So1X4BN03jk,06aiwZ2YzKM,VdXgjrvYboc,1ek5EN1s08A,1H2bRd91sZw,7a4M6voItWM,2XbCWmY0eqY,PDVCpm10SQI,ISTajZAmyKM,ZPdgWYB9fdw,Fxqp8r2sgGU,ZkEIPGPkME4,cFQGnDw8Rlk,PEmfmmwbbfQ,ppUl4eUZCQQ,dXlao2KNYjQ,eW1scLlKLMQ,VL8Tf83_EQ8,E_6d3JBBo4s,deHi9XzC_Uw,Ofd1yvaw3Ms,i5MC809O7Ug,rYI821Siu5E,CXWzpKYXRXM,9C4u3Byi_bw,0f0fk4czZgA,N3bEh-PEk1g,pXzOZTGsgYk,1m2jsyB42r8,YuDwIDBwEaY,sFQKddMYRgk,rFgKey5Ftcs,QCAFU6UTLr4,DMuO-8S_0Wg,uqgF26vzXuo,e49iVNXqiDI,NYtQXtUMWvQ,ziUb27BStGk,QReUbe4kp-o,BSTh2p3mWVo,ZS_6-IwMPjM,eWku6kzJA80,--40RLF5UGo,tECrr4tNPn4,L5YBdhGjV-E,PobIVgIPoew,fPxfIHC58lQ,XRWTGXgCiU0,C2XK0ka-65E,FUxTnjSpBg8,26WXbMJlrCU,G-qkNEampEA,g6eLz2NgOl0,X5TtAJ3Bnww,-2gJamguN04,b3zOpDn3Kb0,gPipSocaUdw,-lcjwnBEKiM,H0g4JxKp4fc,e_UO8wlZymM,UmC-_bTCRwQ,OcMFHRXp8xM,9KFJpY7W0wA,5v-ugxjh53Q,pW_xdftOspA,56Z4XfRyd6g,VdfmGAju6kU,jjK1aUU2Dx4,iFzcQznIxXU,DTwjy65o2UE,yJ2AdNH4_So,3TMMQN0wP6M,oi78FH2QhrA,mhVbLJvYP8s,fIRPDJ5MYcg,f02gidjDHg0,fMhy7a7UD_U,6MWK7uNOlBw,8xQ5wdilf4Y,EPvmIxu-LSA,gk7rCLwBmM8,azEsDoQXkP0,33PTDlhGTvI,yV1Pt0tsGcc,frKyaFTeC7c,yRGVGsI9r44,uNgjQI0SsR0,9vWhf575Qr4,iuon_Wi1dq8,mbfRQBFC3hk,tSEqVqmYhrk,t5r5hpTKzD0,ldaQLGOoJW0,XtIBHfOdyX0,AQQmfjr3R7A,N9EN58qF32k,d9NyFCoZsqc,edbYNEPUmV0,U9t-slLl30E,lO27dEaCS3c,DNi87bUY5LM,s3RwVOSpcVo,1urscLw2NN0,IUN0lDk0CcA,pchnzZeoh1Y,gSQyPdYz4f4,9m6YnVxT4rI,1p4TkRnvNco,4EnitdrbL0w,yflTu150QZw,IEIzuJZj03U,LG-L5sth1dw,S26hVzPbjY8,bQr8gIYnCBo,_h4lof_WxYY,z0KKHel88Vo,Ugzoow04dYU,RVeHxUVkW4w,V-fRuoMIfpw,0TZd95BCKMY,ywZt6igT5Dw,15MqcNwkpq4,-VsmF9m_Nt8,IHSRKU8XKIs,OApLDOqLymw,jANThtZJGrs,f9Vjhy6u4Lo,DqOuSJOk1u0,lno7Q-KLpl0,jm47tyItSRQ,Bfsg_eor5TM,Mi23bb9hqZA,WNBhL40FZZk,frNFkM7s_UY,-x_WVQllXoA,YgeYScYe8wI,2J6e2q_pcjI,S8sthqYn9DE,MQHE6Jcii9U,pXrFraJyuOg,ly5-X3mxFTo,bIRnM6s4GNo,9YBQYpQZrrI,93_PDoSJESs,7cBS6sWgYxE,_rB36UGoP4Y,pf9oD_xl8mI,BpIEYjBV5CA,5GHbtOx8-cw,mj72DfGg5SI,A9brSX54vho,-fFYU0wO_ps,egTOi9uZhOA,1I-_LSbbQ40,iXYmFqEkCGQ,2e8xsNxC6Yo,AdYaTa_lOf4,_FhgEeAj9ng,SItFvB0Upb8,Yblm5pSLfo0,u1hPTVy5BlY,vWKzVxMzvxg,32-umK3n0iI,4F0Mer4kDDY,d66O880nHY0,UpUve_7IOAI,ju2i95UUT1E,scqvTimRM20,2CS2A77NAbc,uS6Ee6vfsc0,KHC7pYHn9jQ,GIqfXJs4oFg,hAXZPVpiRX4,Y7dI8fdXQW0,7t70fKk7tO8,f_qnlrs6CsQ,HFq6CCLRCQI,9fBwRPjDLqM,uRP4nAGMYCY,7Y1UBUJ1JZk,SfA_L_zfqiU,wdob-C5Fk8k,oM_WvP4bVKs,L-XtMNYHsZc,1Ckv_Dz-Sio,Daw5z-iASl8,KlXB5Rfyaxw,AsEAo_T7Xvc,zSGANBGtx-8,5ps39gofN9s,Bads-B8O0lI,0EeNF0aTfeQ,E5qLs2M-2OY,6OzuZ5yJreQ'
+			},
+			  
+			  events: {
+				'onReady': onPlayerReady,
+				'onStateChange': onPlayerStateChange,
+				'onError' : onPlayerError
+			  }
+			});
+		  }
+
+		  function onPlayerReady(event) {
+			event.target.playVideo();
+			stop_noise();
+		  }
+		  
+		  function onPlayerStateChange(event) {
+			if (event.data == YT.PlayerState.PAUSED) {
+			  player.nextVideo();
+			  player.playVideo();
+			}
+			else if (event.data == YT.PlayerState.ENDED) {
+			  player.nextVideo();
+			  player.playVideo();
+			}
+			else if (event.data == YT.PlayerState.BUFFERING) {
+			  play_noise();
+			  document.getElementById("player").style.opacity = "0";
+			}
+			else if (event.data == YT.PlayerState.PLAYING) {
+			  stop_noise();
+			  document.getElementById("player").style.opacity = "1";
+			}
+		  }
+		  
+		  function onPlayerError(event) {
+			player.nextVideo();
+			player.playVideo();
+		  }
+		</script>
+	</body>
+</html>
