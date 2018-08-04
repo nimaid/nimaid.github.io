@@ -32,21 +32,26 @@ I am fucking amazed I even got this put together.
 		<title>Interdimensional Cable Box</title>
 		
 		<script>
-			var noise = new Audio('noise.mp3');
-			function play_noise() {
-			  noise.play();
-			}
-			function stop_noise() {
-			  noise.pause();
-			  noise.currentTime = 0;
-			}
+			
 		</script>
 	</head>
-	<body style="background-image:url(static.gif)" onload="play_noise()">
-		
+	<body style="background-image:url(static.gif)">
+		<audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
 		<div id="player" class="videoContainer"></div>
 		
 		<script>
+		  var noise = document.getElementById("noise");
+		  function play_noise() {
+			noise.play();
+		  }
+		  function stop_noise() {
+			noise.pause();
+			noise.currentTime = 0;
+		  }
+		  window.onload = function() {
+		    play_noise();
+		  }
+		  
 		  var tag = document.createElement('script');
 
 		  tag.src = "https://www.youtube.com/iframe_api";
