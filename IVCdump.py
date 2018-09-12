@@ -77,18 +77,6 @@ def get_max_hot():
 
     return videos
 
-def get_random():
-    loop = True
-    while loop:
-        rand = reddit.subreddit(subreddit).random().url
-        #print(rand)
-        parsed_rand = parse_youtube_link(rand)
-        if parsed_rand != False:
-            result = parsed_rand
-            loop = False
-
-    return result
-
 all_vids = []
 for x in get_max_new():
     all_vids.append(x['v'][0:11])
@@ -100,4 +88,4 @@ all_vids = list(set(all_vids))
 
 shuffle(all_vids)
 
-print(",".join(all_vids))
+print("var IVCdump = [\"" + "\", \"".join(all_vids) + "\"];")
