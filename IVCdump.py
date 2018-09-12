@@ -47,9 +47,9 @@ def parse_youtube_link(link):
 
     return False
 
-def get_max_new(postlimit=None):
+def get_max_new():
     videos = []
-    for submission in reddit.subreddit(subreddit).new(limit=postlimit):
+    for submission in reddit.subreddit(subreddit).new(limit=None):
         url = submission.url
         parsed_url = parse_youtube_link(url)
         if parsed_url != False:
@@ -57,9 +57,9 @@ def get_max_new(postlimit=None):
 
     return videos
 
-def get_max_top(postlimit=None):
+def get_max_top():
     videos = []
-    for submission in reddit.subreddit(subreddit).top(limit=postlimit):
+    for submission in reddit.subreddit(subreddit).top(limit=None):
         url = submission.url
         parsed_url = parse_youtube_link(url)
         if parsed_url != False:
@@ -67,9 +67,9 @@ def get_max_top(postlimit=None):
 
     return videos
 
-def get_max_hot(postlimit=None):
+def get_max_hot():
     videos = []
-    for submission in reddit.subreddit(subreddit).hot(limit=postlimit):
+    for submission in reddit.subreddit(subreddit).hot(limit=None):
         url = submission.url
         parsed_url = parse_youtube_link(url)
         if parsed_url != False:
@@ -89,4 +89,15 @@ def get_random():
 
     return result
 
-print(get_random()['v'][0:11])
+all_vids = []
+for x in get_max_new():
+    all_vids.append(x['v'][0:11])
+for x in get_max_top():
+    all_vids.append(x['v'][0:11])
+for x in get_max_hot():
+    all_vids.append(x['v'[0:11]])
+all_vids = list(set(all_vids))
+
+shuffle(all_vids)
+
+print(",".join(all_vids))
