@@ -28,6 +28,16 @@ I am fucking amazed I even got this put together.
 			 align-items: center;
 		}
 
+                #overlay {
+                    width:100%;
+		    color:white;
+	            opacity:0.75;
+		    font-family:Courier New;
+                    position:fixed;
+	            text-align:center;
+                    bottom: 0px;
+		}
+
 		player {
 			/* optional */
 			width: 100%;
@@ -39,7 +49,7 @@ I am fucking amazed I even got this put together.
 	<body style="background-image:url(static.gif)">
 		<audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
 		<div id="player" class="videoContainer"></div>
-		<div style="color:white;opacity:0.5;font-family:Courier New;"><h2>tv.nimaid.com</h2></div>
+		<div id="overlay"><h2>you are watching tv.nimaid.com</h2></div>
 
                 <script>      
                   function shuffle(a) {
