@@ -130,7 +130,7 @@ end_index = index_html.find("\n", start_index)
 print("Found indexes to be " + str(start_index) + " to " + str(end_index) + "...\n")
 
 print("Replacing variable with new ID database...")
-index_html = index_html[:start_index] + IVCdump_output + index_html[end_index-1:]
+index_html = index_html[:start_index] + IVCdump_output + index_html[end_index:]
 print("Replaced variable with updated version!\n")
 
 print("Overwritting original index.html...")
