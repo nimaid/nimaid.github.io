@@ -7,9 +7,13 @@ reddit_client_secret = 'mB36bJ5cNX39zjcw0gLMPycTjzU'
 
 subreddit = 'interdimensionalcable'
 
+print("Interdimensional Video Catcher by nimaid (made for tv.nimaid.com)\n")
+
+print("Connecting to Reddit...")
 reddit = praw.Reddit(client_id=reddit_client_id,
                      client_secret=reddit_client_secret,
                      user_agent='InterdimensionalCableBox')
+print("Fuck yes, we're in!\n")
 
 def parse_query(input_query):
     query_temp = input_query.split('&')
@@ -77,15 +81,61 @@ def get_max_hot():
 
     return videos
 
+
+print("Please wait while I go catch all the videos the park rangers will allow...\n")
 all_vids = []
-for x in get_max_new():
-    all_vids.append(x['v'][0:11])
+
+print("Getting as many TOP videos as allowed...")
 for x in get_max_top():
     all_vids.append(x['v'][0:11])
+top_size = len(all_vids)
+print("Got " + str(top_size) + " TOP video IDs! We have sugar...\n")
+
+print("Getting as many HOT videos as allowed...")
 for x in get_max_hot():
     all_vids.append(x['v'[0:11]])
+hot_size = len(all_vids) - top_size 
+print("Got " + str(hot_size) + " HOT video IDs! We have spice...\n")
+
+print("Getting as many NEW videos as allowed...")
+for x in get_max_new():
+    all_vids.append(x['v'][0:11])
+new_size = len(all_vids) - hot_size - top_size
+print("Got " + str(new_size) + " NEW video IDs! We have everything nice...\n")
+
+print("Throwing all the ingredients into a bowl...")
 all_vids = list(set(all_vids))
+min_size = len(all_vids)
+print("Some of the same IDs merged. Now, there are only " + str(min_size) + " unique video IDs.\n")
 
+print("Mixing the ingredients well...")
 shuffle(all_vids)
+print("Ingredients mixed pretty good, if I do say so myself.\n")
 
-print("var IVCdump = [\"" + "\", \"".join(all_vids) + "\"];")
+print("Adding Chemical X...")
+IVCdump_output = "var IVCdump = [\"" + "\", \"".join(all_vids) + "\"];"
+print("Done! variable string is compiled.\n")
+
+print("Trying to read index.html...")
+with open("index.html", "r") as f:
+    index_html = f.read()
+print("Read index.html!\n")
+
+print("Trying to find variable location...")
+start_index = index_html.find("var IVCdump")
+if start_index == -1:
+    print("Variable not found! Are you sure this is the right index.html? Exiting...")
+    quit()
+end_index = index_html.find("\n", start_index)
+print("Found indexes to be " + str(start_index) + " to " + str(end_index) + "...\n")
+
+print("Replacing variable with new ID database...")
+index_html = index_html[:start_index] + IVCdump_output + index_html[end_index-1:]
+print("Replaced variable with updated version!\n")
+
+print("Overwritting original index.html...")
+with open("index.html", "w") as f:
+    f.write(index_html)
+print("All done! Have a good day!")
+
+
