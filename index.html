@@ -203,7 +203,13 @@ Check out the developer console to see the video ID's and your current playlist.
                     console.log("ID is now: " + vid_id);
                     player.loadVideoById(vid_id);
 	            player.playVideo();
-		  }
+                  }
+                    
+                  document.body.onkeydown = function(e){
+                      if(e.keyCode == 32) {
+                          player.pauseVideo();
+                      }
+                  }
 		</script>
-	</body>
+        </body>
 </html>
