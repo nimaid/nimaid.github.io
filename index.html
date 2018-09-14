@@ -173,6 +173,7 @@
                     console.log("ID is now: " + vid_id);
                     player.loadVideoById(vid_id);
             player.playVideo();
+			window.focus();
             }
             else if (event.data == YT.PlayerState.ENDED) {
                     buffering = false;
