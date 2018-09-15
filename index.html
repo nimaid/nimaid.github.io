@@ -49,12 +49,12 @@
             background-color: black;
             opacity :0.5;
             font-family: Courier New;
-            font-size: 20px;
+            font-size: 24px;
             display: inline-block;
             padding-top: 0px;
             padding-bottom: 0px;
-            padding-left: 8px;
-            padding-right: 8px;
+            padding-left: 6px;
+            padding-right: 6px;
             }
             #overlay_logo_container {
             width: 100%;
@@ -188,6 +188,7 @@
                 console.log("Checking if buffering still...");
                 if (buffering) {
                     console.log("Still buffering! Re-starting video now...");
+					set_message("Video looks stuck! Try clicking to start!");
                     //player.stopVideo();
                     player.playVideo();
                 }
