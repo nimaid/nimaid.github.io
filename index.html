@@ -232,10 +232,9 @@
                     buffering = true;
                     console.log("Player changed to BUFFERING state!");
                     set_message("Aquiring signal...");
-                    document.getElementById("player").style.filter = "opacity(100%)";
+                    document.getElementById("player").style.opacity = "0";
                     document.getElementById("bg_video").style.filter = "opacity(50%)";
                     play_noise();
-                    document.getElementById("player").style.opacity = "0";
                     setTimeout(check_buffer_skip, buffer_check_delay);
                 }
                 else if (event.data == YT.PlayerState.PLAYING) {
@@ -248,6 +247,7 @@
                         document.getElementById("bg_video").style.filter = "opacity(0%)";
                     }
                     else {
+                        document.getElementById("player").style.filter = "opacity(100%)";
                         set_message("Now playing channel: " + vid_id);
                     }
                     stop_noise();
