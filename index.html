@@ -23,55 +23,55 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <style>
             .videoContainer {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
             #bg_video {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
             }
             #overlay {
-            color: white;
-            background-color: black;
-            opacity :0.5;
-            font-family: Courier New;
-            font-size: 24px;
-            display: inline-block;
-            padding-top: 0px;
-            padding-bottom: 0px;
-            padding-left: 6px;
-            padding-right: 6px;
+                color: white;
+                background-color: black;
+                opacity :0.5;
+                font-family: Courier New;
+                font-size: 24px;
+                display: inline-block;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                padding-left: 6px;
+                padding-right: 6px;
             }
             #overlay_logo_container {
-            width: 100%;
-            position: fixed;
-            text-align: center;
-            top: 0px;
+                width: 100%;
+                position: fixed;
+                text-align: center;
+                top: 0px;
             }
             player {
-            /* optional */
-            width: 100%;
-            height: 100%; 
+                /* optional */
+                width: 100%;
+                height: 100%; 
             }
             #overlay_message_container {
-            width: 100%;
-            position: fixed;
-            text-align: center;
-            bottom: 0px;
+                width: 100%;
+                position: fixed;
+                text-align: center;
+                bottom: 0px;
             }
         </style>
         <title>Interdimensional Cable Box</title>
@@ -112,38 +112,38 @@
             var is_first = true;
             
             function update_index() {
-            if (!is_first) {
-                this.curr_vid_index++;
-                if (curr_vid_index >= IVCdump.length) {
-                    console.log("Reached end of playlist, shuffling...");
-                    shuffle(IVCdump);
-                    console.log("Shuffled. Logging new playlist...");
-                    console.log(IVCdump);
-            
-                    curr_vid_index = 0;
+                if (!is_first) {
+                    this.curr_vid_index++;
+                    if (curr_vid_index >= IVCdump.length) {
+                        console.log("Reached end of playlist, shuffling...");
+                        shuffle(IVCdump);
+                        console.log("Shuffled. Logging new playlist...");
+                        console.log(IVCdump);
+                
+                        curr_vid_index = 0;
+                    }
+                console.log("Just changed index to: " + curr_vid_index);
                 }
-            console.log("Just changed index to: " + curr_vid_index);
-            }
-            else {
-            is_first = false;
-            }
+                else {
+                is_first = false;
+                }
             }
             
             function set_message(mess) {
-            document.getElementById("overlay_message_container").innerHTML = "<div id='overlay'>" + mess + "</div>";
+                document.getElementById("overlay_message_container").innerHTML = "<div id='overlay'>" + mess + "</div>";
             }
             
             var noise = document.getElementById("noise");
-            function play_noise() {
-            noise.play();
+                function play_noise() {
+                noise.play();
             }
             function stop_noise() {
-            noise.pause();
-            noise.currentTime = 0;
+                noise.pause();
+                noise.currentTime = 0;
             }
             
             window.onload = function() {
-            play_noise();
+                play_noise();
             }
             
             var tag = document.createElement('script');
@@ -154,31 +154,30 @@
             
             var player;
             function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-            height: '100%',
-            width: '100%',
-            videoId: intro_id, //the intro video
-            playerVars: {
-            wmode:'opaque',
-            autohide: 1,
-            vq:'highres',
-            modestbranding:1,
-            autoplay:1,
-            controls:0,
-            fs:0,
-            rel:0,
-            showinfo:0,
-            disablekb:1,
-            iv_load_policy:3,
-            enablejsapi:1
-            },
-            
-            events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange,
-            'onError' : onPlayerError
-            }
-            });
+                player = new YT.Player('player', {
+                    height: '100%',
+                    width: '100%',
+                    videoId: intro_id, //the intro video
+                    playerVars: {
+                        wmode:'opaque',
+                        autohide: 1,
+                        vq:'highres',
+                        modestbranding:1,
+                        autoplay:1,
+                        controls:0,
+                        fs:0,
+                        rel:0,
+                        showinfo:0,
+                        disablekb:1,
+                        iv_load_policy:3,
+                        enablejsapi:1
+                    },
+                    events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange,
+                    'onError' : onPlayerError
+                    }
+                });
             }
             
             var buffering = false;  
@@ -186,7 +185,7 @@
                 console.log("Checking if buffering still...");
                 if (buffering) {
                     console.log("Still buffering! Re-starting video now...");
-					set_message("Video looks stuck! Try clicking to start!");
+                    set_message("Video looks stuck! Try clicking to start!");
                     //player.stopVideo();
                     player.playVideo();
                 }
@@ -196,71 +195,71 @@
             }
             
             function onPlayerReady(event) {
-            event.target.playVideo();  // https://goo.gl/xX8pDD says I cant do this...
-            buffering = true;
-            console.log("Player changed to BUFFERING state!");
-            set_message("Aquiring signal...");
-            setTimeout(check_buffer_skip, start_buffer_check_delay); // Sorry google! Users want this! It's literally the only thing my site does.
-            stop_noise();
+                event.target.playVideo();  // https://goo.gl/xX8pDD says I cant do this...
+                buffering = true;
+                console.log("Player changed to BUFFERING state!");
+                set_message("Aquiring signal...");
+                setTimeout(check_buffer_skip, start_buffer_check_delay); // Sorry google! Users want this! It's literally the only thing my site does.
+                stop_noise();
             }
             
             function onPlayerStateChange(event) {
-            if (event.data == YT.PlayerState.PAUSED) {
+                if (event.data == YT.PlayerState.PAUSED) {
                     buffering = false;
                     console.log("Player changed to PAUSED state!");
-            set_message("Re-tuning...");
+                    set_message("Re-tuning...");
                     update_index();
                     console.log("Index is now: " + curr_vid_index);
-            var vid_id = new String(IVCdump[curr_vid_index]);
+                    var vid_id = new String(IVCdump[curr_vid_index]);
                     console.log("ID is now: " + vid_id);
                     player.loadVideoById(vid_id);
-            player.playVideo();
-            window.focus();
-            }
-            else if (event.data == YT.PlayerState.ENDED) {
+                    player.playVideo();
+                    window.focus();
+                }
+                else if (event.data == YT.PlayerState.ENDED) {
                     buffering = false;
                     console.log("Player changed to ENDED state!");
-            set_message("Signal lost! Re-tuning...");
-            update_index();
+                    set_message("Signal lost! Re-tuning...");
+                    update_index();
                     console.log("Index is now: " + curr_vid_index);
-            var vid_id = new String(IVCdump[curr_vid_index]);
+                    var vid_id = new String(IVCdump[curr_vid_index]);
                     console.log("ID is now: " + vid_id);
                     player.loadVideoById(vid_id);
-            player.playVideo();
-            }
-            else if (event.data == YT.PlayerState.BUFFERING) {
+                    player.playVideo();
+                }
+                else if (event.data == YT.PlayerState.BUFFERING) {
                     buffering = true;
                     console.log("Player changed to BUFFERING state!");
-            set_message("Aquiring signal...");
-            play_noise();
-            document.getElementById("player").style.opacity = "0";
+                    set_message("Aquiring signal...");
+                    play_noise();
+                    document.getElementById("player").style.opacity = "0";
                     setTimeout(check_buffer_skip, buffer_check_delay);
-            }
-            else if (event.data == YT.PlayerState.PLAYING) {
+                }
+                else if (event.data == YT.PlayerState.PLAYING) {
                     buffering = false;
                     console.log("Player changed to PLAYING state!");
-            var vid_id = player.getVideoData()['video_id'];
-            if (vid_id == intro_id) {
-            set_message("Welcome! Please click or use the spacebar to re-tune the channel.");
-            }
-            else {
-            set_message("Now playing channel: " + vid_id);
-            }
-            stop_noise();
-            document.getElementById("player").style.opacity = "1";
-            }
+                    var vid_id = player.getVideoData()['video_id'];
+                    if (vid_id == intro_id) {
+                        set_message("Welcome! Please click or use the spacebar to re-tune the channel.");
+                    }
+                    else {
+                        set_message("Now playing channel: " + vid_id);
+                    }
+                    stop_noise();
+                    document.getElementById("player").style.opacity = "1";
+                }
             }
             
             function onPlayerError(event) {
-              buffering = false;
-              console.log("Player changed to ERROR state!");
-            set_message("Signal is corrupt! Re-tuning...");
-            update_index();
-              console.log("Index is now: " + curr_vid_index);
-            var vid_id = new String(IVCdump[curr_vid_index]);
-              console.log("ID is now: " + vid_id);
-              player.loadVideoById(vid_id);
-            player.playVideo();
+                buffering = false;
+                console.log("Player changed to ERROR state!");
+                set_message("Signal is corrupt! Re-tuning...");
+                update_index();
+                console.log("Index is now: " + curr_vid_index);
+                var vid_id = new String(IVCdump[curr_vid_index]);
+                console.log("ID is now: " + vid_id);
+                player.loadVideoById(vid_id);
+                player.playVideo();
             }
               
             document.body.onkeydown = function(e){
