@@ -232,6 +232,8 @@
                     buffering = true;
                     console.log("Player changed to BUFFERING state!");
                     set_message("Aquiring signal...");
+                    document.getElementById("player").style.filter = "opacity(100%)";
+                    document.getElementById("bg_video").style.filter = "opacity(50%)";
                     play_noise();
                     document.getElementById("player").style.opacity = "0";
                     setTimeout(check_buffer_skip, buffer_check_delay);
@@ -242,6 +244,8 @@
                     var vid_id = player.getVideoData()['video_id'];
                     if (vid_id == intro_id) {
                         set_message("Welcome! Please click or use the spacebar to re-tune the channel.");
+                        document.getElementById("player").style.filter = "opacity(50%)";
+                        document.getElementById("bg_video").style.filter = "opacity(0%)";
                     }
                     else {
                         set_message("Now playing channel: " + vid_id);
