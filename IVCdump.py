@@ -114,10 +114,10 @@ print("Ingredients mixed pretty good, if I do say so myself.\n")
 
 print("Adding Chemical X...")
 IVCdump_output = "var IVCdump = [\"" + "\", \"".join(all_vids) + "\"];"
-print("Done! variable string is compiled.\n")
+print("Done! Variable string is compiled.\n")
 
 print("Trying to read index.html...")
-with open("index.html", "r") as f:
+with open("index.html", "r", encoding="utf8") as f:
     index_html = f.read()
 print("Read index.html!\n")
 
@@ -126,7 +126,7 @@ start_index = index_html.find("var IVCdump")
 if start_index == -1:
     print("Variable not found! Are you sure this is the right index.html? Exiting...")
     quit()
-end_index = index_html.find("\n", start_index)
+end_index = index_html.find(";", start_index) + 1
 print("Found indexes to be " + str(start_index) + " to " + str(end_index) + "...\n")
 
 print("Replacing variable with new ID database...")
@@ -134,7 +134,7 @@ index_html = index_html[:start_index] + IVCdump_output + index_html[end_index:]
 print("Replaced variable with updated version!\n")
 
 print("Overwritting original index.html...")
-with open("index.html", "w") as f:
+with open("index.html", "w", encoding="utf8") as f:
     f.write(index_html)
 print("All done! Have a good day!")
 
