@@ -103,18 +103,7 @@ for x in get_max_new():
 new_size = len(all_vids) - hot_size - top_size
 print("Got " + str(new_size) + " NEW video IDs! We have everything nice...\n")
 
-print("Throwing all the ingredients into a bowl...")
-all_vids = list(set(all_vids))
-min_size = len(all_vids)
-print("Some of the same IDs merged. Now, there are only " + str(min_size) + " unique video IDs.\n")
 
-print("Mixing the ingredients well...")
-shuffle(all_vids)
-print("Ingredients mixed pretty good, if I do say so myself.\n")
-
-print("Adding Chemical X...")
-IVCdump_output = "var IVCdump = [\"" + "\", \"".join(all_vids) + "\"];"
-print("Done! Variable string is compiled.\n")
 
 print("Trying to read index.html...")
 with open("index.html", "r", encoding="utf8") as f:
@@ -128,6 +117,27 @@ if start_index == -1:
     quit()
 end_index = index_html.find(";", start_index) + 1
 print("Found indexes to be " + str(start_index) + " to " + str(end_index) + "...\n")
+
+print("Extracting existing videos...")
+exist_str = index_html[start_index:end_index]
+exist_start_index = exist_str.find("[")
+exist_vids = exist_str[exist_start_index+2:-3].split('", "')
+exist_size = len(exist_vids)
+all_vids += exist_vids
+print("Extracted " + str(exist_size) + " OLD video IDs!\n")
+
+print("Throwing all the ingredients into a bowl...")
+all_vids = list(set(all_vids))
+min_size = len(all_vids)
+print("Some of the same IDs merged. Now, there are only " + str(min_size) + " unique video IDs.\n")
+
+print("Mixing the ingredients well...")
+shuffle(all_vids)
+print("Ingredients mixed pretty good, if I do say so myself.\n")
+
+print("Adding Chemical X...")
+IVCdump_output = "var IVCdump = [\"" + "\", \"".join(all_vids) + "\"];"
+print("Done! Variable string is compiled.\n")
 
 print("Replacing variable with new ID database...")
 index_html = index_html[:start_index] + IVCdump_output + index_html[end_index:]
