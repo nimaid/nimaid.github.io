@@ -9,6 +9,29 @@ subreddit = 'interdimensionalcable'
 
 print("Interdimensional Video Catcher by nimaid (made for tv.nimaid.com)\n")
 
+all_vids = []
+
+print("Trying to read index.html...")
+with open("index.html", "r", encoding="utf8") as f:
+    index_html = f.read()
+print("Read index.html!\n")
+
+print("Trying to find variable location...")
+start_index = index_html.find("var IVCdump")
+if start_index == -1:
+    print("Variable not found! Are you sure this is the right index.html? Exiting...")
+    quit()
+end_index = index_html.find(";", start_index) + 1
+print("Found indexes to be " + str(start_index) + " to " + str(end_index) + "...\n")
+
+print("Extracting existing videos...")
+exist_str = index_html[start_index:end_index]
+exist_start_index = exist_str.find("[")
+exist_vids = exist_str[exist_start_index+2:-3].split('", "')
+exist_size = len(exist_vids)
+all_vids += exist_vids
+print("Extracted " + str(exist_size) + " OLD video IDs!\n")
+
 print("Connecting to Reddit...")
 reddit = praw.Reddit(client_id=reddit_client_id,
                      client_secret=reddit_client_secret,
@@ -82,49 +105,23 @@ def get_max_hot():
     return videos
 
 
-print("Please wait while I go catch all the videos the park rangers will allow...\n")
-all_vids = []
-
 print("Getting as many TOP videos as allowed...")
 for x in get_max_top():
     all_vids.append(x['v'][0:11])
-top_size = len(all_vids)
+top_size = len(all_vids) - exist_size
 print("Got " + str(top_size) + " TOP video IDs! We have sugar...\n")
 
 print("Getting as many HOT videos as allowed...")
 for x in get_max_hot():
     all_vids.append(x['v'[0:11]])
-hot_size = len(all_vids) - top_size 
+hot_size = len(all_vids) - top_size - exist_size
 print("Got " + str(hot_size) + " HOT video IDs! We have spice...\n")
 
 print("Getting as many NEW videos as allowed...")
 for x in get_max_new():
     all_vids.append(x['v'][0:11])
-new_size = len(all_vids) - hot_size - top_size
+new_size = len(all_vids) - hot_size - top_size - exist_size
 print("Got " + str(new_size) + " NEW video IDs! We have everything nice...\n")
-
-
-
-print("Trying to read index.html...")
-with open("index.html", "r", encoding="utf8") as f:
-    index_html = f.read()
-print("Read index.html!\n")
-
-print("Trying to find variable location...")
-start_index = index_html.find("var IVCdump")
-if start_index == -1:
-    print("Variable not found! Are you sure this is the right index.html? Exiting...")
-    quit()
-end_index = index_html.find(";", start_index) + 1
-print("Found indexes to be " + str(start_index) + " to " + str(end_index) + "...\n")
-
-print("Extracting existing videos...")
-exist_str = index_html[start_index:end_index]
-exist_start_index = exist_str.find("[")
-exist_vids = exist_str[exist_start_index+2:-3].split('", "')
-exist_size = len(exist_vids)
-all_vids += exist_vids
-print("Extracted " + str(exist_size) + " OLD video IDs!\n")
 
 print("Throwing all the ingredients into a bowl...")
 all_vids = list(set(all_vids))
