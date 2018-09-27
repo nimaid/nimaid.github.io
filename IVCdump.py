@@ -143,6 +143,6 @@ print("Replaced variable with updated version!\n")
 print("Overwritting original index.html...")
 with open("index.html", "w", encoding="utf8") as f:
     f.write(index_html)
-print("All done! Have a good day!")
+print("All done! Added " + str(min_size - exist_size) + " new videos! Have a good day!")
 
 
