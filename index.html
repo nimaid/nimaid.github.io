@@ -111,6 +111,7 @@
             
             var curr_vid_index = 0;
             var is_first = true;
+            var cc_toggle = false;
             
             function update_index() {
                 if (!is_first) {
@@ -268,8 +269,25 @@
             }
               
             document.body.onkeydown = function(e){
+                //cconsole.log(e.keyCode);
                 if(e.keyCode == 32) {
                     player.pauseVideo();
+                }
+                else if (e.keyCode == 67) {
+                    player.setOption("captions", "track", {"languageCode": "es"});  //Works for html5 ignored by AS3
+                    player.setOption("cc", "track", {"languageCode": "es"});  //Works for AS3 ignored by html5
+                    if (cc_toggle) {
+                        player.unloadModule("captions");  //Works for html5 ignored by AS3
+                        player.unloadModule("cc");  //Works for AS3 ignored by html5
+                        console.log("Closed Captions OFF!");
+                        cc_toggle = false;
+                    }
+                    else {
+                        player.loadModule("captions");  //Works for html5 ignored by AS3
+                        player.loadModule("cc");  //Works for AS3 ignored by html5
+                        console.log("Closed Captions ON!");
+                        cc_toggle = true;
+                    }
                 }
             }
         </script>
