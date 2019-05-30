@@ -43,7 +43,8 @@ def parse_query(input_query):
     query = {}
     for x in query_temp:
         split = x.split('=')
-        query.update({split[0]:split[1]})
+        if len(split) == 2:
+            query.update({split[0]:split[1]})
 
     return query
 
@@ -79,7 +80,7 @@ def get_max_new():
     for submission in reddit.subreddit(subreddit).new(limit=None):
         url = submission.url
         parsed_url = parse_youtube_link(url)
-        if parsed_url != False:
+        if (parsed_url != False) and ('v' in parsed_url):
             videos.append(parsed_url)
 
     return videos
@@ -89,7 +90,7 @@ def get_max_top():
     for submission in reddit.subreddit(subreddit).top(limit=None):
         url = submission.url
         parsed_url = parse_youtube_link(url)
-        if parsed_url != False:
+        if (parsed_url != False) and ('v' in parsed_url):
             videos.append(parsed_url)
 
     return videos
@@ -99,7 +100,7 @@ def get_max_hot():
     for submission in reddit.subreddit(subreddit).hot(limit=None):
         url = submission.url
         parsed_url = parse_youtube_link(url)
-        if parsed_url != False:
+        if (parsed_url != False) and ('v' in parsed_url):
             videos.append(parsed_url)
 
     return videos
