@@ -1,6 +1,8 @@
 import praw
 from urllib import parse
 from random import shuffle
+import requests
+import sys
 
 reddit_client_id = 'EwDc71J3wNcQqw'
 reddit_client_secret = 'mB36bJ5cNX39zjcw0gLMPycTjzU'
@@ -37,6 +39,16 @@ reddit = praw.Reddit(client_id=reddit_client_id,
                      client_secret=reddit_client_secret,
                      user_agent='InterdimensionalCableBox')
 print("Fuck yes, we're in!\n")
+
+api_base_url = 'https://www.youtube.com/oembed?format=json&url=https://www.youtube.com/watch?v='
+def is_valid_id(id_code):
+    result = requests.get(api_base_url + id_code)
+    if result.status_code == 404:
+        return False
+    elif result.status_code == 200:
+        return True
+    else:
+        return True
 
 def parse_query(input_query):
     query_temp = input_query.split('&')
@@ -133,8 +145,27 @@ print("Mixing the ingredients well...")
 shuffle(all_vids)
 print("Ingredients mixed pretty good, if I do say so myself.\n")
 
+dot_interval = 100
+cross_interval = 1000
+print("Pruning bad video ID's... ('.' = " + str(dot_interval) + ", 'x' = " + str(cross_interval) + ")")
+valid_vids = []
+progress_count = 0
+for vid_id in all_vids:
+    if is_valid_id(vid_id):
+        valid_vids.append(vid_id)
+    progress_count += 1
+    if progress_count % cross_interval == 0:
+        sys.stdout.write("x")
+        sys.stdout.flush()
+    elif progress_count % dot_interval == 0:
+        sys.stdout.write(".")
+        sys.stdout.flush()
+print("")
+prune_size = len(valid_vids)
+print("Removed " + str(min_size - prune_size) + " bad IDs, only " + str(prune_size) + " remaining.")
+
 print("Adding Chemical X...")
-IVCdump_output = "var IVCdump = [\"" + "\", \"".join(all_vids) + "\"];"
+IVCdump_output = "var IVCdump = [\"" + "\", \"".join(valid_vids) + "\"];"
 print("Done! Variable string is compiled.\n")
 
 print("Replacing variable with new ID database...")
