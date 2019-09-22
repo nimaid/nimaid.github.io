@@ -22,6 +22,9 @@
             // To update the database, run "python3 IVCdump.py" in the same directory as this file.
             $.getJSON("database.json", function(json) {
                 IVCdump = json.videos;
+                shuffle(IVCdump);
+                console.log("Logging playlist...");
+                console.log(IVCdump);
             });
             
         </script>
@@ -109,10 +112,6 @@
                 }
                 return a;
             }
-            
-            shuffle(IVCdump);
-            console.log("Logging playlist...");
-            console.log(IVCdump);
             
             var curr_vid_index = 0;
             var is_first = true;
