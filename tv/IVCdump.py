@@ -3,6 +3,7 @@ from urllib import parse
 from random import shuffle
 import requests
 import sys
+import json
 
 reddit_client_id = 'EwDc71J3wNcQqw'
 reddit_client_secret = 'mB36bJ5cNX39zjcw0gLMPycTjzU'
@@ -13,26 +14,11 @@ print("Interdimensional Video Catcher by nimaid (made for tv.nimaid.com)\n")
 
 all_vids = []
 
-print("Trying to read index.html...")
-with open("index.html", "r", encoding="utf8") as f:
-    index_html = f.read()
-print("Read index.html!\n")
-
-print("Trying to find variable location...")
-start_index = index_html.find("var IVCdump")
-if start_index == -1:
-    print("Variable not found! Are you sure this is the right index.html? Exiting...")
-    quit()
-end_index = index_html.find(";", start_index) + 1
-print("Found indexes to be " + str(start_index) + " to " + str(end_index) + "...\n")
-
-print("Extracting existing videos...")
-exist_str = index_html[start_index:end_index]
-exist_start_index = exist_str.find("[")
-exist_vids = exist_str[exist_start_index+2:-3].split('", "')
-exist_size = len(exist_vids)
-all_vids += exist_vids
-print("Extracted " + str(exist_size) + " OLD video IDs!\n")
+print("Reading existing videos...")
+with open('database.json', 'r') as f:
+    all_vids = json.load(f)['videos']
+exist_size = len(all_vids)
+print("Read " + str(exist_size) + " OLD video IDs!\n")
 
 print("Connecting to Reddit...")
 reddit = praw.Reddit(client_id=reddit_client_id,
@@ -164,17 +150,11 @@ print("")
 prune_size = len(valid_vids)
 print("Removed " + str(min_size - prune_size) + " bad IDs, only " + str(prune_size) + " remaining.")
 
-print("Adding Chemical X...")
-IVCdump_output = "var IVCdump = [\"" + "\", \"".join(valid_vids) + "\"];"
-print("Done! Variable string is compiled.\n")
-
-print("Replacing variable with new ID database...")
-index_html = index_html[:start_index] + IVCdump_output + index_html[end_index:]
-print("Replaced variable with updated version!\n")
-
-print("Overwritting original index.html...")
-with open("index.html", "w", encoding="utf8") as f:
-    f.write(index_html)
+print("Updating database.json...")
+database_obj = {}
+database_obj['videos'] = valid_vids
+with open('database.json', 'w') as f:
+    json.dump(database_obj, f)
 print("All done! Added " + str(min_size - exist_size) + " new videos! Have a good day!")
 
 
