@@ -155,6 +155,6 @@ database_obj = {}
 database_obj['videos'] = valid_vids
 with open('database.json', 'w') as f:
     json.dump(database_obj, f)
-print("All done! Added " + str(min_size - exist_size) + " new videos! Have a good day!")
+print("All done! Added " + str(prune_size - exist_size) + " new videos! Have a good day!")
 
 
