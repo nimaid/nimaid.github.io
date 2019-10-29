@@ -24,30 +24,34 @@ def random_tinyurl(quiet=False, prefixs = ['']):
         link_base = 'https://tinyurl.com/'
         while(link_not_valid):
             prefix = random.choice(prefixs)
-            link = link_base + prefix + random_string(8 - len(prefix))
+            address = prefix + random_string(8 - len(prefix))
+            link = link_base + address
             result = resolve_tinyurl(link)
             if(result[0]):
                 link_not_valid = False
                 if(not quiet):
                     print(link + ' = ' + result[1])
+                else:
+                    print('~' + address, end='')
                 return (link, result[1])
             else:
                 link_not_valid = True
                 if(not quiet):
                     print(link + ' is not valid...')
+                else:
+                    print('.', end='')
 
 
 
 try:
     while(True):
         # x and y appear to be the only valid prefixes
-        link = random_tinyurl(prefixs=['x','y'])
+        link = random_tinyurl(quiet=True, prefixs=['x','y'])
 
         with open(filename + '.csv', 'a', newline='') as f:
             writer = csv.writer(f)
             writer.writerow(link)
 
-        print('Saved to ' + filename + '.csv')
         time.sleep(0.1)
 except KeyboardInterrupt:
     print('\nConverting to JSON...')
