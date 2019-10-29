@@ -54,7 +54,7 @@ try:
 
         time.sleep(0.1)
 except KeyboardInterrupt:
-    print('\nConverting to JSON...')
+    print('\nSaving...')
 
     with open(filename + '.csv', 'r') as f:
         reader = csv.reader(f)
