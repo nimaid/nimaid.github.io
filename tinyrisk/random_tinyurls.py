@@ -59,9 +59,16 @@ except KeyboardInterrupt:
     with open(filename + '.csv', 'r') as f:
         reader = csv.reader(f)
         links = list(reader)
+    links = [k for k,_ in itertools.groupby(links)]
 
     links_obj = {}
-    links_obj['links'] = [k for k,_ in itertools.groupby(links)]
+    links_obj['links'] = links
+
+    with open(filename + '.csv', 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerows(links)
+
+    print('Exported ' + str(len(links)) + ' links to ' + filename + '.csv')
     
     with open(filename + '.json', 'w') as f:
         json.dump(links_obj, f)
