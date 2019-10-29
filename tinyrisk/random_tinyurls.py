@@ -4,6 +4,7 @@ import urllib.request as urlreq
 import csv
 import json
 import time
+import itertools
 
 filename = 'random_tinyurls'
 
@@ -53,10 +54,10 @@ except KeyboardInterrupt:
 
     with open(filename + '.csv', 'r') as f:
         reader = csv.reader(f)
-        links = [link[0] for link in list(reader)]
+        links = list(reader)
 
     links_obj = {}
-    links_obj['links'] = list(set(links))
+    links_obj['links'] = [k for k,_ in itertools.groupby(links)]
     
     with open(filename + '.json', 'w') as f:
         json.dump(links_obj, f)
