@@ -7,6 +7,7 @@ import time
 import itertools
 
 filename = 'random_tinyurls'
+SAVE_INT = 100
 
 def random_string(stringLength=10):
     letters = string.ascii_lowercase + string.digits
@@ -43,34 +44,36 @@ def random_tinyurl(quiet=False, prefixs = ['']):
 
 
 
-try:
-    while(True):
-        # x and y appear to be the only valid prefixes
-        link = random_tinyurl(quiet=True, prefixs=['x','y'])
+count = SAVE_INT
+while(True):
+    # x and y appear to be the only valid prefixes
+    link = random_tinyurl(quiet=True, prefixs=['x','y'])
 
-        with open(filename + '.csv', 'a', newline='') as f:
-            writer = csv.writer(f)
-            writer.writerow(link)
-
-        time.sleep(0.1)
-except KeyboardInterrupt:
-    print('\nSaving...')
-
-    with open(filename + '.csv', 'r') as f:
-        reader = csv.reader(f)
-        links = list(reader)
-    links = [k for k,_ in itertools.groupby(links)]
-
-    links_obj = {}
-    links_obj['links'] = links
-
-    with open(filename + '.csv', 'w', newline='') as f:
+    with open(filename + '.csv', 'a', newline='') as f:
         writer = csv.writer(f)
-        writer.writerows(links)
+        writer.writerow(link)
 
-    print('Exported ' + str(len(links)) + ' links to ' + filename + '.csv')
-    
-    with open(filename + '.json', 'w') as f:
-        json.dump(links_obj, f)
+    if count >= SAVE_INT - 1:
+        with open(filename + '.csv', 'r') as f:
+            reader = csv.reader(f)
+            links = list(reader)
+        links = [k for k,_ in itertools.groupby(links)]
 
-    print('Exported ' + str(len(links)) + ' links to ' + filename + '.json')
+        links_obj = {}
+        links_obj['links'] = links
+
+        print('~' + str(len(links)), end='')
+
+        with open(filename + '.csv', 'w', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerows(links)
+
+        print('~' + 'csv', end='')
+        
+        with open(filename + '.json', 'w') as f:
+            json.dump(links_obj, f)
+
+        print('~' + 'json', end='')
+
+    count += 1
+    count %= SAVE_INT
