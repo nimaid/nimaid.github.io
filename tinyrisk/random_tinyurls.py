@@ -84,7 +84,7 @@ signal.signal(signal.SIGINT, signal_handler)
 count = 0
 while(not kill_loop):
     # x and y appear to be the only valid prefixes
-    link = random_tinyurl(quiet=True, prefixs=['x','y'])
+    link = random_tinyurl(quiet=True, prefixs=['x', 'y'])
 
     with open(filename + '.csv', 'a', newline='') as f:
         writer = csv.writer(f)
