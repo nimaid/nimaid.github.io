@@ -3,11 +3,17 @@ import string
 import urllib.request as urlreq
 import csv
 import json
-import time
 import itertools
+import sys
+import signal
 
 filename = 'random_tinyurls'
 SAVE_INT = 100
+
+
+def print_raw(message):
+    sys.stdout.write(message)
+    sys.stdout.flush()
 
 def random_string(stringLength=10):
     letters = string.ascii_lowercase + string.digits
@@ -33,19 +39,50 @@ def random_tinyurl(quiet=False, prefixs = ['']):
                 if(not quiet):
                     print(link + ' = ' + result[1])
                 else:
-                    print('~' + address, end='')
+                    print_raw('~' + address)
                 return (link, result[1])
             else:
                 link_not_valid = True
                 if(not quiet):
                     print(link + ' is not valid...')
                 else:
-                    print('.', end='')
+                    print_raw('.')
 
 
+def save_all():
+    with open(filename + '.csv', 'r') as f:
+        reader = csv.reader(f)
+        links = list(reader)
+    links = [k for k,_ in itertools.groupby(links)]
 
-count = SAVE_INT
-while(True):
+    links_obj = {}
+    links_obj['links'] = links
+
+    print_raw('~' + str(len(links)))
+
+    with open(filename + '.csv', 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerows(links)
+
+    print_raw('~' + 'csv')
+    
+    with open(filename + '.json', 'w') as f:
+        json.dump(links_obj, f)
+
+    print_raw('~' + 'json')
+
+
+kill_loop = False
+def signal_handler(signal, frame):
+    global kill_loop
+    print_raw('~Exiting')
+    kill_loop = True
+
+signal.signal(signal.SIGINT, signal_handler)
+
+
+count = 0
+while(not kill_loop):
     # x and y appear to be the only valid prefixes
     link = random_tinyurl(quiet=True, prefixs=['x','y'])
 
@@ -53,27 +90,10 @@ while(True):
         writer = csv.writer(f)
         writer.writerow(link)
 
-    if count >= SAVE_INT - 1:
-        with open(filename + '.csv', 'r') as f:
-            reader = csv.reader(f)
-            links = list(reader)
-        links = [k for k,_ in itertools.groupby(links)]
-
-        links_obj = {}
-        links_obj['links'] = links
-
-        print('~' + str(len(links)), end='')
-
-        with open(filename + '.csv', 'w', newline='') as f:
-            writer = csv.writer(f)
-            writer.writerows(links)
-
-        print('~' + 'csv', end='')
-        
-        with open(filename + '.json', 'w') as f:
-            json.dump(links_obj, f)
-
-        print('~' + 'json', end='')
+    if (count >= SAVE_INT - 1) or (kill_loop):
+        save_all()
 
     count += 1
     count %= SAVE_INT
+
+print('\nThank you for being risky today. ;)')
