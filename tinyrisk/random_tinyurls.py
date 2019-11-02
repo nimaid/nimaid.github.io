@@ -64,6 +64,15 @@ def save_all():
     spamindex = [i for i, s in enumerate(links) if 'tinyurl.com/nospam' in s[1]]
     for i in spamindex[::-1]:
         temp = links.pop(i)
+
+    # Remove tinypic.com/images links (dead)
+    tinypicindex = [i for i, s in enumerate(links) if 'tinypic.com/images' in s[1]]
+    for i in tinypicindex[::-1]:
+        temp = links.pop(i)
+
+    # Shuffle
+    random.shuffle(links)
+    
     
     links_obj = {}
     links_obj['links'] = links
