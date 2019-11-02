@@ -56,8 +56,15 @@ def save_all():
     with open(filename + '.csv', 'r') as f:
         reader = csv.reader(f)
         links = list(reader)
+
+    # Remove duplicates
     links = [k for k,_ in itertools.groupby(links)]
 
+    # Remove tinyurl.com/nospam links
+    spamindex = [i for i, s in enumerate(links) if 'tinyurl.com/nospam' in s[1]]
+    for i in spamindex[::-1]:
+        temp = links.pop(i)
+    
     links_obj = {}
     links_obj['links'] = links
 
