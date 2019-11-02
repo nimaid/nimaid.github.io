@@ -6,10 +6,13 @@ import json
 import itertools
 import sys
 import signal
+import os
 
 filename = 'random_tinyurls'
 SAVE_INT = 100
 
+folder_dir = os.path.dirname(os.path.realpath(__file__))
+filename = folder_dir + '\\' + filename
 
 def print_raw(message):
     sys.stdout.write(message)
