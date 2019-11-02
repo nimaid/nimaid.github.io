@@ -4,18 +4,24 @@ from random import shuffle
 import requests
 import sys
 import json
+import os
+from datetime import datetime
+
+folder_dir = os.path.dirname(os.path.realpath(__file__))
 
 reddit_client_id = 'EwDc71J3wNcQqw'
 reddit_client_secret = 'mB36bJ5cNX39zjcw0gLMPycTjzU'
 
 subreddit = 'interdimensionalcable'
 
+database_name = folder_dir + '\\database.json'
+
 print("Interdimensional Video Catcher by nimaid (made for tv.nimaid.com)\n")
 
 all_vids = []
 
 print("Reading existing videos...")
-with open('database.json', 'r') as f:
+with open(database_name, 'r') as f:
     all_vids = json.load(f)['videos']
 exist_size = len(all_vids)
 print("Read " + str(exist_size) + " OLD video IDs!\n")
@@ -153,7 +159,8 @@ print("Removed " + str(min_size - prune_size) + " bad IDs, only " + str(prune_si
 print("Updating database.json...")
 database_obj = {}
 database_obj['videos'] = valid_vids
-with open('database.json', 'w') as f:
+database_obj['updated'] = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+with open(database_name, 'w') as f:
     json.dump(database_obj, f)
 print("All done! Added " + str(prune_size - exist_size) + " new videos! Have a good day!")
 
