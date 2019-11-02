@@ -14,7 +14,7 @@ reddit_client_secret = 'mB36bJ5cNX39zjcw0gLMPycTjzU'
 
 subreddit = 'interdimensionalcable'
 
-database_name = folder_dir + '\\database.json'
+database_name = folder_dir + '/database.json'
 
 print("Interdimensional Video Catcher by nimaid (made for tv.nimaid.com)\n")
 
