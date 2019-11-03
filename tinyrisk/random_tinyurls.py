@@ -22,9 +22,9 @@ def random_string(stringLength=10):
     letters = string.ascii_lowercase + string.digits
     return ''.join(random.choice(letters) for i in range(stringLength))
 
-def resolve_tinyurl(url):
+def resolve_tinyurl(url, timeout=10):
     try:
-        result = urlreq.urlopen(url)
+        result = urlreq.urlopen(url, timeout=timeout)
         return (True, result.url)
     except:
         return (False, '')
