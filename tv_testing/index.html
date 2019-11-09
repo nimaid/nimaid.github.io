@@ -148,14 +148,13 @@
             var video_source = document.getElementById("bg_video_source");
             if (static_mp4 != undefined)
             {
-                video_source.setAttribute("src", static_mp4);
+                video_source.setAttribute("src", String(static_mp4));
                 
                 video_main.load();
                 video_main.play();
             }
             else
             {
-                
                 video_main.remove();
             }
         </script>
