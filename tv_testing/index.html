@@ -141,16 +141,22 @@
     </head>
     <body style="background-image:url(static.gif);background-size:1000px;">
         <video autoplay muted loop id="bg_video">
-            <source src="" type="video/mp4" id="bg_video_source">
+            <source type="video/mp4" id="bg_video_source">
         </video>
         <script>
+            var video_main = document.getElementById("bg_video");
+            var video_source = document.getElementById("bg_video_source");
             if (static_mp4 != undefined)
             {
-                document.getElementById("bg_video_source").setAttribute("src", static_mp4);
+                video_source.setAttribute("src", static_mp4);
+                
+                video_main.load();
+                video_main.play();
             }
             else
             {
-                document.getElementById("bg_video_source").remove();
+                
+                video_main.remove();
             }
         </script>
         <audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
