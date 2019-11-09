@@ -63,11 +63,18 @@
             $.getJSON(db_file, function(json) 
             {
                 static_mp4 = json.static_mp4
-                console.log("Logging static MP4 filename...")
-                console.log(static_mp4);
+                if (static_mp4 != undefined)
+                {
+                    console.log("Logging static MP4 filename...");
+                    console.log(static_mp4);
+                }
+                else
+                {
+                    console.log("No MP4 video for static was provided for database.");
+                }
                 
                 intro_id = json.intro_video;
-                console.log("Logging intro ID...")
+                console.log("Logging intro ID...");
                 console.log(intro_id);
                 
                 IVCdump = json.videos;
@@ -137,7 +144,14 @@
             <source src="" type="video/mp4" id="bg_video_source">
         </video>
         <script>
-            document.getElementById("bg_video_source").setAttribute("src", static_mp4);
+            if (static_mp4 != undefined)
+            {
+                document.getElementById("bg_video_source").setAttribute("src", static_mp4);
+            }
+            else
+            {
+                document.getElementById("bg_video_source").remove();
+            }
         </script>
         <audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
         <div id="player" class="videoContainer"></div>
