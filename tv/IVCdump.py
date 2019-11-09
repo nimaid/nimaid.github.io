@@ -14,15 +14,18 @@ reddit_client_secret = 'mB36bJ5cNX39zjcw0gLMPycTjzU'
 
 subreddit = 'interdimensionalcable'
 
-database_name = folder_dir + '/database.json'
+database_name = folder_dir + '/interdimensional_database.json'
 
 print("Interdimensional Video Catcher by nimaid (made for tv.nimaid.com)\n")
 
+intro_vid = ""
 all_vids = []
 
 print("Reading existing videos...")
 with open(database_name, 'r') as f:
-    all_vids = json.load(f)['videos']
+    f_obj = json.load(f)
+    intro_vid = f_obj['intro_video']
+    all_vids = f_obj['videos']
 exist_size = len(all_vids)
 print("Read " + str(exist_size) + " OLD video IDs!\n")
 
@@ -158,6 +161,7 @@ print("Removed " + str(min_size - prune_size) + " bad IDs, only " + str(prune_si
 
 print("Updating database.json...")
 database_obj = {}
+database_obj['intro_video'] = intro_vid
 database_obj['videos'] = valid_vids
 database_obj['updated'] = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 with open(database_name, 'w') as f:

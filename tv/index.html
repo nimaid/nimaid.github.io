@@ -12,20 +12,56 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Interdimensional Cable Box</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript">
             var buffer_check_delay = 5000; // How long to wait after buffering
             var start_buffer_check_delay = 2000; // How long to wait after start
-            var intro_id = "dNjiaUW3OzE";
+            var databases =
+            {
+                "default": "interdimensional_database.json",
+                "interdimensional": "interdimensional_database.json"
+            };
             
+            var GET = {};
+            var query = window.location.search.substring(1).split("&");
+            for (var i = 0, max = query.length; i < max; i++)
+            {
+                if (query[i] === "") // check for trailing & with no param
+                    continue;
+
+                var param = query[i].split("=");
+                GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || "");
+            }
+            
+            var database_input = GET["database"];
+            
+            var db_file = "";
+            if (Object.keys(databases).includes(database_input))
+            {
+                db_file = databases[database_input];
+            }
+            else
+            {
+                db_file = databases["default"];
+            }
+            
+            var intro_id = "";
             var IVCdump = [];
             // To update the database, run "python3 IVCdump.py" in the same directory as this file.
-            $.getJSON("database.json", function(json) {
+            $.getJSON(db_file, function(json) 
+            {
+                intro_id = json.intro_video;
+                console.log("Logging intro ID...")
+                console.log(intro_id);
+                
                 IVCdump = json.videos;
                 shuffle(IVCdump);
                 console.log("Logging playlist...");
                 console.log(IVCdump);
             });
+            
+            
             
         </script>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -83,7 +119,6 @@
                 bottom: 0px;
             }
         </style>
-        <title>Interdimensional Cable Box</title>
     </head>
     <body style="background-image:url(static.gif);background-size:1000px;">
         <video autoplay muted loop id="bg_video">
