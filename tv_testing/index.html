@@ -82,6 +82,20 @@
                 console.log("Logging playlist...");
                 console.log(IVCdump);
             });
+            
+            var video_main = document.getElementById("bg_video");
+            var video_source = document.getElementById("bg_video_source");
+            if (static_mp4 != undefined)
+            {
+                video_source.setAttribute("src", static_mp4);
+                
+                video_main.load();
+                video_main.play();
+            }
+            else
+            {
+                video_main.remove();
+            }
         </script>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <style>
@@ -143,21 +157,6 @@
         <video autoplay muted loop id="bg_video">
             <source type="video/mp4" id="bg_video_source">
         </video>
-        <script>
-            var video_main = document.getElementById("bg_video");
-            var video_source = document.getElementById("bg_video_source");
-            if (static_mp4 != undefined)
-            {
-                video_source.setAttribute("src", String(static_mp4));
-                
-                video_main.load();
-                video_main.play();
-            }
-            else
-            {
-                video_main.remove();
-            }
-        </script>
         <audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
         <div id="player" class="videoContainer"></div>
         <div id="overlay_logo_container">
