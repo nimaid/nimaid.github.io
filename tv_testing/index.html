@@ -49,7 +49,7 @@
             var intro_id = "";
             var IVCdump = [];
             // To update the database, run "python3 IVCdump.py" in the same directory as this file.
-            $.getJSON("database.json", function(json) {
+            $.getJSON(db_file, function(json) {
                 intro_id = json.intro_video;
                 console.log(intro_id);
                 IVCdump = json.videos;
