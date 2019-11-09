@@ -39,12 +39,22 @@
             var db_file = "";
             if (Object.keys(databases).includes(database_input))
             {
-                db_file = databases[database_input];
+                console.log("Using database: ".concat(database_input));
+                db_file = databases[database_input]; 
             }
             else
             {
+                if (database_input != undefined)
+                {
+                    console.log("Invalid database name! Using 'default'");
+                }
+                else
+                {
+                    console.log("Using 'default' database.");
+                }
                 db_file = databases["default"];
             }
+            console.log("Database file: ".concat(db_file));
             
             var intro_id = "";
             var IVCdump = [];
