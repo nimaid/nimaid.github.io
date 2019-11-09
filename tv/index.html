@@ -72,8 +72,7 @@
                 console.log(IVCdump);
             });
             
-            
-            
+            var 
         </script>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <style>
@@ -292,7 +291,7 @@
                     buffering = false;
                     console.log("Player changed to PLAYING state!");
                     var vid_id = player.getVideoData()['video_id'];
-                    if (vid_id == intro_id) {
+                    if (is_first) {
                         set_message("Welcome! Please click or use the spacebar to re-tune the channel.");
                         document.getElementById("player").style.filter = "opacity(50%)";
                         document.getElementById("bg_video").style.filter = "opacity(0%)";
