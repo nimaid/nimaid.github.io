@@ -17,12 +17,11 @@
         <script type="text/javascript">
             var buffer_check_delay = 5000; // How long to wait after buffering
             var start_buffer_check_delay = 2000; // How long to wait after start
-            var databases =
-            {
-                "default": "interdimensional_database.json",
-                "interdimensional": "interdimensional_database.json",
-                "test": "test_database.json"
-            };
+            
+            var databases = {};
+            databases["interdimensional"] = "interdimensional_database.json"
+            databases["test"] = "test_database.json"
+            databases["default"] = databases["interdimensional"]
             
             var GET = {};
             var query = window.location.search.substring(1).split("&");
@@ -130,7 +129,7 @@
     </head>
     <body style="background-image:url(static.gif);background-size:1000px;">
         <video autoplay muted loop id="bg_video">
-            <source src="static.mp4" type="video/mp4">
+            <source src="static.mp4" type="video/mp4" id="bg_video_source">
         </video>
         <audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
         <div id="player" class="videoContainer"></div>
