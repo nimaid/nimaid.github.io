@@ -123,15 +123,6 @@
             $.getJSON(db_file, function(json) 
             {
                 static_mp4 = json.static_mp4
-                if (static_mp4 != undefined)
-                {
-                    console.log("Logging static MP4 filename...");
-                    console.log(static_mp4);
-                }
-                else
-                {
-                    console.log("No MP4 video for static was provided for database.");
-                }
                 
                 intro_id = json.intro_video;
                 console.log("Logging intro ID...");
@@ -147,13 +138,17 @@
             var video_source = document.getElementById("bg_video_source");
             if (static_mp4 != undefined)
             {
-                video_source.setAttribute("src", static_mp4);
+                console.log("Logging static MP4 filename...");
+                console.log(static_mp4);
                 
+                video_source.setAttribute("src", static_mp4);
+            
                 video_main.load();
                 video_main.play();
             }
             else
             {
+                console.log("No MP4 video for static was provided for database.");
                 video_main.remove();
             }
         </script>
