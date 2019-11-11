@@ -119,6 +119,9 @@
             var static_mp4 = "";
             var intro_id = "";
             var IVCdump = [];
+            
+            var video_main = document.getElementById("bg_video");
+            var video_source = document.getElementById("bg_video_source");
             // To update the database, run "python3 IVCdump.py" in the same directory as this file.
             $.getJSON(db_file, function(json) 
             {
@@ -141,24 +144,22 @@
                 shuffle(IVCdump);
                 console.log("Logging playlist...");
                 console.log(IVCdump);
-            });
-            
-            var video_main = document.getElementById("bg_video");
-            var video_source = document.getElementById("bg_video_source");
-            if ((static_mp4 != undefined) && !(static_mp4 === ""))
-            {
-                console.log("Using a static MP4...");
-                video_source.setAttribute("src", static_mp4);
                 
-                video_main.load();
-                video_main.play();
-            }
-            else
-            {
-                console.log("Not using a static MP4...");
-                static_mp4 = undefined;
-                video_main.remove();
-            }
+                if ((static_mp4 == undefined) || (static_mp4 === ""))
+                {
+                    console.log("Not using a static MP4...");
+                    static_mp4 = undefined;
+                    video_main.remove();
+                }
+                else
+                {
+                    console.log("Using a static MP4...");
+                    video_source.setAttribute("src", static_mp4);
+                    
+                    video_main.load();
+                    video_main.play();
+                }
+            });
         </script>
         <audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
         <div id="player" class="videoContainer"></div>
