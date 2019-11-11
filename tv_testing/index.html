@@ -74,18 +74,6 @@
         <video autoplay muted loop id="bg_video">
             <source type="video/mp4" id="bg_video_source">
         </video>
-        <audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
-        <div id="player" class="videoContainer"></div>
-        <div id="overlay_logo_container">
-            <div id="overlay">
-                <b>tv.nimaid.com</b>
-            </div>
-        </div>
-        <div id="overlay_message_container">
-            <div id="overlay">
-                Please wait while we connect to the multiverse...
-            </div>
-        </div>
         <script>
             var buffer_check_delay = 5000; // How long to wait after buffering
             var start_buffer_check_delay = 2000; // How long to wait after start
@@ -163,7 +151,20 @@
                 console.log("Logging playlist...");
                 console.log(IVCdump);
             });
-      
+        </script>
+        <audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
+        <div id="player" class="videoContainer"></div>
+        <div id="overlay_logo_container">
+            <div id="overlay">
+                <b>tv.nimaid.com</b>
+            </div>
+        </div>
+        <div id="overlay_message_container">
+            <div id="overlay">
+                Please wait while we connect to the multiverse...
+            </div>
+        </div>
+        <script>      
             function shuffle(a) {
                 var j, x, i;
                 for (i = a.length - 1; i > 0; i--) {
