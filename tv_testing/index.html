@@ -74,13 +74,25 @@
         <video autoplay muted loop id="bg_video">
             <source type="video/mp4" id="bg_video_source">
         </video>
+        <audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
+        <div id="player" class="videoContainer"></div>
+        <div id="overlay_logo_container">
+            <div id="overlay">
+                <b>tv.nimaid.com</b>
+            </div>
+        </div>
+        <div id="overlay_message_container">
+            <div id="overlay">
+                Please wait while we connect to the multiverse...
+            </div>
+        </div>
         <script>
             var buffer_check_delay = 5000; // How long to wait after buffering
             var start_buffer_check_delay = 2000; // How long to wait after start
             
             var databases = {};
             databases["interdimensional"] = "interdimensional_database.json"
-            databases["test"] = "test_database.json"
+            databases["history"] = "history_database.json"
             databases["default"] = databases["interdimensional"]
             
             var GET = {};
@@ -125,15 +137,6 @@
             // To update the database, run "python3 IVCdump.py" in the same directory as this file.
             $.getJSON(db_file, function(json) 
             {
-                intro_id = json.intro_video;
-                console.log("Logging intro ID...");
-                console.log(intro_id);
-                
-                IVCdump = json.videos;
-                shuffle(IVCdump);
-                console.log("Logging playlist...");
-                console.log(IVCdump);
-                
                 static_mp4 = json.static_mp4;
                 if ((static_mp4 == undefined) || (static_mp4 === ""))
                 {
@@ -150,21 +153,17 @@
                     video_main.load();
                     video_main.play();
                 }
+                
+                intro_id = json.intro_video;
+                console.log("Logging intro ID...");
+                console.log(intro_id);
+                
+                IVCdump = json.videos;
+                shuffle(IVCdump);
+                console.log("Logging playlist...");
+                console.log(IVCdump);
             });
-        </script>
-        <audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
-        <div id="player" class="videoContainer"></div>
-        <div id="overlay_logo_container">
-            <div id="overlay">
-                <b>tv.nimaid.com</b>
-            </div>
-        </div>
-        <div id="overlay_message_container">
-            <div id="overlay">
-                Please wait while we connect to the multiverse...
-            </div>
-        </div>
-        <script>      
+      
             function shuffle(a) {
                 var j, x, i;
                 for (i = a.length - 1; i > 0; i--) {
