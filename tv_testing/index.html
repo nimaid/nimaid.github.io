@@ -14,7 +14,67 @@
     <head>
         <title>Interdimensional Cable Box</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script type="text/javascript">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <style>
+            .videoContainer {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #bg_video {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                filter:opacity(50%);
+            }
+            #overlay {
+                color: white;
+                background-color: black;
+                opacity :0.5;
+                font-family: Courier New;
+                font-size: 24px;
+                display: inline-block;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+            #overlay_logo_container {
+                width: 100%;
+                position: fixed;
+                text-align: center;
+                top: 0px;
+            }
+            player {
+                /* optional */
+                width: 100%;
+                height: 100%; 
+            }
+            #overlay_message_container {
+                width: 100%;
+                position: fixed;
+                text-align: center;
+                bottom: 0px;
+            }
+        </style>
+    </head>
+    <body style="background-image:url(static.gif);background-size:1000px;">
+        <video autoplay muted loop id="bg_video">
+            <source type="video/mp4" id="bg_video_source">
+        </video>
+        <script>
             var buffer_check_delay = 5000; // How long to wait after buffering
             var start_buffer_check_delay = 2000; // How long to wait after start
             
@@ -82,73 +142,12 @@
                 console.log("Logging playlist...");
                 console.log(IVCdump);
             });
-        </script>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <style>
-            .videoContainer {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            #bg_video {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                filter:opacity(50%);
-            }
-            #overlay {
-                color: white;
-                background-color: black;
-                opacity :0.5;
-                font-family: Courier New;
-                font-size: 24px;
-                display: inline-block;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                padding-left: 6px;
-                padding-right: 6px;
-            }
-            #overlay_logo_container {
-                width: 100%;
-                position: fixed;
-                text-align: center;
-                top: 0px;
-            }
-            player {
-                /* optional */
-                width: 100%;
-                height: 100%; 
-            }
-            #overlay_message_container {
-                width: 100%;
-                position: fixed;
-                text-align: center;
-                bottom: 0px;
-            }
-        </style>
-    </head>
-    <body style="background-image:url(static.gif);background-size:1000px;">
-        <video autoplay muted loop id="bg_video">
-            <source type="video/mp4" id="bg_video_source">
-        </video>
-        <script>
+            
             var video_main = document.getElementById("bg_video");
             var video_source = document.getElementById("bg_video_source");
             if ((static_mp4 != undefined) && !(static_mp4 === ""))
             {
-                console.log("Using static MP4...");
+                console.log("Using a static MP4...");
                 video_source.setAttribute("src", static_mp4);
                 
                 video_main.load();
@@ -156,7 +155,7 @@
             }
             else
             {
-                console.log("NO static MP4...");
+                console.log("Not using a static MP4...");
                 static_mp4 = undefined;
                 video_main.remove();
             }
