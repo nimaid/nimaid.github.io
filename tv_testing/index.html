@@ -148,6 +148,7 @@
             var video_source = document.getElementById("bg_video_source");
             if ((static_mp4 != undefined) && !(static_mp4 === ""))
             {
+                console.log("Using static MP4...");
                 video_source.setAttribute("src", static_mp4);
                 
                 video_main.load();
@@ -155,11 +156,10 @@
             }
             else
             {
+                console.log("NO static MP4...");
                 static_mp4 = undefined;
                 video_main.remove();
             }
-            
-            console.log(document.getElementById("bg_video_source"));
         </script>
         <audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
         <div id="player" class="videoContainer"></div>
