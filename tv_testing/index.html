@@ -210,8 +210,9 @@
             
             var buffering = true;  
             window.onload = function() {
-                if (buffering)
-                play_noise();
+                if (buffering) {
+                    play_noise();
+                }
             }
             
             var tag = document.createElement('script');
