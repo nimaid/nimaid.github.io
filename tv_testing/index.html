@@ -207,7 +207,10 @@
                 noise.currentTime = 0;
             }
             
+            
+            var buffering = true;  
             window.onload = function() {
+                if (buffering)
                 play_noise();
             }
             
@@ -245,7 +248,6 @@
                 });
             }
             
-            var buffering = false;  
             function check_buffer_skip() {
                 console.log("Checking if buffering still...");
                 if (buffering) {
