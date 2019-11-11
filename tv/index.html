@@ -14,63 +14,6 @@
     <head>
         <title>Interdimensional Cable Box</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            var buffer_check_delay = 5000; // How long to wait after buffering
-            var start_buffer_check_delay = 2000; // How long to wait after start
-            
-            var databases = {};
-            databases["interdimensional"] = "interdimensional_database.json"
-            databases["test"] = "test_database.json"
-            databases["default"] = databases["interdimensional"]
-            
-            var GET = {};
-            var query = window.location.search.substring(1).split("&");
-            for (var i = 0, max = query.length; i < max; i++)
-            {
-                if (query[i] === "") // check for trailing & with no param
-                    continue;
-
-                var param = query[i].split("=");
-                GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || "");
-            }
-            
-            var database_input = GET["database"];
-            
-            var db_file = "";
-            if (Object.keys(databases).includes(database_input))
-            {
-                console.log("Using database: ".concat(database_input));
-                db_file = databases[database_input]; 
-            }
-            else
-            {
-                if (database_input != undefined)
-                {
-                    console.log("Invalid database name! Using 'default'");
-                }
-                else
-                {
-                    console.log("Using 'default' database.");
-                }
-                db_file = databases["default"];
-            }
-            console.log("Database file: ".concat(db_file));
-            
-            var intro_id = "";
-            var IVCdump = [];
-            // To update the database, run "python3 IVCdump.py" in the same directory as this file.
-            $.getJSON(db_file, function(json) 
-            {
-                intro_id = json.intro_video;
-                console.log("Logging intro ID...")
-                console.log(intro_id);
-                
-                IVCdump = json.videos;
-                shuffle(IVCdump);
-                console.log("Logging playlist...");
-                console.log(IVCdump);
-            });
-        </script>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <style>
             .videoContainer {
@@ -129,7 +72,7 @@
     </head>
     <body style="background-image:url(static.gif);background-size:1000px;">
         <video autoplay muted loop id="bg_video">
-            <source src="static.mp4" type="video/mp4" id="bg_video_source">
+            <source type="video/mp4" id="bg_video_source">
         </video>
         <audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
         <div id="player" class="videoContainer"></div>
@@ -143,7 +86,81 @@
                 Please wait while we connect to the multiverse...
             </div>
         </div>
-        <script>      
+        <script>
+            var buffer_check_delay = 5000; // How long to wait after buffering
+            var start_buffer_check_delay = 2000; // How long to wait after start
+            
+            var databases = {};
+            databases["interdimensional"] = "interdimensional_database.json"
+            databases["history"] = "history_database.json"
+            databases["default"] = databases["interdimensional"]
+            
+            var GET = {};
+            var query = window.location.search.substring(1).split("&");
+            for (var i = 0, max = query.length; i < max; i++)
+            {
+                if (query[i] === "") // check for trailing & with no param
+                    continue;
+
+                var param = query[i].split("=");
+                GET[decodeURIComponent(param[0])] = decodeURIComponent(param[1] || "");
+            }
+            
+            var database_input = GET["database"];
+            
+            var db_file = "";
+            if (Object.keys(databases).includes(database_input))
+            {
+                console.log("Using database: ".concat(database_input));
+                db_file = databases[database_input]; 
+            }
+            else
+            {
+                if (database_input != undefined)
+                {
+                    console.log("Invalid database name! Using 'default'");
+                }
+                else
+                {
+                    console.log("Using 'default' database.");
+                }
+                db_file = databases["default"];
+            }
+            console.log("Database file: ".concat(db_file));
+            
+            var static_mp4 = "";
+            var intro_id = "";
+            var videos_list = [];
+            // To update the database, run "python3 IVCdump.py" in the same directory as this file.
+            $.getJSON(db_file, function(json) 
+            {
+                static_mp4 = json.static_mp4;
+                if ((static_mp4 == undefined) || (static_mp4 === ""))
+                {
+                    console.log("No MP4 video for static was provided for database.");
+                    static_mp4 = undefined;
+                    document.getElementById("bg_video").remove();
+                }
+                else
+                {
+                    console.log("Using a static MP4! Filename is...");
+                    console.log(static_mp4);
+                    document.getElementById("bg_video_source").setAttribute("src", static_mp4);
+                    
+                    document.getElementById("bg_video").load();
+                    document.getElementById("bg_video").play();
+                }
+                
+                intro_id = json.intro_video;
+                console.log("Logging intro ID...");
+                console.log(intro_id);
+                
+                videos_list = json.videos;
+                shuffle(videos_list);
+                console.log("Logging playlist...");
+                console.log(videos_list);
+            });
+      
             function shuffle(a) {
                 var j, x, i;
                 for (i = a.length - 1; i > 0; i--) {
@@ -162,11 +179,11 @@
             function update_index() {
                 if (!is_first) {
                     this.curr_vid_index++;
-                    if (curr_vid_index >= IVCdump.length) {
+                    if (curr_vid_index >= videos_list.length) {
                         console.log("Reached end of playlist, shuffling...");
-                        shuffle(IVCdump);
+                        shuffle(videos_list);
                         console.log("Shuffled. Logging new playlist...");
-                        console.log(IVCdump);
+                        console.log(videos_list);
                 
                         curr_vid_index = 0;
                     }
@@ -182,7 +199,7 @@
             }
             
             var noise = document.getElementById("noise");
-                function play_noise() {
+            function play_noise() {
                 noise.play();
             }
             function stop_noise() {
@@ -190,8 +207,12 @@
                 noise.currentTime = 0;
             }
             
+            
+            var buffering = false;  
             window.onload = function() {
-                play_noise();
+                if (buffering) {
+                    play_noise();
+                }
             }
             
             var tag = document.createElement('script');
@@ -228,7 +249,6 @@
                 });
             }
             
-            var buffering = false;  
             function check_buffer_skip() {
                 console.log("Checking if buffering still...");
                 if (buffering) {
@@ -258,7 +278,7 @@
                     set_message("Re-tuning...");
                     update_index();
                     console.log("Index is now: " + curr_vid_index);
-                    var vid_id = new String(IVCdump[curr_vid_index]);
+                    var vid_id = new String(videos_list[curr_vid_index]);
                     console.log("ID is now: " + vid_id);
                     player.loadVideoById(vid_id);
                     player.playVideo();
@@ -270,7 +290,7 @@
                     set_message("Signal lost! Re-tuning...");
                     update_index();
                     console.log("Index is now: " + curr_vid_index);
-                    var vid_id = new String(IVCdump[curr_vid_index]);
+                    var vid_id = new String(videos_list[curr_vid_index]);
                     console.log("ID is now: " + vid_id);
                     player.loadVideoById(vid_id);
                     player.playVideo();
@@ -280,7 +300,9 @@
                     console.log("Player changed to BUFFERING state!");
                     set_message("Aquiring signal...");
                     document.getElementById("player").style.opacity = "0";
-                    document.getElementById("bg_video").style.filter = "opacity(50%)";
+                    if (static_mp4 != undefined) {
+                        document.getElementById("bg_video").style.filter = "opacity(50%)";
+                    }
                     play_noise();
                     setTimeout(check_buffer_skip, buffer_check_delay);
                 }
@@ -291,7 +313,9 @@
                     if (is_first) {
                         set_message("Welcome! Please click or use the spacebar to re-tune the channel.");
                         document.getElementById("player").style.filter = "opacity(50%)";
-                        document.getElementById("bg_video").style.filter = "opacity(0%)";
+                        if (static_mp4 != undefined) {
+                            document.getElementById("bg_video").style.filter = "opacity(0%)";
+                        }
                     }
                     else {
                         document.getElementById("player").style.filter = "opacity(100%)";
@@ -308,7 +332,7 @@
                 set_message("Signal is corrupt! Re-tuning...");
                 update_index();
                 console.log("Index is now: " + curr_vid_index);
-                var vid_id = new String(IVCdump[curr_vid_index]);
+                var vid_id = new String(videos_list[curr_vid_index]);
                 console.log("ID is now: " + vid_id);
                 player.loadVideoById(vid_id);
                 player.playVideo();
