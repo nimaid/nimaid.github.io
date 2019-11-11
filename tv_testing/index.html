@@ -74,6 +74,18 @@
         <video autoplay muted loop id="bg_video">
             <source type="video/mp4" id="bg_video_source">
         </video>
+        <audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
+        <div id="player" class="videoContainer"></div>
+        <div id="overlay_logo_container">
+            <div id="overlay">
+                <b>tv.nimaid.com</b>
+            </div>
+        </div>
+        <div id="overlay_message_container">
+            <div id="overlay">
+                Please wait while we connect to the multiverse...
+            </div>
+        </div>
         <script>
             var buffer_check_delay = 5000; // How long to wait after buffering
             var start_buffer_check_delay = 2000; // How long to wait after start
@@ -118,10 +130,7 @@
             
             var static_mp4 = "";
             var intro_id = "";
-            var IVCdump = [];
-            
-            var video_main = document.getElementById("bg_video");
-            var video_source = document.getElementById("bg_video_source");
+            var videos_list = [];
             // To update the database, run "python3 IVCdump.py" in the same directory as this file.
             $.getJSON(db_file, function(json) 
             {
@@ -130,41 +139,28 @@
                 {
                     console.log("No MP4 video for static was provided for database.");
                     static_mp4 = undefined;
-                    video_main.remove();
+                    document.getElementById("bg_video").remove();
                 }
                 else
                 {
                     console.log("Using a static MP4! Filename is...");
                     console.log(static_mp4);
-                    video_source.setAttribute("src", static_mp4);
+                    document.getElementById("bg_video_source").setAttribute("src", static_mp4);
                     
-                    video_main.load();
-                    video_main.play();
+                    document.getElementById("bg_video").load();
+                    document.getElementById("bg_video").play();
                 }
                 
                 intro_id = json.intro_video;
                 console.log("Logging intro ID...");
                 console.log(intro_id);
                 
-                IVCdump = json.videos;
-                shuffle(IVCdump);
+                videos_list = json.videos;
+                shuffle(videos_list);
                 console.log("Logging playlist...");
-                console.log(IVCdump);
+                console.log(videos_list);
             });
-        </script>
-        <audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
-        <div id="player" class="videoContainer"></div>
-        <div id="overlay_logo_container">
-            <div id="overlay">
-                <b>tv.nimaid.com</b>
-            </div>
-        </div>
-        <div id="overlay_message_container">
-            <div id="overlay">
-                Please wait while we connect to the multiverse...
-            </div>
-        </div>
-        <script>      
+      
             function shuffle(a) {
                 var j, x, i;
                 for (i = a.length - 1; i > 0; i--) {
@@ -183,11 +179,11 @@
             function update_index() {
                 if (!is_first) {
                     this.curr_vid_index++;
-                    if (curr_vid_index >= IVCdump.length) {
+                    if (curr_vid_index >= videos_list.length) {
                         console.log("Reached end of playlist, shuffling...");
-                        shuffle(IVCdump);
+                        shuffle(videos_list);
                         console.log("Shuffled. Logging new playlist...");
-                        console.log(IVCdump);
+                        console.log(videos_list);
                 
                         curr_vid_index = 0;
                     }
@@ -203,7 +199,7 @@
             }
             
             var noise = document.getElementById("noise");
-                function play_noise() {
+            function play_noise() {
                 noise.play();
             }
             function stop_noise() {
@@ -279,7 +275,7 @@
                     set_message("Re-tuning...");
                     update_index();
                     console.log("Index is now: " + curr_vid_index);
-                    var vid_id = new String(IVCdump[curr_vid_index]);
+                    var vid_id = new String(videos_list[curr_vid_index]);
                     console.log("ID is now: " + vid_id);
                     player.loadVideoById(vid_id);
                     player.playVideo();
@@ -291,7 +287,7 @@
                     set_message("Signal lost! Re-tuning...");
                     update_index();
                     console.log("Index is now: " + curr_vid_index);
-                    var vid_id = new String(IVCdump[curr_vid_index]);
+                    var vid_id = new String(videos_list[curr_vid_index]);
                     console.log("ID is now: " + vid_id);
                     player.loadVideoById(vid_id);
                     player.playVideo();
@@ -329,7 +325,7 @@
                 set_message("Signal is corrupt! Re-tuning...");
                 update_index();
                 console.log("Index is now: " + curr_vid_index);
-                var vid_id = new String(IVCdump[curr_vid_index]);
+                var vid_id = new String(videos_list[curr_vid_index]);
                 console.log("ID is now: " + vid_id);
                 player.loadVideoById(vid_id);
                 player.playVideo();
