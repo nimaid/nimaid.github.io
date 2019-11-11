@@ -208,7 +208,7 @@
             }
             
             
-            var buffering = true;  
+            var buffering = false;  
             window.onload = function() {
                 if (buffering) {
                     play_noise();
@@ -300,7 +300,9 @@
                     console.log("Player changed to BUFFERING state!");
                     set_message("Aquiring signal...");
                     document.getElementById("player").style.opacity = "0";
-                    document.getElementById("bg_video").style.filter = "opacity(50%)";
+                    if (static_mp4 != undefined) {
+                        document.getElementById("bg_video").style.filter = "opacity(50%)";
+                    }
                     play_noise();
                     setTimeout(check_buffer_skip, buffer_check_delay);
                 }
@@ -311,7 +313,9 @@
                     if (is_first) {
                         set_message("Welcome! Please click or use the spacebar to re-tune the channel.");
                         document.getElementById("player").style.filter = "opacity(50%)";
-                        document.getElementById("bg_video").style.filter = "opacity(0%)";
+                        if (static_mp4 != undefined) {
+                            document.getElementById("bg_video").style.filter = "opacity(0%)";
+                        }
                     }
                     else {
                         document.getElementById("player").style.filter = "opacity(100%)";
