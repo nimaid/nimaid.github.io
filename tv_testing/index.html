@@ -151,21 +151,21 @@
                 url: db_file,
                 success: function(data) 
                 {
-                    if (json.title == undefined)
+                    if (data.title == undefined)
                     {
                         document.title = "TV Player";
                     }
                     else
                     {
-                        document.title = json.title;
+                        document.title = data.title;
                     }
                     
                     var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
                     link.type = 'image/x-icon';
                     link.rel = 'shortcut icon';
-                    if (file_exists(json.favicon))
+                    if (file_exists(data.favicon))
                     {
-                        link.href = json.favicon;
+                        link.href = data.favicon;
                     }
                     else
                     {
@@ -173,16 +173,16 @@
                     }
                     document.getElementsByTagName('head')[0].appendChild(link);
                     
-                    if ((json.header == undefined) || (json.header === ""))
+                    if ((data.header == undefined) || (data.header === ""))
                     {
                         document.getElementById("overlay_text").innerHTML = "";
                     }
                     else
                     {
-                        document.getElementById("overlay_text").innerHTML = json.header;
+                        document.getElementById("overlay_text").innerHTML = data.header;
                     }
                     
-                    static_mp4 = json.static_mp4;
+                    static_mp4 = data.static_mp4;
                     if ((static_mp4 == undefined) || (static_mp4 === ""))
                     {
                         console.log("No MP4 video for static was provided for database.");
@@ -199,7 +199,7 @@
                         document.getElementById("bg_video").play();
                     }
                     
-                    if ((json.intro_video == undefined) || (json.intro_video === ""))
+                    if ((data.intro_video == undefined) || (data.intro_video === ""))
                     {
                         no_intro = true;
                         intro_id = undefined;
@@ -208,12 +208,12 @@
                     else
                     {
                         no_intro = false;
-                        intro_id = json.intro_video;
+                        intro_id = data.intro_video;
                         console.log("Intro video ID given...");
                         console.log(intro_id);
                     }
                     
-                    videos_list = json.videos;
+                    videos_list = data.videos;
                     shuffle(videos_list);
                     console.log("Logging playlist...");
                     console.log(videos_list);
