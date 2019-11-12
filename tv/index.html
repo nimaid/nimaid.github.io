@@ -374,12 +374,12 @@
             
             function onPlayerReady(event)
             {
+                set_message("Aquiring signal...");
                 if (no_intro)
                 {
                     console.log("Player is skipping intro video!");
                     is_first = false;
                     buffering = false;
-                    set_message("Re-tuning...");
                     curr_vid_index = -1;
                     update_index();
                     console.log("Index is now: " + curr_vid_index);
@@ -394,7 +394,6 @@
                     event.target.playVideo();  // https://goo.gl/xX8pDD says I cant do this...
                     buffering = true;
                     console.log("Player is BUFFERING intro video!");
-                    set_message("Aquiring signal...");
                     setTimeout(check_buffer_skip, start_buffer_check_delay); // Sorry google! Users want this! It's literally the only thing my site does.
                     stop_noise();
                 }
