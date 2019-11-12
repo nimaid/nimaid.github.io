@@ -3,22 +3,29 @@ from urllib import parse
 import requests
 import sys
 import csv
+import json
 import os
+from datetime import datetime
 
-folder_dir = os.path.dirname(os.path.realpath(__file__))
 
 reddit_client_id = 'EwDc71J3wNcQqw'
 reddit_client_secret = 'mB36bJ5cNX39zjcw0gLMPycTjzU'
 
 subreddit = 'trippyvideos'
 
-database_name = folder_dir + '/trip_database_raw.csv'
+folder_dir = os.path.dirname(os.path.realpath(__file__))
 
-print("r/TrippyVideos Dumper by nimaid (made for trip.nimaid.com)\n")
+dump_name = folder_dir + '/trip_database_dump.csv'
+database_name = folder_dir + '/trip_database.json'
+
+print("r/TrippyVideos Dumper by nimaid (made for trip.nimaid.com)")
+
+import TRIPdbclean # Prune the main DB
+print("")
 
 all_vids = []
-print("Reading existing videos...")
-with open(database_name, 'r') as f:
+print("Reading existing dump...")
+with open(dump_name, 'r') as f:
     reader = csv.reader(f)
     all_vids = [i[0] for i in list(reader)]
 exist_size = len(all_vids)
@@ -107,6 +114,22 @@ def get_max_hot():
 
     return videos
 
+def remove_bad_ids(vids_in, dot_interval=100, cross_interval=1000):
+    print("Checking " + str(len(vids_in)) + " videos... ('.' = " + str(dot_interval) + ", 'x' = " + str(cross_interval) + ")")
+    vids_out = []
+    progress_count = 0
+    for vid_id in vids_in:
+        if is_valid_id(vid_id):
+            vids_out.append(vid_id)
+        progress_count += 1
+        if progress_count % cross_interval == 0:
+            sys.stdout.write("x")
+            sys.stdout.flush()
+        elif progress_count % dot_interval == 0:
+            sys.stdout.write(".")
+            sys.stdout.flush()
+    print("done")
+    return vids_out
 
 print("Getting as many TOP videos as allowed...")
 for x in get_max_top():
@@ -131,29 +154,23 @@ all_vids = list(set(all_vids))
 min_size = len(all_vids)
 print("Some of the same IDs merged. Now, there are only " + str(min_size) + " unique video IDs.\n")
 
-dot_interval = 100
-cross_interval = 1000
-print("Pruning bad video ID's... ('.' = " + str(dot_interval) + ", 'x' = " + str(cross_interval) + ")")
-valid_vids = []
-progress_count = 0
-for vid_id in all_vids:
-    if is_valid_id(vid_id):
-        valid_vids.append(vid_id)
-    progress_count += 1
-    if progress_count % cross_interval == 0:
-        sys.stdout.write("x")
-        sys.stdout.flush()
-    elif progress_count % dot_interval == 0:
-        sys.stdout.write(".")
-        sys.stdout.flush()
-print("")
+print("Pruning bad video ID's...")
+valid_vids = remove_bad_ids(all_vids)
 prune_size = len(valid_vids)
 print("Removed " + str(min_size - prune_size) + " bad IDs, only " + str(prune_size) + " remaining.")
 
-print("Updating CSV...")
-with open(database_name, 'w', newline='') as f:
+print("Removeing ID's in main database from dump...")
+json_file = dict()
+with open(database_name, 'r') as f:
+    json_file = json.load(f)
+valid_vids = [x for x in valid_vids if x not in json_file["videos"]]
+final_size = len(valid_vids)
+print("Removed " + str(prune_size - final_size) + " existing IDs, only " + str(final_size) + " remaining.")
+
+print("Saving CSV...")
+with open(dump_name, 'w', newline='') as f:
     writer = csv.writer(f)
     writer.writerows([[i] for i in valid_vids])
-print("All done! Added " + str(prune_size - exist_size) + " new videos! Have a good day!")
+print("All done! Added " + str(final_size - exist_size) + " new videos! Have a good day!")
 
 
