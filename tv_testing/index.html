@@ -78,7 +78,9 @@
         <div id="player" class="videoContainer"></div>
         <div id="overlay_logo_container">
             <div id="overlay">
-                <b>tv.nimaid.com</b>
+                <b id="overlay_text">
+                    test test test
+                </b>
             </div>
         </div>
         <div id="overlay_message_container">
@@ -128,7 +130,6 @@
             }
             console.log("Database file: ".concat(db_file));
             
-            var page_title = "";
             var static_mp4 = "";
             var intro_id = "";
             var videos_list = [];
@@ -138,14 +139,22 @@
                 db_file,
                 function(json) 
                 {
-                    page_title = json.title;
-                    if (page_title == undefined)
+                    if (json.title == undefined)
                     {
                         document.title = "TV Player";
                     }
                     else
                     {
-                        document.title = page_title;
+                        document.title = json.title;
+                    }
+                    
+                    if ((json.header == undefined) || (json.header === ""))
+                    {
+                        document.getElementById("overlay_text").innerHTML = "no header provided";
+                    }
+                    else
+                    {
+                        document.getElementById("overlay_text").innerHTML = json.header;
                     }
                     
                     static_mp4 = json.static_mp4;
