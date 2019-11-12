@@ -14,7 +14,7 @@
     <head>
         <title>Tuning in...</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="interdimensional.ico" type="image/x-icon"> -->
         <style>
             .videoContainer {
                 position: absolute;
@@ -95,6 +95,20 @@
             databases["history"] = "history_database.json"
             databases["default"] = databases["interdimensional"]
             
+            function file_exists(image_url)
+            {
+                if (image_url == undefined)
+                {
+                    return false;
+                }
+                var http = new XMLHttpRequest();
+
+                http.open('HEAD', image_url, false);
+                http.send();
+
+                return http.status != 404;
+            }
+            
             var GET = {};
             var query = window.location.search.substring(1).split("&");
             for (var i = 0, max = query.length; i < max; i++)
@@ -145,6 +159,19 @@
                     {
                         document.title = json.title;
                     }
+                    
+                    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+                    link.type = 'image/x-icon';
+                    link.rel = 'shortcut icon';
+                    if (file_exists(json.favicon))
+                    {
+                        link.href = json.favicon;
+                    }
+                    else
+                    {
+                        link.href = 'default.ico';
+                    }
+                    document.getElementsByTagName('head')[0].appendChild(link);
                     
                     if ((json.header == undefined) || (json.header === ""))
                     {
