@@ -78,14 +78,12 @@
         <div id="player" class="videoContainer"></div>
         <div id="overlay_logo_container">
             <div id="overlay">
-                <b id="overlay_text">
-                    test test test
-                </b>
+                <b id="overlay_text"></b>
             </div>
         </div>
         <div id="overlay_message_container">
             <div id="overlay">
-                Please wait while we connect to the multiverse...
+                Please wait while we tune in...
             </div>
         </div>
         <script>
@@ -150,7 +148,7 @@
                     
                     if ((json.header == undefined) || (json.header === ""))
                     {
-                        document.getElementById("overlay_text").innerHTML = "no header provided";
+                        document.getElementById("overlay_text").innerHTML = "";
                     }
                     else
                     {
