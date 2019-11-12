@@ -157,15 +157,16 @@ print("Some of the same IDs merged. Now, there are only " + str(min_size) + " un
 print("Pruning bad video ID's...")
 valid_vids = remove_bad_ids(all_vids)
 prune_size = len(valid_vids)
-print("Removed " + str(min_size - prune_size) + " bad IDs, only " + str(prune_size) + " remaining.")
+print("Removed " + str(min_size - prune_size) + " bad IDs, only " + str(prune_size) + " remaining.\n")
 
-print("Removeing ID's in main database from dump...")
+print("Removing ID's in main database from dump...")
 json_file = dict()
 with open(database_name, 'r') as f:
     json_file = json.load(f)
 valid_vids = [x for x in valid_vids if x not in json_file["videos"]]
+valid_vids = [x for x in valid_vids if x not in json_file["bad_videos"]]
 final_size = len(valid_vids)
-print("Removed " + str(prune_size - final_size) + " existing IDs, only " + str(final_size) + " remaining.")
+print("Removed " + str(prune_size - final_size) + " existing IDs, only " + str(final_size) + " remaining.\n")
 
 print("Saving CSV...")
 with open(dump_name, 'w', newline='') as f:
