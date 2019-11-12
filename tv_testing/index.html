@@ -201,7 +201,7 @@
                     
                     if ((json.intro_video == undefined) || (json.intro_video === ""))
                     {
-                        intro_id = "";
+                        intro_id = undefined;
                         console.log("No intro video ID given, will skip intro.");
                     }
                     else
@@ -292,33 +292,65 @@
             var player;
             function onYouTubeIframeAPIReady()
             {
-                player = new YT.Player('player',
+                if (intro_id == undefined)
                 {
-                    height: '100%',
-                    width: '100%',
-                    videoId: intro_id, //the intro video
-                    playerVars:
+                    is_first = false;
+                    player = new YT.Player('player',
                     {
-                        wmode:'opaque',
-                        autohide: 1,
-                        vq:'highres',
-                        modestbranding:1,
-                        autoplay:1,
-                        controls:0,
-                        fs:0,
-                        rel:0,
-                        showinfo:0,
-                        disablekb:1,
-                        iv_load_policy:3,
-                        enablejsapi:1
-                    },
-                    events:
+                        height: '100%',
+                        width: '100%',
+                        playerVars:
+                        {
+                            wmode:'opaque',
+                            autohide: 1,
+                            vq:'highres',
+                            modestbranding:1,
+                            autoplay:1,
+                            controls:0,
+                            fs:0,
+                            rel:0,
+                            showinfo:0,
+                            disablekb:1,
+                            iv_load_policy:3,
+                            enablejsapi:1
+                        },
+                        events:
+                        {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange,
+                            'onError' : onPlayerError
+                        }
+                    });
+                }
+                else
+                {
+                    player = new YT.Player('player',
                     {
-                        'onReady': onPlayerReady,
-                        'onStateChange': onPlayerStateChange,
-                        'onError' : onPlayerError
-                    }
-                });
+                        height: '100%',
+                        width: '100%',
+                        videoId: intro_id, //the intro video
+                        playerVars:
+                        {
+                            wmode:'opaque',
+                            autohide: 1,
+                            vq:'highres',
+                            modestbranding:1,
+                            autoplay:1,
+                            controls:0,
+                            fs:0,
+                            rel:0,
+                            showinfo:0,
+                            disablekb:1,
+                            iv_load_policy:3,
+                            enablejsapi:1
+                        },
+                        events:
+                        {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange,
+                            'onError' : onPlayerError
+                        }
+                    });
             }
             
             function check_buffer_skip()
