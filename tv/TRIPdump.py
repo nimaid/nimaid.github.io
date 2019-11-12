@@ -8,13 +8,15 @@ import reddit_videos
 
 subreddit = 'trippyvideos'
 
-print("r/TrippyVideos Dumper by nimaid (made for trip.nimaid.com)")
-
 import TRIPdbclean  # Prune the main DB
 print("")
 
+old_json_size = TRIPdbclean.old_json_size
+
+clean_json = TRIPdbclean.json_file
+
 folder_dir = TRIPdbclean.folder_dir
-database_name = folder_dir + TRIPdbclean.database_name
+database_name = TRIPdbclean.database_name
 
 dump_name = folder_dir + '/trip_database_dump.csv'
 
@@ -39,7 +41,6 @@ prune_size = len(valid_vids)
 print("Removed " + str(new_size - prune_size) + " bad IDs, only " + str(prune_size) + " remaining.\n")
 
 print("Removing ID's in main database from dump...")
-clean_json = TRIPdbclean.json_file
 valid_vids = [x for x in valid_vids if x not in clean_json["videos"]]
 valid_vids = [x for x in valid_vids if x not in clean_json["bad_videos"]]
 final_size = len(valid_vids)
@@ -49,6 +50,6 @@ print("Saving CSV...")
 with open(dump_name, 'w', newline='') as f:
     writer = csv.writer(f)
     writer.writerows([[i] for i in valid_vids])
-print("All done! Added " + str(final_size - exist_size) + " new videos! Have a good day!")
+print("Saved " + str(final_size - exist_size) + " new videos to CSV!")
 
 
