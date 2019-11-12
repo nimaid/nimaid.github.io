@@ -145,10 +145,12 @@
             var intro_id = "";
             var videos_list = [];
             var no_intro = false;
-            $.getJSON
-            (
-                db_file,
-                function(json) 
+            $.ajax
+            ({
+                dataType: "json",
+                url: db_file,
+                data: json,
+                success: function(json) 
                 {
                     if (json.title == undefined)
                     {
@@ -216,9 +218,8 @@
                     shuffle(videos_list);
                     console.log("Logging playlist...");
                     console.log(videos_list);
-                },
-                async: false
-            );
+                }
+            });
       
             function shuffle(a)
             {
