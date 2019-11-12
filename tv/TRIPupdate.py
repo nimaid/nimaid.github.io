@@ -13,6 +13,9 @@ clean_json = TRIPdump.clean_json
 dump_name = TRIPdump.dump_name
 database_name = TRIPdump.database_name
 
+final_json_size = len(clean_json["videos"])
+valid_vids_size = len(valid_vids)
+
 def ask_question(question="Y/N", options=["Y", "N"], default=None):
     options = [x.upper() for x in options]
     answer = None
@@ -33,7 +36,7 @@ def ask_question(question="Y/N", options=["Y", "N"], default=None):
 print("")
 vet_videos = ask_question("Would you like to vet dumped videos now? Y/N")
 unvetted_vids = []
-videos_left_to_vet = len(valid_vids)
+videos_left_to_vet = valid_vids_size
 if(vet_videos == "Y"):
     print("Vetting videos now! Enter 'Q' to exit...\n")
     for i, vid in enumerate(valid_vids):
@@ -62,16 +65,15 @@ if(vet_videos == "Y"):
     clean_json["updated"] = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
     with open(database_name, 'w') as f:
         json.dump(clean_json, f)
-    final_json_size = len(clean_json["videos"])
     print("Saved", final_json_size, "videos to the database!\n")
 
     print("Saving unvetted videos...")
     with open(dump_name, 'w', newline='') as f:
         writer = csv.writer(f)
         writer.writerows([[i] for i in unvetted_vids])
-    print("Saved", len(unvetted_vids), "unvetted videos!\n")
+    unvetted_size = len(unvetted_vids)
+    print("Saved", unvetted_size, "unvetted videos!\n")
     
-    print("All done!", final_json_size - old_json_size, "new videos added to database!")
-        
+    print("All done!", final_json_size - old_json_size, "new videos added to database!", final_json_size, "total,", unvetted_size, "unvetted.")  
 else:
-    print("Not vetting videos! Goodbye!")
+    print("Not vetting videos!", final_json_size, "videos in database,", valid_vids_size, "unvetted.")

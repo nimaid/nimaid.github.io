@@ -52,7 +52,7 @@ def parse_youtube_link(link):
     return False
 
 def remove_bad_ids(vids_in, dot_interval=100, cross_interval=1000):
-    print("Checking " + str(len(vids_in)) + " videos... ('.' = " + str(dot_interval) + ", 'x' = " + str(cross_interval) + ")")
+    print("Checking", len(vids_in), "videos... ('.' = " + str(dot_interval) + ", 'x' = " + str(cross_interval) + ")")
     vids_out = []
     progress_count = 0
     for vid_id in vids_in:
