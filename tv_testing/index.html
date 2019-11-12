@@ -133,44 +133,48 @@
             var intro_id = "";
             var videos_list = [];
             // To update the database, run "python3 IVCdump.py" in the same directory as this file.
-            $.getJSON(db_file, function(json) 
-            {
-                page_title = json.title;
-                if (page_title == undefined)
+            $.getJSON
+            (
+                db_file,
+                function(json) 
                 {
-                    document.title = "TV Player";
-                }
-                else
-                {
-                    document.title = page_title;
-                }
-                
-                static_mp4 = json.static_mp4;
-                if ((static_mp4 == undefined) || (static_mp4 === ""))
-                {
-                    console.log("No MP4 video for static was provided for database.");
-                    static_mp4 = undefined;
-                    document.getElementById("bg_video").remove();
-                }
-                else
-                {
-                    console.log("Using a static MP4! Filename is...");
-                    console.log(static_mp4);
-                    document.getElementById("bg_video_source").setAttribute("src", static_mp4);
+                    page_title = json.title;
+                    if (page_title == undefined)
+                    {
+                        document.title = "TV Player";
+                    }
+                    else
+                    {
+                        document.title = page_title;
+                    }
                     
-                    document.getElementById("bg_video").load();
-                    document.getElementById("bg_video").play();
+                    static_mp4 = json.static_mp4;
+                    if ((static_mp4 == undefined) || (static_mp4 === ""))
+                    {
+                        console.log("No MP4 video for static was provided for database.");
+                        static_mp4 = undefined;
+                        document.getElementById("bg_video").remove();
+                    }
+                    else
+                    {
+                        console.log("Using a static MP4! Filename is...");
+                        console.log(static_mp4);
+                        document.getElementById("bg_video_source").setAttribute("src", static_mp4);
+                        
+                        document.getElementById("bg_video").load();
+                        document.getElementById("bg_video").play();
+                    }
+                    
+                    intro_id = json.intro_video;
+                    console.log("Logging intro ID...");
+                    console.log(intro_id);
+                    
+                    videos_list = json.videos;
+                    shuffle(videos_list);
+                    console.log("Logging playlist...");
+                    console.log(videos_list);
                 }
-                
-                intro_id = json.intro_video;
-                console.log("Logging intro ID...");
-                console.log(intro_id);
-                
-                videos_list = json.videos;
-                shuffle(videos_list);
-                console.log("Logging playlist...");
-                console.log(videos_list);
-            });
+            );
       
             function shuffle(a)
             {
