@@ -33,10 +33,11 @@ def ask_question(question="Y/N", options=["Y", "N"], default=None):
 print("")
 vet_videos = ask_question("Would you like to vet dumped videos now? Y/N")
 unvetted_vids = []
+videos_left_to_vet = len(valid_vids)
 if(vet_videos == "Y"):
     print("Vetting videos now! Enter 'Q' to exit...\n")
     for i, vid in enumerate(valid_vids):
-        print("Current ID:", vid)
+        print(videos_left_to_vet, "videos left! Current ID:", vid)
         vid_verdict = ask_question("Is this (G)ood, (B)ad, or should I (S)kip it? G/B/[S]/Q",
                                    options=["G", "B", "S", "Q"],
                                    default="S")
@@ -55,7 +56,7 @@ if(vet_videos == "Y"):
             break;
         else:
             print("Skipping ", vid, "...\n")
-            unvetted_vids.append(vid)
+        videos_left_to_vet -= 1
 
     print("Vetting done. Saving database to file...")
     clean_json["updated"] = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
