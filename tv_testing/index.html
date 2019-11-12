@@ -145,6 +145,7 @@
             var static_mp4 = "";
             var intro_id = "";
             var videos_list = [];
+            var no_intro = true;
             // To update the database, run "python3 IVCdump.py" in the same directory as this file.
             $.getJSON
             (
@@ -206,6 +207,7 @@
                     }
                     else
                     {
+                        no_intro = false;
                         intro_id = json.intro_video;
                         console.log("Intro video ID given...");
                         console.log(intro_id);
@@ -289,12 +291,12 @@
             var firstScriptTag = document.getElementsByTagName('script')[0];
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
             
+            
             var player;
             function onYouTubeIframeAPIReady()
             {
-                if (intro_id == undefined)
+                if (no_intro)
                 {
-                    is_first = false;
                     player = new YT.Player('player',
                     {
                         height: '100%',
@@ -372,12 +374,29 @@
             
             function onPlayerReady(event)
             {
-                event.target.playVideo();  // https://goo.gl/xX8pDD says I cant do this...
-                buffering = true;
-                console.log("Player changed to BUFFERING state!");
-                set_message("Aquiring signal...");
-                setTimeout(check_buffer_skip, start_buffer_check_delay); // Sorry google! Users want this! It's literally the only thing my site does.
-                stop_noise();
+                if (no_intro)
+                {
+                    console.log("Player is skipping intro video!");
+                    is_first = false;
+                    buffering = false;
+                    set_message("Re-tuning...");
+                    update_index();
+                    console.log("Index is now: " + curr_vid_index);
+                    var vid_id = new String(videos_list[curr_vid_index]);
+                    console.log("ID is now: " + vid_id);
+                    player.loadVideoById(vid_id);
+                    player.playVideo();
+                    window.focus();
+                }
+                else
+                {
+                    event.target.playVideo();  // https://goo.gl/xX8pDD says I cant do this...
+                    buffering = true;
+                    console.log("Player is BUFFERING intro video!");
+                    set_message("Aquiring signal...");
+                    setTimeout(check_buffer_skip, start_buffer_check_delay); // Sorry google! Users want this! It's literally the only thing my site does.
+                    stop_noise();
+                }
             }
             
             function onPlayerStateChange(event)
