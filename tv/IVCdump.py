@@ -21,11 +21,12 @@ print("Interdimensional Video Catcher by nimaid (made for tv.nimaid.com)\n")
 intro_vid = ""
 all_vids = []
 
+json_file = dict()
+
 print("Reading existing videos...")
 with open(database_name, 'r') as f:
-    f_obj = json.load(f)
-    intro_vid = f_obj['intro_video']
-    all_vids = f_obj['videos']
+    json_file = json.load(f)
+all_vids = json_file['videos']
 exist_size = len(all_vids)
 print("Read " + str(exist_size) + " OLD video IDs!\n")
 
@@ -160,12 +161,10 @@ prune_size = len(valid_vids)
 print("Removed " + str(min_size - prune_size) + " bad IDs, only " + str(prune_size) + " remaining.")
 
 print("Updating database.json...")
-database_obj = {}
-database_obj['intro_video'] = intro_vid
-database_obj['videos'] = valid_vids
-database_obj['updated'] = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+json_file['videos'] = valid_vids
+json_file['updated'] = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 with open(database_name, 'w') as f:
-    json.dump(database_obj, f)
+    json.dump(json_file, f)
 print("All done! Added " + str(prune_size - exist_size) + " new videos! Have a good day!")
 
 

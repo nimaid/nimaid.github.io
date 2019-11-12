@@ -12,9 +12,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Interdimensional Cable Box</title>
+        <title>Tuning in...</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="interdimensional.ico" type="image/x-icon"> -->
         <style>
             .videoContainer {
                 position: absolute;
@@ -78,12 +78,12 @@
         <div id="player" class="videoContainer"></div>
         <div id="overlay_logo_container">
             <div id="overlay">
-                <b>tv.nimaid.com</b>
+                <b id="overlay_text"></b>
             </div>
         </div>
         <div id="overlay_message_container">
             <div id="overlay">
-                Please wait while we connect to the multiverse...
+                Please wait while we tune in...
             </div>
         </div>
         <script>
@@ -94,6 +94,20 @@
             databases["interdimensional"] = "interdimensional_database.json"
             databases["history"] = "history_database.json"
             databases["default"] = databases["interdimensional"]
+            
+            function file_exists(image_url)
+            {
+                if (image_url == undefined)
+                {
+                    return false;
+                }
+                var http = new XMLHttpRequest();
+
+                http.open('HEAD', image_url, false);
+                http.send();
+
+                return http.status != 404;
+            }
             
             var GET = {};
             var query = window.location.search.substring(1).split("&");
@@ -132,38 +146,75 @@
             var intro_id = "";
             var videos_list = [];
             // To update the database, run "python3 IVCdump.py" in the same directory as this file.
-            $.getJSON(db_file, function(json) 
-            {
-                static_mp4 = json.static_mp4;
-                if ((static_mp4 == undefined) || (static_mp4 === ""))
+            $.getJSON
+            (
+                db_file,
+                function(json) 
                 {
-                    console.log("No MP4 video for static was provided for database.");
-                    static_mp4 = undefined;
-                    document.getElementById("bg_video").remove();
-                }
-                else
-                {
-                    console.log("Using a static MP4! Filename is...");
-                    console.log(static_mp4);
-                    document.getElementById("bg_video_source").setAttribute("src", static_mp4);
+                    if (json.title == undefined)
+                    {
+                        document.title = "TV Player";
+                    }
+                    else
+                    {
+                        document.title = json.title;
+                    }
                     
-                    document.getElementById("bg_video").load();
-                    document.getElementById("bg_video").play();
+                    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+                    link.type = 'image/x-icon';
+                    link.rel = 'shortcut icon';
+                    if (file_exists(json.favicon))
+                    {
+                        link.href = json.favicon;
+                    }
+                    else
+                    {
+                        link.href = 'default.ico';
+                    }
+                    document.getElementsByTagName('head')[0].appendChild(link);
+                    
+                    if ((json.header == undefined) || (json.header === ""))
+                    {
+                        document.getElementById("overlay_text").innerHTML = "";
+                    }
+                    else
+                    {
+                        document.getElementById("overlay_text").innerHTML = json.header;
+                    }
+                    
+                    static_mp4 = json.static_mp4;
+                    if ((static_mp4 == undefined) || (static_mp4 === ""))
+                    {
+                        console.log("No MP4 video for static was provided for database.");
+                        static_mp4 = undefined;
+                        document.getElementById("bg_video").remove();
+                    }
+                    else
+                    {
+                        console.log("Using a static MP4! Filename is...");
+                        console.log(static_mp4);
+                        document.getElementById("bg_video_source").setAttribute("src", static_mp4);
+                        
+                        document.getElementById("bg_video").load();
+                        document.getElementById("bg_video").play();
+                    }
+                    
+                    intro_id = json.intro_video;
+                    console.log("Logging intro ID...");
+                    console.log(intro_id);
+                    
+                    videos_list = json.videos;
+                    shuffle(videos_list);
+                    console.log("Logging playlist...");
+                    console.log(videos_list);
                 }
-                
-                intro_id = json.intro_video;
-                console.log("Logging intro ID...");
-                console.log(intro_id);
-                
-                videos_list = json.videos;
-                shuffle(videos_list);
-                console.log("Logging playlist...");
-                console.log(videos_list);
-            });
+            );
       
-            function shuffle(a) {
+            function shuffle(a)
+            {
                 var j, x, i;
-                for (i = a.length - 1; i > 0; i--) {
+                for (i = a.length - 1; i > 0; i--)
+                {
                     j = Math.floor(Math.random() * (i + 1));
                     x = a[i];
                    a[i] = a[j];
@@ -176,10 +227,13 @@
             var is_first = true;
             var cc_toggle = false;
             
-            function update_index() {
-                if (!is_first) {
+            function update_index()
+            {
+                if (!is_first)
+                {
                     this.curr_vid_index++;
-                    if (curr_vid_index >= videos_list.length) {
+                    if (curr_vid_index >= videos_list.length)
+                    {
                         console.log("Reached end of playlist, shuffling...");
                         shuffle(videos_list);
                         console.log("Shuffled. Logging new playlist...");
@@ -189,28 +243,34 @@
                     }
                 console.log("Just changed index to: " + curr_vid_index);
                 }
-                else {
+                else
+                {
                 is_first = false;
                 }
             }
             
-            function set_message(mess) {
+            function set_message(mess)
+            {
                 document.getElementById("overlay_message_container").innerHTML = "<div id='overlay'>" + mess + "</div>";
             }
             
             var noise = document.getElementById("noise");
-            function play_noise() {
+            function play_noise()
+            {
                 noise.play();
             }
-            function stop_noise() {
+            function stop_noise()
+            {
                 noise.pause();
                 noise.currentTime = 0;
             }
             
             
             var buffering = false;  
-            window.onload = function() {
-                if (buffering) {
+            window.onload = function()
+            {
+                if (buffering)
+                {
                     play_noise();
                 }
             }
@@ -222,12 +282,15 @@
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
             
             var player;
-            function onYouTubeIframeAPIReady() {
-                player = new YT.Player('player', {
+            function onYouTubeIframeAPIReady()
+            {
+                player = new YT.Player('player',
+                {
                     height: '100%',
                     width: '100%',
                     videoId: intro_id, //the intro video
-                    playerVars: {
+                    playerVars:
+                    {
                         wmode:'opaque',
                         autohide: 1,
                         vq:'highres',
@@ -241,28 +304,33 @@
                         iv_load_policy:3,
                         enablejsapi:1
                     },
-                    events: {
-                    'onReady': onPlayerReady,
-                    'onStateChange': onPlayerStateChange,
-                    'onError' : onPlayerError
+                    events:
+                    {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange,
+                        'onError' : onPlayerError
                     }
                 });
             }
             
-            function check_buffer_skip() {
+            function check_buffer_skip()
+            {
                 console.log("Checking if buffering still...");
-                if (buffering) {
+                if (buffering)
+                {
                     console.log("Still buffering! Re-starting video now...");
                     set_message("Video looks stuck! Try clicking to start!");
                     //player.stopVideo();
                     player.playVideo();
                 }
-                else {
+                else
+                {
                     console.log("Video looks like it's done buffering.");
                 }
             }
             
-            function onPlayerReady(event) {
+            function onPlayerReady(event)
+            {
                 event.target.playVideo();  // https://goo.gl/xX8pDD says I cant do this...
                 buffering = true;
                 console.log("Player changed to BUFFERING state!");
@@ -271,8 +339,10 @@
                 stop_noise();
             }
             
-            function onPlayerStateChange(event) {
-                if (event.data == YT.PlayerState.PAUSED) {
+            function onPlayerStateChange(event)
+            {
+                if (event.data == YT.PlayerState.PAUSED)
+                {
                     buffering = false;
                     console.log("Player changed to PAUSED state!");
                     set_message("Re-tuning...");
@@ -284,7 +354,8 @@
                     player.playVideo();
                     window.focus();
                 }
-                else if (event.data == YT.PlayerState.ENDED) {
+                else if (event.data == YT.PlayerState.ENDED)
+                {
                     buffering = false;
                     console.log("Player changed to ENDED state!");
                     set_message("Signal lost! Re-tuning...");
@@ -295,29 +366,35 @@
                     player.loadVideoById(vid_id);
                     player.playVideo();
                 }
-                else if (event.data == YT.PlayerState.BUFFERING) {
+                else if (event.data == YT.PlayerState.BUFFERING)
+                {
                     buffering = true;
                     console.log("Player changed to BUFFERING state!");
                     set_message("Aquiring signal...");
                     document.getElementById("player").style.opacity = "0";
-                    if (static_mp4 != undefined) {
+                    if (static_mp4 != undefined)
+                    {
                         document.getElementById("bg_video").style.filter = "opacity(50%)";
                     }
                     play_noise();
                     setTimeout(check_buffer_skip, buffer_check_delay);
                 }
-                else if (event.data == YT.PlayerState.PLAYING) {
+                else if (event.data == YT.PlayerState.PLAYING)
+                {
                     buffering = false;
                     console.log("Player changed to PLAYING state!");
                     var vid_id = player.getVideoData()['video_id'];
-                    if (is_first) {
+                    if (is_first)
+                    {
                         set_message("Welcome! Please click or use the spacebar to re-tune the channel.");
                         document.getElementById("player").style.filter = "opacity(50%)";
-                        if (static_mp4 != undefined) {
+                        if (static_mp4 != undefined)
+                        {
                             document.getElementById("bg_video").style.filter = "opacity(0%)";
                         }
                     }
-                    else {
+                    else
+                    {
                         document.getElementById("player").style.filter = "opacity(100%)";
                         set_message("Now playing channel: " + vid_id);
                     }
@@ -326,7 +403,8 @@
                 }
             }
             
-            function onPlayerError(event) {
+            function onPlayerError(event)
+            {
                 buffering = false;
                 console.log("Player changed to ERROR state!");
                 set_message("Signal is corrupt! Re-tuning...");
@@ -338,21 +416,26 @@
                 player.playVideo();
             }
               
-            document.body.onkeydown = function(e){
+            document.body.onkeydown = function(e)
+            {
                 //cconsole.log(e.keyCode);
-                if(e.keyCode == 32) {
+                if(e.keyCode == 32)
+                {
                     player.pauseVideo();
                 }
-                else if (e.keyCode == 67) {
+                else if (e.keyCode == 67)
+                {
                     player.setOption("captions", "track", {"languageCode": "es"});  //Works for html5 ignored by AS3
                     player.setOption("cc", "track", {"languageCode": "es"});  //Works for AS3 ignored by html5
-                    if (cc_toggle) {
+                    if (cc_toggle)
+                    {
                         player.unloadModule("captions");  //Works for html5 ignored by AS3
                         player.unloadModule("cc");  //Works for AS3 ignored by html5
                         console.log("Closed Captions OFF!");
                         cc_toggle = false;
                     }
-                    else {
+                    else
+                    {
                         player.loadModule("captions");  //Works for html5 ignored by AS3
                         player.loadModule("cc");  //Works for AS3 ignored by html5
                         console.log("Closed Captions ON!");
