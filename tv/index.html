@@ -144,7 +144,7 @@
             var static_mp4 = "";
             var intro_id = "";
             var videos_list = [];
-            var no_intro = true;
+            var no_intro = false;
             $.getJSON
             (
                 db_file,
@@ -200,6 +200,7 @@
                     
                     if ((json.intro_video == undefined) || (json.intro_video === ""))
                     {
+                        no_intro = true;
                         intro_id = undefined;
                         console.log("No intro video ID given, will skip intro.");
                     }
