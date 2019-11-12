@@ -323,6 +323,8 @@
                             'onError' : onPlayerError
                         }
                     });
+                    
+                    player.style.opacity = "0";
                 }
                 else
                 {
@@ -377,11 +379,6 @@
                 if (no_intro)
                 {
                     console.log("Player is skipping intro video!");
-                    document.getElementById("player").style.opacity = "0";
-                    if (static_mp4 != undefined)
-                    {
-                        document.getElementById("bg_video").style.filter = "opacity(50%)";
-                    }
                     is_first = false;
                     buffering = false;
                     set_message("Re-tuning...");
