@@ -8,15 +8,15 @@ import reddit_videos
 
 subreddit = 'trippyvideos'
 
-import TRIPdbclean  # Prune the main DB
+import trip_dbclean  # Prune the main DB
 print("")
 
-old_json_size = TRIPdbclean.old_json_size
+old_json_size = trip_dbclean.old_json_size
 
-clean_json = TRIPdbclean.json_file
+clean_json = trip_dbclean.json_file
 
-folder_dir = TRIPdbclean.folder_dir
-database_name = TRIPdbclean.database_name
+folder_dir = trip_dbclean.folder_dir
+database_name = trip_dbclean.database_name
 
 dump_name = folder_dir + '/trip_database_dump.csv'
 

@@ -5,13 +5,13 @@ from datetime import datetime
 
 print("r/TrippyVideos Database Updater by nimaid (made for trip.nimaid.com)")
 
-import TRIPdump  # Clean main db and update CSV
+import trip_dump  # Clean main db and update CSV
 
-old_json_size = TRIPdump.old_json_size
-valid_vids = TRIPdump.valid_vids
-clean_json = TRIPdump.clean_json
-dump_name = TRIPdump.dump_name
-database_name = TRIPdump.database_name
+old_json_size = trip_dump.old_json_size
+valid_vids = trip_dump.valid_vids
+clean_json = trip_dump.clean_json
+dump_name = trip_dump.dump_name
+database_name = trip_dump.database_name
 
 final_json_size = len(clean_json["videos"])
 valid_vids_size = len(valid_vids)

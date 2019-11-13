@@ -12,7 +12,7 @@ subreddit = 'interdimensionalcable'
 
 database_name = folder_dir + '/interdimensional_database.json'
 
-print("Interdimensional Video Catcher by nimaid (made for tv.nimaid.com)\n")
+print("Interdimensional Cable Box Database Updater by nimaid (made for tv.nimaid.com)\n")
 
 intro_vid = ""
 all_vids = []
