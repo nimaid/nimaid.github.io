@@ -60,12 +60,15 @@ if(vet_videos == "Y"):
         else:
             print("Skipping ", vid, "...\n")
         videos_left_to_vet -= 1
+    
+    vetted_g_vids_size = len(clean_json["videos"])
+    vetted_b_vids_size = len(clean_json["bad_videos"])
 
     print("Vetting done. Saving database to file...")
     clean_json["updated"] = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
     with open(database_name, 'w') as f:
         json.dump(clean_json, f)
-    print("Saved", final_json_size, "videos to the database!\n")
+    print("Saved", vetted_g_vids_size, "videos to the database!\n")
 
     print("Saving unvetted videos...")
     with open(dump_name, 'w', newline='') as f:
@@ -74,6 +77,6 @@ if(vet_videos == "Y"):
     unvetted_size = len(unvetted_vids)
     print("Saved", unvetted_size, "unvetted videos!\n")
     
-    print("All done!", final_json_size - old_json_size, "new videos added to database!", final_json_size, "total,", unvetted_size, "unvetted.")  
+    print("All done!", vetted_g_vids_size - old_json_size, "new videos added to database!", vetted_g_vids_size, "total,", unvetted_size, "unvetted.")  
 else:
     print("Not vetting videos!", final_json_size, "videos in database,", valid_vids_size, "unvetted.")

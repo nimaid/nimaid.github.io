@@ -31,4 +31,4 @@ print("Saving main database...")
 json_file["updated"] = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 with open(database_name, 'w') as f:
     json.dump(json_file, f)
-print("All done!")
+print("Saved cleaned main database!")
