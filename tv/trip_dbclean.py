@@ -5,7 +5,7 @@ from datetime import datetime
 import requests
 from random import shuffle
 
-import yt
+from libs import yt
 
 folder_dir = os.path.dirname(os.path.realpath(__file__))
 

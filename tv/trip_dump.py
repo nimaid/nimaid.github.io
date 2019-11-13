@@ -3,8 +3,8 @@ import json
 import os
 from datetime import datetime
 
-import yt
-import reddit_videos
+from libs import reddit_videos
+yt = reddit_videos.yt
 
 subreddit = 'trippyvideos'
 

@@ -1,6 +1,6 @@
 import praw
 
-import yt
+from . import yt
 
 reddit_client_id = 'EwDc71J3wNcQqw'
 reddit_client_secret = 'mB36bJ5cNX39zjcw0gLMPycTjzU'

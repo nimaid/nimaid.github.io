@@ -69,11 +69,11 @@
             }
         </style>
     </head>
-    <body style="background-image:url(static.gif);background-size:1000px;">
+    <body style="background-image:url(resources/static.gif);background-size:1000px;">
         <video autoplay muted loop id="bg_video">
             <source type="video/mp4" id="bg_video_source">
         </video>
-        <audio id="noise" src="noise.mp3" preload="auto" loop="loop"></audio>
+        <audio id="noise" src="resources/noise.mp3" preload="auto" loop="loop"></audio>
         <div id="player" class="videoContainer"></div>
         <div id="overlay_logo_container">
             <div id="overlay">
@@ -170,7 +170,7 @@
                     }
                     else
                     {
-                        link.href = 'default.ico';
+                        link.href = 'resources/default.ico';
                     }
                     document.getElementsByTagName('head')[0].appendChild(link);
                     
