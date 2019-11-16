@@ -2,6 +2,7 @@ import csv
 import json
 import os
 from datetime import datetime
+import webbrowser
 
 print("r/TrippyVideos Database Updater by nimaid (made for trip.nimaid.com)")
 
@@ -15,6 +16,11 @@ database_name = trip_dump.database_name
 
 final_json_size = len(clean_json["videos"])
 valid_vids_size = len(valid_vids)
+
+wb = webbrowser.get()
+open_in_browser = False
+
+youtube_link_base = "https://youtu.be/"
 
 def ask_question(question="Y/N", options=["Y", "N"], default=None):
     options = [x.upper() for x in options]
@@ -42,14 +48,26 @@ def save_progress(json_database, csv_dump):
         writer = csv.writer(f)
         writer.writerows([[i] for i in csv_dump])
 
-
 print("")
 vet_videos = ask_question("Would you like to vet dumped videos now? Y/N")
 unvetted_vids = []
 if(vet_videos == "Y"):
+    open_in_browser_resp = ask_question("Would you also like to automatically open them in your default browser? Y/[N]", default="N")
+    if open_in_browser_resp == "Y":
+        open_in_browser = True
+        print("Will open videos in default browser!\n")
+    else:
+        open_in_browser = False
+        print("Will not open videos!\n")
+    
     print("Vetting videos now! Enter 'Q' to exit...\n")
     for i, vid in enumerate(valid_vids):
-        print(valid_vids_size - i, "videos left! Current ID:", vid)
+        current_video_link = youtube_link_base + vid
+        print(valid_vids_size - i, "videos left! Current video:", current_video_link)
+        if open_in_browser:
+            print("Opening in browser...")
+            wb.open_new_tab(current_video_link)
+         
         vid_verdict = ask_question("Is this (G)ood, (B)ad, or should I (S)kip it? G/B/[S]/Q",
                                    options=["G", "B", "S", "Q"],
                                    default="S")
