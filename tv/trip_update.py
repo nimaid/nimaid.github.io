@@ -2,7 +2,15 @@ import csv
 import json
 import os
 from datetime import datetime
-import webbrowser
+
+try:
+    import webbrowser
+    can_use_webbrowser = True
+except ImportError:
+    can_use_webbrowser = False
+    print("WARNING: 'webbrowser' module not found!")
+    print("The program will still work, but it will not be able to automatically open videos.")
+    print("Run 'pip install webbrowser' to enable this feature!")
 
 print("r/TrippyVideos Database Updater by nimaid (made for trip.nimaid.com)")
 
@@ -17,8 +25,9 @@ database_name = trip_dump.database_name
 final_json_size = len(clean_json["videos"])
 valid_vids_size = len(valid_vids)
 
-wb = webbrowser.get()
-open_in_browser = False
+if can_use_webbrowser:
+    wb = webbrowser.get()
+    open_in_browser = False
 
 youtube_link_base = "https://youtu.be/"
 
@@ -52,22 +61,24 @@ print("")
 vet_videos = ask_question("Would you like to vet dumped videos now? Y/N")
 unvetted_vids = []
 if(vet_videos == "Y"):
-    open_in_browser_resp = ask_question("Would you also like to automatically open them in your default browser? Y/[N]", default="N")
-    if open_in_browser_resp == "Y":
-        open_in_browser = True
-        print("Will open videos in default browser!\n")
-    else:
-        open_in_browser = False
-        print("Will not open videos!\n")
+    if can_use_webbrowser:
+        open_in_browser_resp = ask_question("Would you also like to automatically open them in your default browser? Y/[N]", default="N")
+        if open_in_browser_resp == "Y":
+            open_in_browser = True
+            print("Will open videos in default browser!\n")
+        else:
+            open_in_browser = False
+            print("Will not open videos!\n")
     
     print("Vetting videos now! Enter 'Q' to exit...\n")
     for i, vid in enumerate(valid_vids):
         current_video_link = youtube_link_base + vid
         print(valid_vids_size - i, "videos left! Current video:", current_video_link)
-        if open_in_browser:
-            print("Opening in browser...")
-            wb.open_new_tab(current_video_link)
-         
+        if can_use_webbrowser:
+            if open_in_browser:
+                print("Opening in browser...")
+                wb.open_new_tab(current_video_link)
+        
         vid_verdict = ask_question("Is this (G)ood, (B)ad, or should I (S)kip it? G/B/[S]/Q",
                                    options=["G", "B", "S", "Q"],
                                    default="S")
