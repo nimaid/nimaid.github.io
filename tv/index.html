@@ -108,6 +108,11 @@
                 return http.status != 404;
             }
             
+            function is_valid_percent_string(input_string)
+            {
+                return /^(100(\.0{1,2})?|[1-9]?\d(\.\d{1,2})?)%$/.test(input_string);
+            }
+            
             var GET = {};
             var query = window.location.search.substring(1).split("&");
             for (var i = 0, max = query.length; i < max; i++)
@@ -145,6 +150,7 @@
             var intro_id = "";
             var videos_list = [];
             var no_intro = false;
+            var intro_opacity = "";
             $.ajax
             ({
                 dataType: "json",
@@ -212,6 +218,20 @@
                         intro_id = data.intro_video;
                         console.log("Intro video ID given...");
                         console.log(intro_id);
+                    }
+                    
+                    if (!no_intro)
+                    {
+                        if ((data.intro_opacity != undefined) && (is_valid_percent_string(data.intro_opacity)))
+                        {
+                            intro_opacity = data.intro_opacity;
+                            console.log("Logging intro opacity...");
+                        }
+                        else
+                        {
+                            intro_opacity = "50%";
+                            console.log("Intro opacity either invalid or missing, using '50%'...")
+                        }
                     }
                     
                     videos_list = data.videos;
@@ -437,7 +457,7 @@
                     document.getElementById("player").style.opacity = "0";
                     if (static_mp4 != undefined)
                     {
-                        document.getElementById("bg_video").style.filter = "opacity(50%)";
+                        document.getElementById("bg_video").style.filter = "opacity(".concat(intro_opacity, ")");
                     }
                     play_noise();
                     setTimeout(check_buffer_skip, buffer_check_delay);
@@ -450,7 +470,7 @@
                     if (is_first)
                     {
                         set_message("Welcome! Please click or use the spacebar to re-tune the channel.");
-                        document.getElementById("player").style.filter = "opacity(50%)";
+                        document.getElementById("player").style.filter = "opacity(".concat(intro_opacity, ")");
                         if (static_mp4 != undefined)
                         {
                             document.getElementById("bg_video").style.filter = "opacity(0%)";
