@@ -16,12 +16,18 @@ json_file = dict()
 with open(database_name, 'r') as f:
     json_file = json.load(f)
 old_json_size = len(json_file["videos"])
+old_json_bad_size = len(json_file["bad_videos"])
 print("Read", old_json_size, "OLD video IDs!\n")
 
-print("Pruning bad video ID's from main database...")
-json_file["videos"] = yt.remove_bad_ids(json_file["videos"])
+print("Pruning invalid/unwanted video ID's from main database...")
+json_file["videos"] = yt.remove_bad_ids_and_channels(json_file["videos"], json_file["bad_channels"])
 new_json_size = len(json_file["videos"])
-print("Removed", old_json_size - new_json_size,"bad IDs from main database, only", new_json_size, "remaining.\n")
+print("Removed", old_json_size - new_json_size,"invalid/unwanted IDs from main database, only", new_json_size, "remaining.\n")
+
+print("Pruning invalid/unwanted bad video ID's from main database...")
+json_file["bad_videos"] = yt.remove_bad_ids_and_channels(json_file["bad_videos"], json_file["bad_channels"])
+new_json_bad_size = len(json_file["bad_videos"])
+print("Removed", old_json_bad_size - new_json_bad_size,"invalid/unwanted bad IDs from main database, only", new_json_bad_size, "remaining.\n")
 
 print("Shuffling ID's...")
 shuffle(json_file["videos"])

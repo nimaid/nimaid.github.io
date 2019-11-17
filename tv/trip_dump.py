@@ -41,8 +41,8 @@ all_vids = [x for x in all_vids if x not in clean_json["bad_videos"]]
 removed_size = len(all_vids)
 print("Removed", new_size - removed_size, "existing IDs, only", removed_size, "remaining.\n")
 
-print("Pruning bad video ID's...")
-valid_vids = yt.remove_bad_ids(all_vids)
+print("Pruning invalid/unwanted dumped video ID's...")
+valid_vids = yt.remove_bad_ids_and_channels(all_vids, clean_json["bad_channels"])
 prune_size = len(valid_vids)
 print("Removed", removed_size - prune_size, "bad IDs, only", prune_size, "remaining.\n")
 
