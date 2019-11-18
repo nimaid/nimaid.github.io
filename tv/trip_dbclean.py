@@ -19,8 +19,8 @@ old_json_size = len(json_file["videos"])
 old_json_bad_size = len(json_file["bad_videos"])
 print("Read", old_json_size, "OLD video IDs!\n")
 
-print("Pruning invalid/unwanted video ID's from main database...")
-json_file["videos"] = yt.remove_bad_ids_and_channels(json_file["videos"], json_file["bad_channels"])
+print("Pruning invalid video ID's from main database...")
+json_file["videos"] = yt.remove_bad_ids(json_file["videos"])
 new_json_size = len(json_file["videos"])
 print("Removed", old_json_size - new_json_size,"invalid/unwanted IDs from main database, only", new_json_size, "remaining.\n")
 
