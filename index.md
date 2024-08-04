@@ -1,3 +1,6 @@
+# My Pages
+<a href="https://nimaid.blogspot.com/">[nimaid's Blog] My blog, where I document some things!</a>
+
 # My (Favorite) Projects
 <a href="https://nimaid.github.io/backrooms">[THE NEW REVOLUTION RACEWAY] The original Backrooms blog post, fully restored.</a>
 
