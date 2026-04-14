@@ -1,0 +1,69 @@
+# Perfect Flower Item Codes: Part 1/2
+```
++====================+========+=========+================+
+|        Type        | Color  | Genome  |   Item Code    |
++====================+========+=========+================+
+|        Rose        | White  | 1-0-1-2 | FFFFD100000F16 |
+|        Rose        |  Pink  | 1-2-2-1 | FFFF7D00000F1C |
+|        Rose        |  Red   | 1-2-2-0 | FFFF3D00000F18 |
+|        Rose        | Orange | 2-2-1-0 | FFFF1F00000F1E |
+|        Rose        | Yellow | 1-2-1-1 | FFFF5D00000F1A |
+|        Rose        |  Blue  | 2-2-2-0 | FFFF3F00000F24 |
+|        Rose        | Purple | 1-1-2-2 | FFFFF500000F20 |
+|        Rose        | Black  | 2-1-2-0 | FFFF3700000F22 |
+|        Rose        |  Gold  | 0-0-0-0 | FFFF0000000F26 |
+|        Mum         | White  |  0-1-2  | FFFF3400000F54 |
+|        Mum         |  Pink  |  1-1-2  | FFFF3500000F5A |
+|        Mum         |  Red   |  1-1-1  | FFFF1500000F5C |
+|        Mum         | Yellow |  1-1-0  | FFFF0500000F56 |
+|        Mum         | Green  |  2-2-0  | FFFF0F00000F5E |
+|        Mum         | Purple |  2-1-0  | FFFF0700000F58 |
+|      Hyacinth      | White  |  1-0-2  | FFFF3100000F46 |
+|      Hyacinth      |  Pink  |  1-0-1  | FFFF1100000F4A |
+|      Hyacinth      |  Red   |  2-1-1  | FFFF1700000F4E |
+|      Hyacinth      | Orange |  1-2-0  | FFFF0D00000F4C |
+|      Hyacinth      | Yellow |  1-2-1  | FFFF1D00000F48 |
+|      Hyacinth      |  Blue  |  2-1-0  | FFFF0700000F50 |
+|      Hyacinth      | Purple |  2-2-1  | FFFF1700000F52 |
+|       Pansy        | White  |  0-0-1  | FFFF1000000F0A |
+|       Pansy        |  Red   |  2-1-1  | FFFF1700000F0C |
+|       Pansy        | Orange |  2-2-1  | FFFF1F00000F10 |
+|       Pansy        | Yellow |  1-2-2  | FFFF3D00000F0E |
+|       Pansy        |  Blue  |  1-0-2  | FFFF3100000F14 |
+|       Pansy        | Purple |  2-1-2  | FFFF3700000F12 |
++--------------------+--------+---------+----------------+
+```
+
+# Perfect Flower Item Codes: Part 2/2
+```
++====================+========+=========+================+
+|        Type        | Color  | Genome  |   Item Code    |
++====================+========+=========+================+
+|     Windflower     | White  |  0-0-1  | FFFF1000000F3A |
+|     Windflower     |  Pink  |  1-1-2  | FFFF3500000F40 |
+|     Windflower     |  Red   |  2-1-1  | FFFF1F00000F42 |
+|     Windflower     | Orange |  1-2-2  | FFFF3D00000F3C |
+|     Windflower     |  Blue  |  1-0-2  | FFFF3100000F3E |
+|     Windflower     | Purple |  2-1-2  | FFFF3700000F44 |
+|       Tulip        | White  |  1-0-2  | FFFF3100000EFC |
+|       Tulip        |  Pink  |  1-0-1  | FFFF1100000F02 |
+|       Tulip        |  Red   |  2-1-1  | FFFF1700000EFE |
+|       Tulip        | Orange |  1-2-0  | FFFF0D00000F04 |
+|       Tulip        | Yellow |  1-2-1  | FFFF1D00000F00 |
+|       Tulip        | Purple |  2-2-1  | FFFF1F00000F06 |
+|       Tulip        | Black  |  2-1-0  | FFFF3700000F08 |
+|       Cosmo        | White  |  0-1-2  | FFFF3400000EF2 |
+|       Cosmo        |  Pink  |  1-1-2  | FFFF3500000EF6 |
+|       Cosmo        |  Red   |  2-1-2  | FFFF3700000EF0 |
+|       Cosmo        | Orange |  2-1-0  | FFFF0700000EF8 |
+|       Cosmo        | Yellow |  0-1-1  | FFFF1400000EF4 |
+|       Cosmo        | Black  |  2-2-0  | FFFF0F00000EFA |
+|        Lily        | White  |  1-0-2  | FFFF3100000F2E |
+|        Lily        |  Pink  |  1-0-1  | FFFF1100000F34 |
+|        Lily        |  Red   |  1-0-0  | FFFF0100000F30 |
+|        Lily        | Orange |  1-1-0  | FFFF0500000F36 |
+|        Lily        | Yellow |  1-1-1  | FFFF1500000F32 |
+|        Lily        | Black  |  2-0-0  | FFFF0300000F38 |
+| Lily-of-the-Valley | White  | 0-0-0-0 | FFFF0000001DE3 |
++--------------------+--------+---------+----------------+
+```
