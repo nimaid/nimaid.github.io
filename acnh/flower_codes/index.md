@@ -73,11 +73,6 @@ title: ACNH Perfect Flower Item Codes
             <td>FFFF3700000F22</td>
         </tr>
         <tr>
-            <td>Gold</td>
-            <td>0-0-0-0</td>
-            <td>FFFF0000000F26</td>
-        </tr>
-        <tr>
             <td>Purple</td>
             <td>1-1-2-2</td>
             <td>FFFFF500000F20</td>
