@@ -16,9 +16,7 @@
     <b>Perfect Flower Item Code Tables</b>
 </summary>
 
-<p align="center">
-    <h2>Roses</h2>
-</p>
+<h2>Roses</h2>
 
 <table style="margin: 0 auto;">
     <thead>
