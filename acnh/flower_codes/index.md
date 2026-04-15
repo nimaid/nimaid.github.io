@@ -18,17 +18,58 @@
 
 ## Roses
 
-| Color | Genome | Item Code |
-| :-: | :-: | :-: |
-| White | 1-0-1-2 | FFFFD100000F16 |
-| Pink | 1-2-2-1 | FFFF7D00000F1C |
-| Red | 1-2-2-0 | FFFF3D00000F18 |
-| Orange | 2-2-1-0 | FFFF1F00000F1E |
-| Yellow | 1-2-1-1 | FFFF5D00000F1A |
-| Blue | 2-2-2-0 | FFFF3F00000F24 |
-| Purple | 1-1-2-2 | FFFFF500000F20 |
-| Black | 2-1-2-0 | FFFF3700000F22 |
-| Gold | 0-0-0-0 | FFFF0000000F26 |
+<table>
+    <tr>
+        <th>Color</th>
+        <td>Genome</td>
+        <td>Item Code</td>
+    </tr>
+    <tr>
+        <th>White</th>
+        <td>1-0-1-2</td>
+        <td>FFFFD100000F16</td>
+    </tr>
+    <tr>
+        <th>Pink</th>
+        <td>1-2-2-1</td>
+        <td>FFFF7D00000F1C</td>
+    </tr>
+    <tr>
+        <th>Red</th>
+        <td>1-2-2-0</td>
+        <td>FFFF3D00000F18</td>
+    </tr>
+    <tr>
+        <th>Orange</th>
+        <td>2-2-1-0</td>
+        <td>FFFF1F00000F1E</td>
+    </tr>
+    <tr>
+        <th>Yellow</th>
+        <td>1-2-1-1</td>
+        <td>FFFF5D00000F1A</td>
+    </tr>
+    <tr>
+        <th>Blue</th>
+        <td>2-2-2-0</td>
+        <td>FFFF3F00000F24</td>
+    </tr>
+    <tr>
+        <th>Purple</th>
+        <td>1-1-2-2</td>
+        <td>FFFFF500000F20</td>
+    </tr>
+    <tr>
+        <th>Black</th>
+        <td>2-1-2-0</td>
+        <td>FFFF3700000F22</td>
+    </tr>
+    <tr>
+        <th>Gold</th>
+        <td>0-0-0-0</td>
+        <td>FFFF0000000F26</td>
+    </tr>
+</table>
 
 ## Mums
 
