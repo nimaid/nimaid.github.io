@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "ACNH Perfect Flower Item Codes"
+title: ACNH Perfect Flower Item Codes
 ---
 
 # ACNH Perfect Flower Item Codes
