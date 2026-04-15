@@ -26,71 +26,71 @@ title: ACNH Perfect Flower Item Codes
 <table>
     <thead>
         <tr>
-            <th style="text-align: center;">Color</th>
-            <th style="text-align: center;">Genome</th>
-            <th style="text-align: center;">Item Code</th>
+            <th>Color</th>
+            <th>Genome</th>
+            <th>Item Code</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="text-align: center;">White</td>
-            <td style="text-align: center;">1-0-1-2</td>
-            <td style="text-align: center;">FFFFD100000F16</td>
+            <td>White</td>
+            <td>1-0-1-2</td>
+            <td>FFFFD100000F16</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Pink</td>
-            <td style="text-align: center;">1-2-2-1</td>
-            <td style="text-align: center;">FFFF7D00000F1C</td>
+            <td>Pink</td>
+            <td>1-2-2-1</td>
+            <td>FFFF7D00000F1C</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Red</td>
-            <td style="text-align: center;">1-2-2-0</td>
-            <td style="text-align: center;">FFFF3D00000F18</td>
+            <td>Red</td>
+            <td>1-2-2-0</td>
+            <td>FFFF3D00000F18</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Orange</td>
-            <td style="text-align: center;">2-2-1-0</td>
-            <td style="text-align: center;">FFFF1F00000F1E</td>
+            <td>Orange</td>
+            <td>2-2-1-0</td>
+            <td>FFFF1F00000F1E</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Yellow</td>
-            <td style="text-align: center;">1-2-1-1</td>
-            <td style="text-align: center;">FFFF5D00000F1A</td>
+            <td>Yellow</td>
+            <td>1-2-1-1</td>
+            <td>FFFF5D00000F1A</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Blue</td>
-            <td style="text-align: center;">2-2-2-0</td>
-            <td style="text-align: center;">FFFF3F00000F24</td>
+            <td>Blue</td>
+            <td>2-2-2-0</td>
+            <td>FFFF3F00000F24</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Purple</td>
-            <td style="text-align: center;">1-1-2-2</td>
-            <td style="text-align: center;">FFFFF500000F20</td>
+            <td>Purple</td>
+            <td>1-1-2-2</td>
+            <td>FFFFF500000F20</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Black</td>
-            <td style="text-align: center;">2-1-2-0</td>
-            <td style="text-align: center;">FFFF3700000F22</td>
+            <td>Black</td>
+            <td>2-1-2-0</td>
+            <td>FFFF3700000F22</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Gold</td>
-            <td style="text-align: center;">0-0-0-0</td>
-            <td style="text-align: center;">FFFF0000000F26</td>
+            <td>Gold</td>
+            <td>0-0-0-0</td>
+            <td>FFFF0000000F26</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Purple</td>
-            <td style="text-align: center;">1-1-2-2</td>
-            <td style="text-align: center;">FFFFF500000F20</td>
+            <td>Purple</td>
+            <td>1-1-2-2</td>
+            <td>FFFFF500000F20</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Black</td>
-            <td style="text-align: center;">2-1-2-0</td>
-            <td style="text-align: center;">FFFF3700000F22</td>
+            <td>Black</td>
+            <td>2-1-2-0</td>
+            <td>FFFF3700000F22</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Gold</td>
-            <td style="text-align: center;">0-0-0-0</td>
-            <td style="text-align: center;">FFFF0000000F26</td>
+            <td>Gold</td>
+            <td>0-0-0-0</td>
+            <td>FFFF0000000F26</td>
         </tr>
     </tbody>
 </table>
@@ -100,41 +100,41 @@ title: ACNH Perfect Flower Item Codes
 <table>
     <thead>
         <tr>
-            <th style="text-align: center;">Color</th>
-            <th style="text-align: center;">Genome</th>
-            <th style="text-align: center;">Item Code</th>
+            <th>Color</th>
+            <th>Genome</th>
+            <th>Item Code</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="text-align: center;">White</td>
-            <td style="text-align: center;">0-1-2</td>
-            <td style="text-align: center;">FFFF3400000F54</td>
+            <td>White</td>
+            <td>0-1-2</td>
+            <td>FFFF3400000F54</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Pink</td>
-            <td style="text-align: center;">1-1-2</td>
-            <td style="text-align: center;">FFFF3500000F5A</td>
+            <td>Pink</td>
+            <td>1-1-2</td>
+            <td>FFFF3500000F5A</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Red</td>
-            <td style="text-align: center;">1-1-1</td>
-            <td style="text-align: center;">FFFF1500000F5C</td>
+            <td>Red</td>
+            <td>1-1-1</td>
+            <td>FFFF1500000F5C</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Yellow</td>
-            <td style="text-align: center;">1-1-0</td>
-            <td style="text-align: center;">FFFF0500000F56</td>
+            <td>Yellow</td>
+            <td>1-1-0</td>
+            <td>FFFF0500000F56</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Green</td>
-            <td style="text-align: center;">2-2-0</td>
-            <td style="text-align: center;">FFFF0F00000F5E</td>
+            <td>Green</td>
+            <td>2-2-0</td>
+            <td>FFFF0F00000F5E</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Purple</td>
-            <td style="text-align: center;">2-1-0</td>
-            <td style="text-align: center;">FFFF0700000F58</td>
+            <td>Purple</td>
+            <td>2-1-0</td>
+            <td>FFFF0700000F58</td>
         </tr>
     </tbody>
 </table>
@@ -144,46 +144,46 @@ title: ACNH Perfect Flower Item Codes
 <table>
     <thead>
         <tr>
-            <th style="text-align: center;">Color</th>
-            <th style="text-align: center;">Genome</th>
-            <th style="text-align: center;">Item Code</th>
+            <th>Color</th>
+            <th>Genome</th>
+            <th>Item Code</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="text-align: center;">White</td>
-            <td style="text-align: center;">1-0-2</td>
-            <td style="text-align: center;">FFFF3100000F46</td>
+            <td>White</td>
+            <td>1-0-2</td>
+            <td>FFFF3100000F46</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Pink</td>
-            <td style="text-align: center;">1-0-1</td>
-            <td style="text-align: center;">FFFF1100000F4A</td>
+            <td>Pink</td>
+            <td>1-0-1</td>
+            <td>FFFF1100000F4A</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Red</td>
-            <td style="text-align: center;">2-1-1</td>
-            <td style="text-align: center;">FFFF1700000F4E</td>
+            <td>Red</td>
+            <td>2-1-1</td>
+            <td>FFFF1700000F4E</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Orange</td>
-            <td style="text-align: center;">1-2-0</td>
-            <td style="text-align: center;">FFFF0D00000F4C</td>
+            <td>Orange</td>
+            <td>1-2-0</td>
+            <td>FFFF0D00000F4C</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Yellow</td>
-            <td style="text-align: center;">1-2-1</td>
-            <td style="text-align: center;">FFFF1D00000F48</td>
+            <td>Yellow</td>
+            <td>1-2-1</td>
+            <td>FFFF1D00000F48</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Blue</td>
-            <td style="text-align: center;">2-1-0</td>
-            <td style="text-align: center;">FFFF0700000F50</td>
+            <td>Blue</td>
+            <td>2-1-0</td>
+            <td>FFFF0700000F50</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Purple</td>
-            <td style="text-align: center;">2-2-1</td>
-            <td style="text-align: center;">FFFF1700000F52</td>
+            <td>Purple</td>
+            <td>2-2-1</td>
+            <td>FFFF1700000F52</td>
         </tr>
     </tbody>
 </table>
@@ -193,41 +193,41 @@ title: ACNH Perfect Flower Item Codes
 <table>
     <thead>
         <tr>
-            <th style="text-align: center;">Color</th>
-            <th style="text-align: center;">Genome</th>
-            <th style="text-align: center;">Item Code</th>
+            <th>Color</th>
+            <th>Genome</th>
+            <th>Item Code</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="text-align: center;">White</td>
-            <td style="text-align: center;">0-0-1</td>
-            <td style="text-align: center;">FFFF1000000F0A</td>
+            <td>White</td>
+            <td>0-0-1</td>
+            <td>FFFF1000000F0A</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Red</td>
-            <td style="text-align: center;">2-1-1</td>
-            <td style="text-align: center;">FFFF1700000F0C</td>
+            <td>Red</td>
+            <td>2-1-1</td>
+            <td>FFFF1700000F0C</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Orange</td>
-            <td style="text-align: center;">2-2-1</td>
-            <td style="text-align: center;">FFFF1F00000F10</td>
+            <td>Orange</td>
+            <td>2-2-1</td>
+            <td>FFFF1F00000F10</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Yellow</td>
-            <td style="text-align: center;">1-2-2</td>
-            <td style="text-align: center;">FFFF3D00000F0E</td>
+            <td>Yellow</td>
+            <td>1-2-2</td>
+            <td>FFFF3D00000F0E</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Blue</td>
-            <td style="text-align: center;">1-0-2</td>
-            <td style="text-align: center;">FFFF3100000F14</td>
+            <td>Blue</td>
+            <td>1-0-2</td>
+            <td>FFFF3100000F14</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Purple</td>
-            <td style="text-align: center;">2-1-2</td>
-            <td style="text-align: center;">FFFF3700000F12</td>
+            <td>Purple</td>
+            <td>2-1-2</td>
+            <td>FFFF3700000F12</td>
         </tr>
     </tbody>
 </table>
@@ -237,41 +237,41 @@ title: ACNH Perfect Flower Item Codes
 <table>
     <thead>
         <tr>
-            <th style="text-align: center;">Color</th>
-            <th style="text-align: center;">Genome</th>
-            <th style="text-align: center;">Item Code</th>
+            <th>Color</th>
+            <th>Genome</th>
+            <th>Item Code</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="text-align: center;">White</td>
-            <td style="text-align: center;">0-0-1</td>
-            <td style="text-align: center;">FFFF1000000F3A</td>
+            <td>White</td>
+            <td>0-0-1</td>
+            <td>FFFF1000000F3A</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Pink</td>
-            <td style="text-align: center;">1-1-2</td>
-            <td style="text-align: center;">FFFF3500000F40</td>
+            <td>Pink</td>
+            <td>1-1-2</td>
+            <td>FFFF3500000F40</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Red</td>
-            <td style="text-align: center;">2-1-1</td>
-            <td style="text-align: center;">FFFF1F00000F42</td>
+            <td>Red</td>
+            <td>2-1-1</td>
+            <td>FFFF1F00000F42</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Orange</td>
-            <td style="text-align: center;">1-2-2</td>
-            <td style="text-align: center;">FFFF3D00000F3C</td>
+            <td>Orange</td>
+            <td>1-2-2</td>
+            <td>FFFF3D00000F3C</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Blue</td>
-            <td style="text-align: center;">1-0-2</td>
-            <td style="text-align: center;">FFFF3100000F3E</td>
+            <td>Blue</td>
+            <td>1-0-2</td>
+            <td>FFFF3100000F3E</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Purple</td>
-            <td style="text-align: center;">2-1-2</td>
-            <td style="text-align: center;">FFFF3700000F44</td>
+            <td>Purple</td>
+            <td>2-1-2</td>
+            <td>FFFF3700000F44</td>
         </tr>
     </tbody>
 </table>
@@ -281,46 +281,46 @@ title: ACNH Perfect Flower Item Codes
 <table>
     <thead>
         <tr>
-            <th style="text-align: center;">Color</th>
-            <th style="text-align: center;">Genome</th>
-            <th style="text-align: center;">Item Code</th>
+            <th>Color</th>
+            <th>Genome</th>
+            <th>Item Code</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="text-align: center;">White</td>
-            <td style="text-align: center;">1-0-2</td>
-            <td style="text-align: center;">FFFF3100000EFC</td>
+            <td>White</td>
+            <td>1-0-2</td>
+            <td>FFFF3100000EFC</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Pink</td>
-            <td style="text-align: center;">1-0-1</td>
-            <td style="text-align: center;">FFFF1100000F02</td>
+            <td>Pink</td>
+            <td>1-0-1</td>
+            <td>FFFF1100000F02</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Red</td>
-            <td style="text-align: center;">2-1-1</td>
-            <td style="text-align: center;">FFFF1700000EFE</td>
+            <td>Red</td>
+            <td>2-1-1</td>
+            <td>FFFF1700000EFE</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Orange</td>
-            <td style="text-align: center;">1-2-0</td>
-            <td style="text-align: center;">FFFF0D00000F04</td>
+            <td>Orange</td>
+            <td>1-2-0</td>
+            <td>FFFF0D00000F04</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Yellow</td>
-            <td style="text-align: center;">1-2-1</td>
-            <td style="text-align: center;">FFFF1D00000F00</td>
+            <td>Yellow</td>
+            <td>1-2-1</td>
+            <td>FFFF1D00000F00</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Purple</td>
-            <td style="text-align: center;">2-2-1</td>
-            <td style="text-align: center;">FFFF1F00000F06</td>
+            <td>Purple</td>
+            <td>2-2-1</td>
+            <td>FFFF1F00000F06</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Black</td>
-            <td style="text-align: center;">2-1-0</td>
-            <td style="text-align: center;">FFFF3700000F08</td>
+            <td>Black</td>
+            <td>2-1-0</td>
+            <td>FFFF3700000F08</td>
         </tr>
     </tbody>
 </table>
@@ -330,41 +330,41 @@ title: ACNH Perfect Flower Item Codes
 <table>
     <thead>
         <tr>
-            <th style="text-align: center;">Color</th>
-            <th style="text-align: center;">Genome</th>
-            <th style="text-align: center;">Item Code</th>
+            <th>Color</th>
+            <th>Genome</th>
+            <th>Item Code</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="text-align: center;">White</td>
-            <td style="text-align: center;">0-1-2</td>
-            <td style="text-align: center;">FFFF3400000EF2</td>
+            <td>White</td>
+            <td>0-1-2</td>
+            <td>FFFF3400000EF2</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Pink</td>
-            <td style="text-align: center;">1-1-2</td>
-            <td style="text-align: center;">FFFF3500000EF6</td>
+            <td>Pink</td>
+            <td>1-1-2</td>
+            <td>FFFF3500000EF6</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Red</td>
-            <td style="text-align: center;">2-1-2</td>
-            <td style="text-align: center;">FFFF3700000EF0</td>
+            <td>Red</td>
+            <td>2-1-2</td>
+            <td>FFFF3700000EF0</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Orange</td>
-            <td style="text-align: center;">2-1-0</td>
-            <td style="text-align: center;">FFFF0700000EF8</td>
+            <td>Orange</td>
+            <td>2-1-0</td>
+            <td>FFFF0700000EF8</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Yellow</td>
-            <td style="text-align: center;">0-1-1</td>
-            <td style="text-align: center;">FFFF1400000EF4</td>
+            <td>Yellow</td>
+            <td>0-1-1</td>
+            <td>FFFF1400000EF4</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Black</td>
-            <td style="text-align: center;">2-2-0</td>
-            <td style="text-align: center;">FFFF0F00000EFA</td>
+            <td>Black</td>
+            <td>2-2-0</td>
+            <td>FFFF0F00000EFA</td>
         </tr>
     </tbody>
 </table>
@@ -374,41 +374,41 @@ title: ACNH Perfect Flower Item Codes
 <table>
     <thead>
         <tr>
-            <th style="text-align: center;">Color</th>
-            <th style="text-align: center;">Genome</th>
-            <th style="text-align: center;">Item Code</th>
+            <th>Color</th>
+            <th>Genome</th>
+            <th>Item Code</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="text-align: center;">White</td>
-            <td style="text-align: center;">1-0-2</td>
-            <td style="text-align: center;">FFFF3100000F2E</td>
+            <td>White</td>
+            <td>1-0-2</td>
+            <td>FFFF3100000F2E</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Pink</td>
-            <td style="text-align: center;">1-0-1</td>
-            <td style="text-align: center;">FFFF1100000F34</td>
+            <td>Pink</td>
+            <td>1-0-1</td>
+            <td>FFFF1100000F34</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Red</td>
-            <td style="text-align: center;">1-0-0</td>
-            <td style="text-align: center;">FFFF0100000F30</td>
+            <td>Red</td>
+            <td>1-0-0</td>
+            <td>FFFF0100000F30</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Orange</td>
-            <td style="text-align: center;">1-1-0</td>
-            <td style="text-align: center;">FFFF0500000F36</td>
+            <td>Orange</td>
+            <td>1-1-0</td>
+            <td>FFFF0500000F36</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Yellow</td>
-            <td style="text-align: center;">1-1-1</td>
-            <td style="text-align: center;">FFFF1500000F32</td>
+            <td>Yellow</td>
+            <td>1-1-1</td>
+            <td>FFFF1500000F32</td>
         </tr>
         <tr>
-            <td style="text-align: center;">Black</td>
-            <td style="text-align: center;">2-0-0</td>
-            <td style="text-align: center;">FFFF0300000F38</td>
+            <td>Black</td>
+            <td>2-0-0</td>
+            <td>FFFF0300000F38</td>
         </tr>
     </tbody>
 </table>
@@ -418,16 +418,16 @@ title: ACNH Perfect Flower Item Codes
 <table>
     <thead>
         <tr>
-            <th style="text-align: center;">Color</th>
-            <th style="text-align: center;">Genome</th>
-            <th style="text-align: center;">Item Code</th>
+            <th>Color</th>
+            <th>Genome</th>
+            <th>Item Code</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="text-align: center;">White</td>
-            <td style="text-align: center;">0-0-0-0</td>
-            <td style="text-align: center;">FFFF0000001DE3</td>
+            <td>White</td>
+            <td>0-0-0-0</td>
+            <td>FFFF0000001DE3</td>
         </tr>
     </tbody>
 </table>
@@ -438,11 +438,11 @@ title: ACNH Perfect Flower Item Codes
 
 Avoid using (and especially gifting) the flowers found on treasure islands; they almost always have invalid genomes. Get your flowers through an order bot instead. When you order, don't do it like this...
 
-<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"><code>!order blue-rose plant</code></pre>
+<pre><code>!order blue-rose plant</code></pre>
 
 ... as this gives a flower with an invalid genome. Instead, copy the code from the chart and order like this...
 
-<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"><code>!ordercat FFFF3F00000F24</code></pre>
+<pre><code>!ordercat FFFF3F00000F24</code></pre>
 
 ... as this will give you a flower with a valid genome in addition to a near 100% chance of cloning itself overnight when planted. Plus, the flower will be ridiculously shiny!
 
@@ -458,11 +458,11 @@ You can use these convenient premade commands to quickly and easily get sets of 
 
 <b>Part 1/2: Roses, Tulips, Hyacinths, Lilies, Windflowers, Mums</b>
 
-<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"><code>ordercat FFFFD100000F16 FFFF7D00000F1C FFFF3D00000F18 FFFF1F00000F1E FFFF5D00000F1A FFFF3F00000F24 FFFFF500000F20 FFFF3700000F22 FFFF3100000EFC FFFF1100000F02 FFFF1700000EFE FFFF0D00000F04 FFFF1D00000F00 FFFF1F00000F06 FFFF3700000F08 FFFF3100000F46 FFFF1100000F4A FFFF1700000F4E FFFF0D00000F4C FFFF1D00000F48 FFFF0700000F50 FFFF1700000F52 FFFF3100000F2E FFFF1100000F34 FFFF0100000F30 FFFF0500000F36 FFFF1500000F32 FFFF0300000F38 FFFF1000000F3A FFFF3500000F40 FFFF1F00000F42 FFFF3D00000F3C FFFF3100000F3E FFFF3700000F44 FFFF3400000F54 FFFF3500000F5A FFFF1500000F5C FFFF0500000F56 FFFF0F00000F5E FFFF0700000F58</code></pre>
+<pre><code>ordercat FFFFD100000F16 FFFF7D00000F1C FFFF3D00000F18 FFFF1F00000F1E FFFF5D00000F1A FFFF3F00000F24 FFFFF500000F20 FFFF3700000F22 FFFF3100000EFC FFFF1100000F02 FFFF1700000EFE FFFF0D00000F04 FFFF1D00000F00 FFFF1F00000F06 FFFF3700000F08 FFFF3100000F46 FFFF1100000F4A FFFF1700000F4E FFFF0D00000F4C FFFF1D00000F48 FFFF0700000F50 FFFF1700000F52 FFFF3100000F2E FFFF1100000F34 FFFF0100000F30 FFFF0500000F36 FFFF1500000F32 FFFF0300000F38 FFFF1000000F3A FFFF3500000F40 FFFF1F00000F42 FFFF3D00000F3C FFFF3100000F3E FFFF3700000F44 FFFF3400000F54 FFFF3500000F5A FFFF1500000F5C FFFF0500000F56 FFFF0F00000F5E FFFF0700000F58</code></pre>
 
 **Part 2/2: Cosmos, Pansies, Golden Watering Cans**
 
-<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"><code>ordercat FFFF3400000EF2 FFFF3500000EF6 FFFF3700000EF0 FFFF0700000EF8 FFFF1400000EF4 FFFF0F00000EFA FFFF1000000F0A FFFF1700000F0C FFFF1F00000F10 FFFF3D00000F0E FFFF3100000F14 FFFF3700000F12 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155</code></pre>
+<pre><code>ordercat FFFF3400000EF2 FFFF3500000EF6 FFFF3700000EF0 FFFF0700000EF8 FFFF1400000EF4 FFFF0F00000EFA FFFF1000000F0A FFFF1700000F0C FFFF1F00000F10 FFFF3D00000F0E FFFF3100000F14 FFFF3700000F12 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155 2155</code></pre>
 
 </details>
 
@@ -474,43 +474,43 @@ You can use these convenient premade commands to quickly and easily get sets of 
 
 <b>Roses (5 each)</b>
 
-<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"><code>ordercat FFFFD100000F16 FFFFD100000F16 FFFFD100000F16 FFFFD100000F16 FFFFD100000F16 FFFF7D00000F1C FFFF7D00000F1C FFFF7D00000F1C FFFF7D00000F1C FFFF7D00000F1C FFFF3D00000F18 FFFF3D00000F18 FFFF3D00000F18 FFFF3D00000F18 FFFF3D00000F18 FFFF1F00000F1E FFFF1F00000F1E FFFF1F00000F1E FFFF1F00000F1E FFFF1F00000F1E FFFF5D00000F1A FFFF5D00000F1A FFFF5D00000F1A FFFF5D00000F1A FFFF5D00000F1A FFFF3F00000F24 FFFF3F00000F24 FFFF3F00000F24 FFFF3F00000F24 FFFF3F00000F24 FFFFF500000F20 FFFFF500000F20 FFFFF500000F20 FFFFF500000F20 FFFFF500000F20 FFFF3700000F22 FFFF3700000F22 FFFF3700000F22 FFFF3700000F22 FFFF3700000F22</code></pre>
+<pre><code>ordercat FFFFD100000F16 FFFFD100000F16 FFFFD100000F16 FFFFD100000F16 FFFFD100000F16 FFFF7D00000F1C FFFF7D00000F1C FFFF7D00000F1C FFFF7D00000F1C FFFF7D00000F1C FFFF3D00000F18 FFFF3D00000F18 FFFF3D00000F18 FFFF3D00000F18 FFFF3D00000F18 FFFF1F00000F1E FFFF1F00000F1E FFFF1F00000F1E FFFF1F00000F1E FFFF1F00000F1E FFFF5D00000F1A FFFF5D00000F1A FFFF5D00000F1A FFFF5D00000F1A FFFF5D00000F1A FFFF3F00000F24 FFFF3F00000F24 FFFF3F00000F24 FFFF3F00000F24 FFFF3F00000F24 FFFFF500000F20 FFFFF500000F20 FFFFF500000F20 FFFFF500000F20 FFFFF500000F20 FFFF3700000F22 FFFF3700000F22 FFFF3700000F22 FFFF3700000F22 FFFF3700000F22</code></pre>
 
 <b>Mums (6-7 each)</b>
 
-<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"><code>ordercat FFFF3400000F54 FFFF3400000F54 FFFF3400000F54 FFFF3400000F54 FFFF3400000F54 FFFF3400000F54 FFFF3500000F5A FFFF3500000F5A FFFF3500000F5A FFFF3500000F5A FFFF3500000F5A FFFF3500000F5A FFFF1500000F5C FFFF1500000F5C FFFF1500000F5C FFFF1500000F5C FFFF1500000F5C FFFF1500000F5C FFFF1500000F5C FFFF0500000F56 FFFF0500000F56 FFFF0500000F56 FFFF0500000F56 FFFF0500000F56 FFFF0500000F56 FFFF0500000F56 FFFF0F00000F5E FFFF0F00000F5E FFFF0F00000F5E FFFF0F00000F5E FFFF0F00000F5E FFFF0F00000F5E FFFF0F00000F5E FFFF0700000F58 FFFF0700000F58 FFFF0700000F58 FFFF0700000F58 FFFF0700000F58 FFFF0700000F58 FFFF0700000F58</code></pre>
+<pre><code>ordercat FFFF3400000F54 FFFF3400000F54 FFFF3400000F54 FFFF3400000F54 FFFF3400000F54 FFFF3400000F54 FFFF3500000F5A FFFF3500000F5A FFFF3500000F5A FFFF3500000F5A FFFF3500000F5A FFFF3500000F5A FFFF1500000F5C FFFF1500000F5C FFFF1500000F5C FFFF1500000F5C FFFF1500000F5C FFFF1500000F5C FFFF1500000F5C FFFF0500000F56 FFFF0500000F56 FFFF0500000F56 FFFF0500000F56 FFFF0500000F56 FFFF0500000F56 FFFF0500000F56 FFFF0F00000F5E FFFF0F00000F5E FFFF0F00000F5E FFFF0F00000F5E FFFF0F00000F5E FFFF0F00000F5E FFFF0F00000F5E FFFF0700000F58 FFFF0700000F58 FFFF0700000F58 FFFF0700000F58 FFFF0700000F58 FFFF0700000F58 FFFF0700000F58</code></pre>
 
 <b>Cosmos (6-7 each)</b>
 
-<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"><code>ordercat FFFF3400000EF2 FFFF3400000EF2 FFFF3400000EF2 FFFF3400000EF2 FFFF3400000EF2 FFFF3400000EF2 FFFF3500000EF6 FFFF3500000EF6 FFFF3500000EF6 FFFF3500000EF6 FFFF3500000EF6 FFFF3500000EF6 FFFF3500000EF6 FFFF3700000EF0 FFFF3700000EF0 FFFF3700000EF0 FFFF3700000EF0 FFFF3700000EF0 FFFF3700000EF0 FFFF3700000EF0 FFFF0700000EF8 FFFF0700000EF8 FFFF0700000EF8 FFFF0700000EF8 FFFF0700000EF8 FFFF0700000EF8 FFFF0700000EF8 FFFF1400000EF4 FFFF1400000EF4 FFFF1400000EF4 FFFF1400000EF4 FFFF1400000EF4 FFFF1400000EF4 FFFF0F00000EFA FFFF0F00000EFA FFFF0F00000EFA FFFF0F00000EFA FFFF0F00000EFA FFFF0F00000EFA FFFF0F00000EFA</code></pre>
+<pre><code>ordercat FFFF3400000EF2 FFFF3400000EF2 FFFF3400000EF2 FFFF3400000EF2 FFFF3400000EF2 FFFF3400000EF2 FFFF3500000EF6 FFFF3500000EF6 FFFF3500000EF6 FFFF3500000EF6 FFFF3500000EF6 FFFF3500000EF6 FFFF3500000EF6 FFFF3700000EF0 FFFF3700000EF0 FFFF3700000EF0 FFFF3700000EF0 FFFF3700000EF0 FFFF3700000EF0 FFFF3700000EF0 FFFF0700000EF8 FFFF0700000EF8 FFFF0700000EF8 FFFF0700000EF8 FFFF0700000EF8 FFFF0700000EF8 FFFF0700000EF8 FFFF1400000EF4 FFFF1400000EF4 FFFF1400000EF4 FFFF1400000EF4 FFFF1400000EF4 FFFF1400000EF4 FFFF0F00000EFA FFFF0F00000EFA FFFF0F00000EFA FFFF0F00000EFA FFFF0F00000EFA FFFF0F00000EFA FFFF0F00000EFA</code></pre>
 
 <b>Pansies (6-7 each)</b>
 
-<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"><code>ordercat FFFF1000000F0A FFFF1000000F0A FFFF1000000F0A FFFF1000000F0A FFFF1000000F0A FFFF1000000F0A FFFF1700000F0C FFFF1700000F0C FFFF1700000F0C FFFF1700000F0C FFFF1700000F0C FFFF1700000F0C FFFF1F00000F10 FFFF1F00000F10 FFFF1F00000F10 FFFF1F00000F10 FFFF1F00000F10 FFFF1F00000F10 FFFF1F00000F10 FFFF3D00000F0E FFFF3D00000F0E FFFF3D00000F0E FFFF3D00000F0E FFFF3D00000F0E FFFF3D00000F0E FFFF3D00000F0E FFFF3100000F14 FFFF3100000F14 FFFF3100000F14 FFFF3100000F14 FFFF3100000F14 FFFF3100000F14 FFFF3100000F14 FFFF3700000F12 FFFF3700000F12 FFFF3700000F12 FFFF3700000F12 FFFF3700000F12 FFFF3700000F12 FFFF3700000F12</code></pre>
+<pre><code>ordercat FFFF1000000F0A FFFF1000000F0A FFFF1000000F0A FFFF1000000F0A FFFF1000000F0A FFFF1000000F0A FFFF1700000F0C FFFF1700000F0C FFFF1700000F0C FFFF1700000F0C FFFF1700000F0C FFFF1700000F0C FFFF1F00000F10 FFFF1F00000F10 FFFF1F00000F10 FFFF1F00000F10 FFFF1F00000F10 FFFF1F00000F10 FFFF1F00000F10 FFFF3D00000F0E FFFF3D00000F0E FFFF3D00000F0E FFFF3D00000F0E FFFF3D00000F0E FFFF3D00000F0E FFFF3D00000F0E FFFF3100000F14 FFFF3100000F14 FFFF3100000F14 FFFF3100000F14 FFFF3100000F14 FFFF3100000F14 FFFF3100000F14 FFFF3700000F12 FFFF3700000F12 FFFF3700000F12 FFFF3700000F12 FFFF3700000F12 FFFF3700000F12 FFFF3700000F12</code></pre>
 
 <b>Windflowers (6-7 each)</b>
 
-<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"><code>ordercat FFFF1000000F3A FFFF1000000F3A FFFF1000000F3A FFFF1000000F3A FFFF1000000F3A FFFF1000000F3A FFFF3500000F40 FFFF3500000F40 FFFF3500000F40 FFFF3500000F40 FFFF3500000F40 FFFF3500000F40 FFFF3500000F40 FFFF1F00000F42 FFFF1F00000F42 FFFF1F00000F42 FFFF1F00000F42 FFFF1F00000F42 FFFF1F00000F42 FFFF3D00000F3C FFFF3D00000F3C FFFF3D00000F3C FFFF3D00000F3C FFFF3D00000F3C FFFF3D00000F3C FFFF3D00000F3C FFFF3100000F3E FFFF3100000F3E FFFF3100000F3E FFFF3100000F3E FFFF3100000F3E FFFF3100000F3E FFFF3100000F3E FFFF3700000F44 FFFF3700000F44 FFFF3700000F44 FFFF3700000F44 FFFF3700000F44 FFFF3700000F44 FFFF3700000F44</code></pre>
+<pre><code>ordercat FFFF1000000F3A FFFF1000000F3A FFFF1000000F3A FFFF1000000F3A FFFF1000000F3A FFFF1000000F3A FFFF3500000F40 FFFF3500000F40 FFFF3500000F40 FFFF3500000F40 FFFF3500000F40 FFFF3500000F40 FFFF3500000F40 FFFF1F00000F42 FFFF1F00000F42 FFFF1F00000F42 FFFF1F00000F42 FFFF1F00000F42 FFFF1F00000F42 FFFF3D00000F3C FFFF3D00000F3C FFFF3D00000F3C FFFF3D00000F3C FFFF3D00000F3C FFFF3D00000F3C FFFF3D00000F3C FFFF3100000F3E FFFF3100000F3E FFFF3100000F3E FFFF3100000F3E FFFF3100000F3E FFFF3100000F3E FFFF3100000F3E FFFF3700000F44 FFFF3700000F44 FFFF3700000F44 FFFF3700000F44 FFFF3700000F44 FFFF3700000F44 FFFF3700000F44</code></pre>
 
 <b>Tulips (5-6 each)</b>
 
-<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"><code>ordercat FFFF3100000EFC FFFF3100000EFC FFFF3100000EFC FFFF3100000EFC FFFF3100000EFC FFFF1100000F02 FFFF1100000F02 FFFF1100000F02 FFFF1100000F02 FFFF1100000F02 FFFF1700000EFE FFFF1700000EFE FFFF1700000EFE FFFF1700000EFE FFFF1700000EFE FFFF1700000EFE FFFF0D00000F04 FFFF0D00000F04 FFFF0D00000F04 FFFF0D00000F04 FFFF0D00000F04 FFFF0D00000F04 FFFF1D00000F00 FFFF1D00000F00 FFFF1D00000F00 FFFF1D00000F00 FFFF1D00000F00 FFFF1D00000F00 FFFF1F00000F06 FFFF1F00000F06 FFFF1F00000F06 FFFF1F00000F06 FFFF1F00000F06 FFFF1F00000F06 FFFF3700000F08 FFFF3700000F08 FFFF3700000F08 FFFF3700000F08 FFFF3700000F08 FFFF3700000F08</code></pre>
+<pre><code>ordercat FFFF3100000EFC FFFF3100000EFC FFFF3100000EFC FFFF3100000EFC FFFF3100000EFC FFFF1100000F02 FFFF1100000F02 FFFF1100000F02 FFFF1100000F02 FFFF1100000F02 FFFF1700000EFE FFFF1700000EFE FFFF1700000EFE FFFF1700000EFE FFFF1700000EFE FFFF1700000EFE FFFF0D00000F04 FFFF0D00000F04 FFFF0D00000F04 FFFF0D00000F04 FFFF0D00000F04 FFFF0D00000F04 FFFF1D00000F00 FFFF1D00000F00 FFFF1D00000F00 FFFF1D00000F00 FFFF1D00000F00 FFFF1D00000F00 FFFF1F00000F06 FFFF1F00000F06 FFFF1F00000F06 FFFF1F00000F06 FFFF1F00000F06 FFFF1F00000F06 FFFF3700000F08 FFFF3700000F08 FFFF3700000F08 FFFF3700000F08 FFFF3700000F08 FFFF3700000F08</code></pre>
 
 <b>Hyacinths (5-6 each)</b>
 
-<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"><code>ordercat FFFF3100000F46 FFFF3100000F46 FFFF3100000F46 FFFF3100000F46 FFFF3100000F46 FFFF1100000F4A FFFF1100000F4A FFFF1100000F4A FFFF1100000F4A FFFF1100000F4A FFFF1700000F4E FFFF1700000F4E FFFF1700000F4E FFFF1700000F4E FFFF1700000F4E FFFF1700000F4E FFFF0D00000F4C FFFF0D00000F4C FFFF0D00000F4C FFFF0D00000F4C FFFF0D00000F4C FFFF0D00000F4C FFFF1D00000F48 FFFF1D00000F48 FFFF1D00000F48 FFFF1D00000F48 FFFF1D00000F48 FFFF1D00000F48 FFFF0700000F50 FFFF0700000F50 FFFF0700000F50 FFFF0700000F50 FFFF0700000F50 FFFF0700000F50 FFFF1700000F52 FFFF1700000F52 FFFF1700000F52 FFFF1700000F52 FFFF1700000F52 FFFF1700000F52</code></pre>
+<pre><code>ordercat FFFF3100000F46 FFFF3100000F46 FFFF3100000F46 FFFF3100000F46 FFFF3100000F46 FFFF1100000F4A FFFF1100000F4A FFFF1100000F4A FFFF1100000F4A FFFF1100000F4A FFFF1700000F4E FFFF1700000F4E FFFF1700000F4E FFFF1700000F4E FFFF1700000F4E FFFF1700000F4E FFFF0D00000F4C FFFF0D00000F4C FFFF0D00000F4C FFFF0D00000F4C FFFF0D00000F4C FFFF0D00000F4C FFFF1D00000F48 FFFF1D00000F48 FFFF1D00000F48 FFFF1D00000F48 FFFF1D00000F48 FFFF1D00000F48 FFFF0700000F50 FFFF0700000F50 FFFF0700000F50 FFFF0700000F50 FFFF0700000F50 FFFF0700000F50 FFFF1700000F52 FFFF1700000F52 FFFF1700000F52 FFFF1700000F52 FFFF1700000F52 FFFF1700000F52</code></pre>
 
 <b>Lilies (6-7 each)</b>
 
-<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"><code>ordercat FFFF3100000F2E FFFF3100000F2E FFFF3100000F2E FFFF3100000F2E FFFF3100000F2E FFFF3100000F2E FFFF1100000F34 FFFF1100000F34 FFFF1100000F34 FFFF1100000F34 FFFF1100000F34 FFFF1100000F34 FFFF1100000F34 FFFF0100000F30 FFFF0100000F30 FFFF0100000F30 FFFF0100000F30 FFFF0100000F30 FFFF0100000F30 FFFF0100000F30 FFFF0500000F36 FFFF0500000F36 FFFF0500000F36 FFFF0500000F36 FFFF0500000F36 FFFF0500000F36 FFFF1500000F32 FFFF1500000F32 FFFF1500000F32 FFFF1500000F32 FFFF1500000F32 FFFF1500000F32 FFFF1500000F32 FFFF0300000F38 FFFF0300000F38 FFFF0300000F38 FFFF0300000F38 FFFF0300000F38 FFFF0300000F38 FFFF0300000F38</code></pre>
+<pre><code>ordercat FFFF3100000F2E FFFF3100000F2E FFFF3100000F2E FFFF3100000F2E FFFF3100000F2E FFFF3100000F2E FFFF1100000F34 FFFF1100000F34 FFFF1100000F34 FFFF1100000F34 FFFF1100000F34 FFFF1100000F34 FFFF1100000F34 FFFF0100000F30 FFFF0100000F30 FFFF0100000F30 FFFF0100000F30 FFFF0100000F30 FFFF0100000F30 FFFF0100000F30 FFFF0500000F36 FFFF0500000F36 FFFF0500000F36 FFFF0500000F36 FFFF0500000F36 FFFF0500000F36 FFFF1500000F32 FFFF1500000F32 FFFF1500000F32 FFFF1500000F32 FFFF1500000F32 FFFF1500000F32 FFFF1500000F32 FFFF0300000F38 FFFF0300000F38 FFFF0300000F38 FFFF0300000F38 FFFF0300000F38 FFFF0300000F38 FFFF0300000F38</code></pre>
 
 <b>Gold Roses (40 each)</b>
 
-<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"><code>ordercat FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26</code></pre>
+<pre><code>ordercat FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26 FFFF0000000F26</code></pre>
 
 <b>Lilies-of-the-Valley (40 each)</b>
 
-<pre style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;"><code>ordercat FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3</code></pre>
+<pre><code>ordercat FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3 FFFF0000001DE3</code></pre>
 
 </details>
 
