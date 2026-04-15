@@ -17,7 +17,7 @@
 </summary>
 
 <p align="center">
-    <b>Roses</b>
+    <h2>Roses</h2>
 </p>
 
 <table style="margin: 0 auto;">
@@ -93,7 +93,7 @@
 </table>
 
 <p align="center">
-    <b>Mums</b>
+    <h2>Mums</h2>
 </p>
 
 <table style="margin: 0 auto;">
@@ -139,7 +139,7 @@
 </table>
 
 <p align="center">
-    <b>Hyacinths</b>
+    <h2>Hyacinths</h2>
 </p>
 
 <table style="margin: 0 auto;">
@@ -190,7 +190,7 @@
 </table>
 
 <p align="center">
-    <b>Pansies</b>
+    <h2>Pansies</h2>
 </p>
 
 <table style="margin: 0 auto;">
@@ -236,7 +236,7 @@
 </table>
 
 <p align="center">
-    <b>Windflowers</b>
+    <h2>Windflowers</h2>
 </p>
 
 <table style="margin: 0 auto;">
@@ -282,7 +282,7 @@
 </table>
 
 <p align="center">
-    <b>Tulips</b>
+    <h2>Tulips</h2>
 </p>
 
 <table style="margin: 0 auto;">
@@ -333,7 +333,7 @@
 </table>
 
 <p align="center">
-    <b>Cosmos</b>
+    <h2>Cosmos</h2>
 </p>
 
 <table style="margin: 0 auto;">
@@ -379,7 +379,7 @@
 </table>
 
 <p align="center">
-    <b>Lilies</b>
+    <h2>Lilies</h2>
 </p>
 
 <table style="margin: 0 auto;">
@@ -425,7 +425,7 @@
 </table>
 
 <p align="center">
-    <b>Lily-of-the-Valley</b>
+    <h2>Lily-of-the-Valley</h2>
 </p>
 
 <table style="margin: 0 auto;">
