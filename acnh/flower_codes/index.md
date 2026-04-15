@@ -107,7 +107,7 @@ Purple | 2-1-2 | FFFF3700000F12 |
 
 </details>
 
-## TL;dr
+## Simple Explanation
 Avoid using (and especially gifting) the flowers found on treasure islands; they almost always have invalid genomes. Get your flowers through an order bot instead. When you order, don't do it like this...
 
     !ordercat blue-rose plant
