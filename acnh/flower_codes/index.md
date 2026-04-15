@@ -217,7 +217,7 @@ The flower also remembers how many different player visitors have watered it tha
 
 This leads to the second issue, or rather missed opportunity, with the default flowers available through treasure islands and simple order bot commands; All of those flags are turned off, meaning the flower is not watered and unlikely to reproduce until it is watered manually over the course of several days! If those flags are all turned on, the flower arrives in your inventory pre-watered for 31 days straight, and has the additional breeding boost from all 10 visitors watering it. As a fun bonus, these flowers have a visually larger sparkle when planted, making them feel truly special. In addition, it is virtually guaranteed that every flower will reproduce immediately after being planted, which means that by having all those flags on, you can effectively store 2 flowers in each inventory space. It's sort of like "compressing" 2 flowers into 1 inventory slot!
 
-### Perfect Item ID Codes**
+### Perfect Item ID Codes
 
 The second bit of information this chart provides is the full item code for every color and type of flower, with valid optimized genes and all the watering flags maxed out. The only flag left off is the GWC flag for gold rose cloning, so that black roses will always clone into more black roses.
 
