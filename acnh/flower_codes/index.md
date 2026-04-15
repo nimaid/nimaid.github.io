@@ -1,3 +1,5 @@
+<title>ACNH Perfect Flower Item Codes</title>
+
 # ACNH Perfect Flower Item Codes
 
 <p align="center">
