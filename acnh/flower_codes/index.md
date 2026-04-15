@@ -1,6 +1,7 @@
 ---
 layout: minimal
 title: ACNH Perfect Flower Item Codes
+theme: jekyll-theme-minima
 ---
 
 # ACNH Perfect Flower Item Codes
