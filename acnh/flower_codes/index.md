@@ -1,5 +1,5 @@
 ---
-layout: acnh
+layout: minimal
 title: ACNH Perfect Flower Item Codes
 ---
 
