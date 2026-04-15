@@ -18,7 +18,7 @@
 
 <h2>Roses</h2>
 
-<table style="margin: 0 auto;">
+<table>
     <thead>
         <tr>
             <th style="text-align: center;">Color</th>
@@ -90,11 +90,9 @@
     </tbody>
 </table>
 
-<p align="center">
-    <h2>Mums</h2>
-</p>
+<h2>Mums</h2>
 
-<table style="margin: 0 auto;">
+<table>
     <thead>
         <tr>
             <th style="text-align: center;">Color</th>
@@ -136,11 +134,9 @@
     </tbody>
 </table>
 
-<p align="center">
-    <h2>Hyacinths</h2>
-</p>
+<h2>Hyacinths</h2>
 
-<table style="margin: 0 auto;">
+<table>
     <thead>
         <tr>
             <th style="text-align: center;">Color</th>
@@ -187,11 +183,9 @@
     </tbody>
 </table>
 
-<p align="center">
-    <h2>Pansies</h2>
-</p>
+<h2>Pansies</h2>
 
-<table style="margin: 0 auto;">
+<table>
     <thead>
         <tr>
             <th style="text-align: center;">Color</th>
@@ -233,11 +227,9 @@
     </tbody>
 </table>
 
-<p align="center">
-    <h2>Windflowers</h2>
-</p>
+<h2>Windflowers</h2>
 
-<table style="margin: 0 auto;">
+<table>
     <thead>
         <tr>
             <th style="text-align: center;">Color</th>
@@ -279,11 +271,9 @@
     </tbody>
 </table>
 
-<p align="center">
-    <h2>Tulips</h2>
-</p>
+<h2>Tulips</h2>
 
-<table style="margin: 0 auto;">
+<table>
     <thead>
         <tr>
             <th style="text-align: center;">Color</th>
@@ -330,11 +320,9 @@
     </tbody>
 </table>
 
-<p align="center">
-    <h2>Cosmos</h2>
-</p>
+<h2>Cosmos</h2>
 
-<table style="margin: 0 auto;">
+<table>
     <thead>
         <tr>
             <th style="text-align: center;">Color</th>
@@ -376,11 +364,9 @@
     </tbody>
 </table>
 
-<p align="center">
-    <h2>Lilies</h2>
-</p>
+<h2>Lilies</h2>
 
-<table style="margin: 0 auto;">
+<table>
     <thead>
         <tr>
             <th style="text-align: center;">Color</th>
@@ -422,11 +408,9 @@
     </tbody>
 </table>
 
-<p align="center">
-    <h2>Lily-of-the-Valley</h2>
-</p>
+<h2>Lily-of-the-Valley</h2>
 
-<table style="margin: 0 auto;">
+<table>
     <thead>
         <tr>
             <th style="text-align: center;">Color</th>
