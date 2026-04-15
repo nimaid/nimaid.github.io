@@ -16,104 +16,434 @@
     <b>Perfect Flower Item Code Tables</b>
 </summary>
 
-**Roses**
+<p align="center">
+    <b>Roses</b>
+</p>
 
-| Color | Genome | Item Code |
-| :-: | :-: | :-: |
-| White | 1-0-1-2 | FFFFD100000F16 |
-| Pink | 1-2-2-1 | FFFF7D00000F1C |
-| Red | 1-2-2-0 | FFFF3D00000F18 |
-| Orange | 2-2-1-0 | FFFF1F00000F1E |
-| Yellow | 1-2-1-1 | FFFF5D00000F1A |
-| Blue | 2-2-2-0 | FFFF3F00000F24 |
-| Purple | 1-1-2-2 | FFFFF500000F20 |
-| Black | 2-1-2-0 | FFFF3700000F22 |
-| Gold | 0-0-0-0 | FFFF0000000F26 |
+<table style="margin: 0 auto;">
+    <thead>
+        <tr>
+            <th style="text-align: center;">Color</th>
+            <th style="text-align: center;">Genome</th>
+            <th style="text-align: center;">Item Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;">White</td>
+            <td style="text-align: center;">1-0-1-2</td>
+            <td style="text-align: center;">FFFFD100000F16</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Pink</td>
+            <td style="text-align: center;">1-2-2-1</td>
+            <td style="text-align: center;">FFFF7D00000F1C</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Red</td>
+            <td style="text-align: center;">1-2-2-0</td>
+            <td style="text-align: center;">FFFF3D00000F18</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Orange</td>
+            <td style="text-align: center;">2-2-1-0</td>
+            <td style="text-align: center;">FFFF1F00000F1E</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Yellow</td>
+            <td style="text-align: center;">1-2-1-1</td>
+            <td style="text-align: center;">FFFF5D00000F1A</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Blue</td>
+            <td style="text-align: center;">2-2-2-0</td>
+            <td style="text-align: center;">FFFF3F00000F24</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Purple</td>
+            <td style="text-align: center;">1-1-2-2</td>
+            <td style="text-align: center;">FFFFF500000F20</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Black</td>
+            <td style="text-align: center;">2-1-2-0</td>
+            <td style="text-align: center;">FFFF3700000F22</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Gold</td>
+            <td style="text-align: center;">0-0-0-0</td>
+            <td style="text-align: center;">FFFF0000000F26</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Purple</td>
+            <td style="text-align: center;">1-1-2-2</td>
+            <td style="text-align: center;">FFFFF500000F20</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Black</td>
+            <td style="text-align: center;">2-1-2-0</td>
+            <td style="text-align: center;">FFFF3700000F22</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Gold</td>
+            <td style="text-align: center;">0-0-0-0</td>
+            <td style="text-align: center;">FFFF0000000F26</td>
+        </tr>
+    </tbody>
+</table>
 
-**Mums**
+<p align="center">
+    <b>Mums</b>
+</p>
 
-| Color | Genome | Item Code |
-| :-: | :-: | :-: |
-| White | 0-1-2 | FFFF3400000F54 |
-| Pink | 1-1-2 | FFFF3500000F5A |
-| Red | 1-1-1 | FFFF1500000F5C |
-| Yellow | 1-1-0 | FFFF0500000F56 |
-| Green | 2-2-0 | FFFF0F00000F5E |
-| Purple | 2-1-0 | FFFF0700000F58 |
+<table style="margin: 0 auto;">
+    <thead>
+        <tr>
+            <th style="text-align: center;">Color</th>
+            <th style="text-align: center;">Genome</th>
+            <th style="text-align: center;">Item Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;">White</td>
+            <td style="text-align: center;">0-1-2</td>
+            <td style="text-align: center;">FFFF3400000F54</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Pink</td>
+            <td style="text-align: center;">1-1-2</td>
+            <td style="text-align: center;">FFFF3500000F5A</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Red</td>
+            <td style="text-align: center;">1-1-1</td>
+            <td style="text-align: center;">FFFF1500000F5C</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Yellow</td>
+            <td style="text-align: center;">1-1-0</td>
+            <td style="text-align: center;">FFFF0500000F56</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Green</td>
+            <td style="text-align: center;">2-2-0</td>
+            <td style="text-align: center;">FFFF0F00000F5E</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Purple</td>
+            <td style="text-align: center;">2-1-0</td>
+            <td style="text-align: center;">FFFF0700000F58</td>
+        </tr>
+    </tbody>
+</table>
 
-**Hyacinths**
+<p align="center">
+    <b>Hyacinths</b>
+</p>
 
-| Color | Genome | Item Code |
-| :-: | :-: | :-: |
-| White | 1-0-2 | FFFF3100000F46 |
-| Pink | 1-0-1 | FFFF1100000F4A |
-| Red | 2-1-1 | FFFF1700000F4E |
-| Orange | 1-2-0 | FFFF0D00000F4C |
-| Yellow | 1-2-1 | FFFF1D00000F48 |
-| Blue | 2-1-0 | FFFF0700000F50 |
-| Purple | 2-2-1 | FFFF1700000F52 |
+<table style="margin: 0 auto;">
+    <thead>
+        <tr>
+            <th style="text-align: center;">Color</th>
+            <th style="text-align: center;">Genome</th>
+            <th style="text-align: center;">Item Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;">White</td>
+            <td style="text-align: center;">1-0-2</td>
+            <td style="text-align: center;">FFFF3100000F46</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Pink</td>
+            <td style="text-align: center;">1-0-1</td>
+            <td style="text-align: center;">FFFF1100000F4A</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Red</td>
+            <td style="text-align: center;">2-1-1</td>
+            <td style="text-align: center;">FFFF1700000F4E</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Orange</td>
+            <td style="text-align: center;">1-2-0</td>
+            <td style="text-align: center;">FFFF0D00000F4C</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Yellow</td>
+            <td style="text-align: center;">1-2-1</td>
+            <td style="text-align: center;">FFFF1D00000F48</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Blue</td>
+            <td style="text-align: center;">2-1-0</td>
+            <td style="text-align: center;">FFFF0700000F50</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Purple</td>
+            <td style="text-align: center;">2-2-1</td>
+            <td style="text-align: center;">FFFF1700000F52</td>
+        </tr>
+    </tbody>
+</table>
 
-**Pansies**
+<p align="center">
+    <b>Pansies</b>
+</p>
 
-| Color | Genome | Item Code |
-| :-: | :-: | :-: |
-| White | 0-0-1 | FFFF1000000F0A |
-| Red | 2-1-1 | FFFF1700000F0C |
-| Orange | 2-2-1 | FFFF1F00000F10 |
-| Yellow | 1-2-2 | FFFF3D00000F0E |
-| Blue | 1-0-2 | FFFF3100000F14 |
-| Purple | 2-1-2 | FFFF3700000F12 |
+<table style="margin: 0 auto;">
+    <thead>
+        <tr>
+            <th style="text-align: center;">Color</th>
+            <th style="text-align: center;">Genome</th>
+            <th style="text-align: center;">Item Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;">White</td>
+            <td style="text-align: center;">0-0-1</td>
+            <td style="text-align: center;">FFFF1000000F0A</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Red</td>
+            <td style="text-align: center;">2-1-1</td>
+            <td style="text-align: center;">FFFF1700000F0C</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Orange</td>
+            <td style="text-align: center;">2-2-1</td>
+            <td style="text-align: center;">FFFF1F00000F10</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Yellow</td>
+            <td style="text-align: center;">1-2-2</td>
+            <td style="text-align: center;">FFFF3D00000F0E</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Blue</td>
+            <td style="text-align: center;">1-0-2</td>
+            <td style="text-align: center;">FFFF3100000F14</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Purple</td>
+            <td style="text-align: center;">2-1-2</td>
+            <td style="text-align: center;">FFFF3700000F12</td>
+        </tr>
+    </tbody>
+</table>
 
-**Windflowers**
+<p align="center">
+    <b>Windflowers</b>
+</p>
 
-| Color | Genome | Item Code |
-| :-: | :-: | :-: |
-| White | 0-0-1 | FFFF1000000F3A |
-| Pink | 1-1-2 | FFFF3500000F40 |
-| Red | 2-1-1 | FFFF1F00000F42 |
-| Orange | 1-2-2 | FFFF3D00000F3C |
-| Blue | 1-0-2 | FFFF3100000F3E |
-| Purple | 2-1-2 | FFFF3700000F44 |
+<table style="margin: 0 auto;">
+    <thead>
+        <tr>
+            <th style="text-align: center;">Color</th>
+            <th style="text-align: center;">Genome</th>
+            <th style="text-align: center;">Item Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;">White</td>
+            <td style="text-align: center;">0-0-1</td>
+            <td style="text-align: center;">FFFF1000000F3A</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Pink</td>
+            <td style="text-align: center;">1-1-2</td>
+            <td style="text-align: center;">FFFF3500000F40</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Red</td>
+            <td style="text-align: center;">2-1-1</td>
+            <td style="text-align: center;">FFFF1F00000F42</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Orange</td>
+            <td style="text-align: center;">1-2-2</td>
+            <td style="text-align: center;">FFFF3D00000F3C</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Blue</td>
+            <td style="text-align: center;">1-0-2</td>
+            <td style="text-align: center;">FFFF3100000F3E</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Purple</td>
+            <td style="text-align: center;">2-1-2</td>
+            <td style="text-align: center;">FFFF3700000F44</td>
+        </tr>
+    </tbody>
+</table>
 
-**Tulips**
+<p align="center">
+    <b>Tulips</b>
+</p>
 
-| Color | Genome | Item Code |
-| :-: | :-: | :-: |
-| White | 1-0-2 | FFFF3100000EFC |
-| Pink | 1-0-1 | FFFF1100000F02 |
-| Red | 2-1-1 | FFFF1700000EFE |
-| Orange | 1-2-0 | FFFF0D00000F04 |
-| Yellow | 1-2-1 | FFFF1D00000F00 |
-| Purple | 2-2-1 | FFFF1F00000F06 |
-| Black | 2-1-0 | FFFF3700000F08 |
+<table style="margin: 0 auto;">
+    <thead>
+        <tr>
+            <th style="text-align: center;">Color</th>
+            <th style="text-align: center;">Genome</th>
+            <th style="text-align: center;">Item Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;">White</td>
+            <td style="text-align: center;">1-0-2</td>
+            <td style="text-align: center;">FFFF3100000EFC</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Pink</td>
+            <td style="text-align: center;">1-0-1</td>
+            <td style="text-align: center;">FFFF1100000F02</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Red</td>
+            <td style="text-align: center;">2-1-1</td>
+            <td style="text-align: center;">FFFF1700000EFE</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Orange</td>
+            <td style="text-align: center;">1-2-0</td>
+            <td style="text-align: center;">FFFF0D00000F04</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Yellow</td>
+            <td style="text-align: center;">1-2-1</td>
+            <td style="text-align: center;">FFFF1D00000F00</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Purple</td>
+            <td style="text-align: center;">2-2-1</td>
+            <td style="text-align: center;">FFFF1F00000F06</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Black</td>
+            <td style="text-align: center;">2-1-0</td>
+            <td style="text-align: center;">FFFF3700000F08</td>
+        </tr>
+    </tbody>
+</table>
 
-**Cosmos**
+<p align="center">
+    <b>Cosmos</b>
+</p>
 
-| Color | Genome | Item Code |
-| :-: | :-: | :-: |
-| White | 0-1-2 | FFFF3400000EF2 |
-| Pink | 1-1-2 | FFFF3500000EF6 |
-| Red | 2-1-2 | FFFF3700000EF0 |
-| Orange | 2-1-0 | FFFF0700000EF8 |
-| Yellow | 0-1-1 | FFFF1400000EF4 |
-| Black | 2-2-0 | FFFF0F00000EFA |
+<table style="margin: 0 auto;">
+    <thead>
+        <tr>
+            <th style="text-align: center;">Color</th>
+            <th style="text-align: center;">Genome</th>
+            <th style="text-align: center;">Item Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;">White</td>
+            <td style="text-align: center;">0-1-2</td>
+            <td style="text-align: center;">FFFF3400000EF2</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Pink</td>
+            <td style="text-align: center;">1-1-2</td>
+            <td style="text-align: center;">FFFF3500000EF6</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Red</td>
+            <td style="text-align: center;">2-1-2</td>
+            <td style="text-align: center;">FFFF3700000EF0</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Orange</td>
+            <td style="text-align: center;">2-1-0</td>
+            <td style="text-align: center;">FFFF0700000EF8</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Yellow</td>
+            <td style="text-align: center;">0-1-1</td>
+            <td style="text-align: center;">FFFF1400000EF4</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Black</td>
+            <td style="text-align: center;">2-2-0</td>
+            <td style="text-align: center;">FFFF0F00000EFA</td>
+        </tr>
+    </tbody>
+</table>
 
-**Lilies**
+<p align="center">
+    <b>Lilies</b>
+</p>
 
-| Color | Genome | Item Code |
-| :-: | :-: | :-: |
-| White | 1-0-2 | FFFF3100000F2E |
-| Pink | 1-0-1 | FFFF1100000F34 |
-| Red | 1-0-0 | FFFF0100000F30 |
-| Orange | 1-1-0 | FFFF0500000F36 |
-| Yellow | 1-1-1 | FFFF1500000F32 |
-| Black | 2-0-0 | FFFF0300000F38 |
+<table style="margin: 0 auto;">
+    <thead>
+        <tr>
+            <th style="text-align: center;">Color</th>
+            <th style="text-align: center;">Genome</th>
+            <th style="text-align: center;">Item Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;">White</td>
+            <td style="text-align: center;">1-0-2</td>
+            <td style="text-align: center;">FFFF3100000F2E</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Pink</td>
+            <td style="text-align: center;">1-0-1</td>
+            <td style="text-align: center;">FFFF1100000F34</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Red</td>
+            <td style="text-align: center;">1-0-0</td>
+            <td style="text-align: center;">FFFF0100000F30</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Orange</td>
+            <td style="text-align: center;">1-1-0</td>
+            <td style="text-align: center;">FFFF0500000F36</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Yellow</td>
+            <td style="text-align: center;">1-1-1</td>
+            <td style="text-align: center;">FFFF1500000F32</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Black</td>
+            <td style="text-align: center;">2-0-0</td>
+            <td style="text-align: center;">FFFF0300000F38</td>
+        </tr>
+    </tbody>
+</table>
 
-**Lily-of-the-Valley**
+<p align="center">
+    <b>Lily-of-the-Valley</b>
+</p>
 
-| Color | Genome | Item Code |
-| :-: | :-: | :-: |
-| White | 0-0-0-0 | FFFF0000001DE3 |
+<table style="margin: 0 auto;">
+    <thead>
+        <tr>
+            <th style="text-align: center;">Color</th>
+            <th style="text-align: center;">Genome</th>
+            <th style="text-align: center;">Item Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;">White</td>
+            <td style="text-align: center;">0-0-0-0</td>
+            <td style="text-align: center;">FFFF0000001DE3</td>
+        </tr>
+    </tbody>
+</table>
 
 </details>
 
