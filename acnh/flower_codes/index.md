@@ -5,6 +5,7 @@
 <p align="center"><a href="https://docs.google.com/spreadsheets/d/1SEaDqWYe6AtL6SMq35v5299ktBtCWv5S2jDZ1dUNnqU/edit?usp=sharing">Google Sheets</a></p>
 
 <details>
+
 <summary><b>Perfect Flower Item Code Tables</b></summary>
 
 ## Roses
@@ -122,6 +123,7 @@ Avoid using (and especially gifting) the flowers found on treasure islands; they
 You can use these convenient premade commands to quickly and easily get sets of flowers! Just make sure to add the required prefix; it was not included here because it is different for every order bot.
 
 <details>
+
 <summary><b>"Perfect" Flower Complete Kit</b></summary>
 
 ### Part 1/2: Roses, Tulips, Hyacinths, Lilies, Windflowers, Mums
@@ -137,6 +139,7 @@ ordercat FFFF3400000EF2 FFFF3500000EF6 FFFF3700000EF0 FFFF0700000EF8 FFFF1400000
 </details>
 
 <details>
+
 <summary><b>"Perfect" Flower Individual Species Kits</b></summary>
 
 ### Roses (5 each)
