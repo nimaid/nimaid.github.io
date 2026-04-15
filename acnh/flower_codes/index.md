@@ -438,7 +438,7 @@ You can use these convenient premade commands to quickly and easily get sets of 
 <details>
 
 <summary>
-    <b style="font-size: 20px;">"Perfect" Flower Complete Kit</b>
+    <b style="font-size: 20px;">Perfect Flower Complete Kit</b>
 </summary>
 
 <h3>Part 1/2: Roses, Tulips, Hyacinths, Lilies, Windflowers, Mums</h3>
@@ -454,7 +454,7 @@ You can use these convenient premade commands to quickly and easily get sets of 
 <details>
 
 <summary>
-    <b style="font-size: 20px;">"Perfect" Flower Individual Species Kits</b>
+    <b style="font-size: 20px;">Perfect Flower Individual Species Kits</b>
 </summary>
 
 <h3>Roses (5 each)</h3>
