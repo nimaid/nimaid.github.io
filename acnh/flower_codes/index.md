@@ -77,21 +77,6 @@ title: ACNH Perfect Flower Item Codes
             <td>0-0-0-0</td>
             <td>FFFF0000000F26</td>
         </tr>
-        <tr>
-            <td>Purple</td>
-            <td>1-1-2-2</td>
-            <td>FFFFF500000F20</td>
-        </tr>
-        <tr>
-            <td>Black</td>
-            <td>2-1-2-0</td>
-            <td>FFFF3700000F22</td>
-        </tr>
-        <tr>
-            <td>Gold</td>
-            <td>0-0-0-0</td>
-            <td>FFFF0000000F26</td>
-        </tr>
     </tbody>
 </table>
 
@@ -529,7 +514,7 @@ You can use these convenient premade commands to quickly and easily get sets of 
 <details>
 
 <summary>
-    <b style="font-size: 20px;">"Perfect" Flower Complete Kit</b>
+    <b style="font-size: 20px;">Perfect Flower Complete Kit</b>
 </summary>
 
 <h3>Part 1/2: Roses, Tulips, Hyacinths, Lilies, Windflowers, Mums</h3>
@@ -545,7 +530,7 @@ You can use these convenient premade commands to quickly and easily get sets of 
 <details>
 
 <summary>
-    <b style="font-size: 20px;">"Perfect" Flower Individual Species Kits</b>
+    <b style="font-size: 20px;">Perfect Flower Individual Species Kits</b>
 </summary>
 
 <h3>Roses (5 each)</h3>
@@ -608,7 +593,7 @@ Each flower "remembers" if it has been watered for consecutive days without repr
 
 The flower also remembers how many different player visitors have watered it that day! It stores these once again as flags. Each visitor who waters the flower increases the chances of breeding even further. You can actually tell when this happens because the "sparkle" effect of the watered flowers gets visually bigger with each additional unique player visitor that waters it in a day!
 
-This leads to the second issue, or rather missed opportunity, with the default flowers available through treasure islands and simple order bot commands; All of those flags are turned off, meaning the flower is not watered and unlikely to reproduce until it is watered manually over the course of several days! If those flags are all turned on, the flower arrives in your inventory pre-watered for 31 days straight, and has the additional breeding boost from all 10 visitors watering it. As a fun bonus, these flowers have a visually larger sparkle when planted, making them feel truly special. In addition, it is virtually guaranteed that every flower will reproduce immediately after being planted, which means that by having all those flags on, you can effectively store 2 flowers in each inventory space. It's sort of like "compressing" 2 flowers into 1 inventory slot!
+This leads to the second issue, or rather missed opportunity, with the default flowers available through treasure islands and simple order bot commands; All of those flags are turned off, meaning the flower is not watered and unlikely to reproduce until it is watered manually over the course of several days! If those flags are all turned on, the flower arrives in your inventory pre-watered for 31 days straight, and has the additional breeding boost from all 10 visitors watering it. Due to this, it is virtually guaranteed that every flower will reproduce immediately after being planted, which means that by having all those flags on, you can effectively store 2 flowers in each inventory space. It's sort of like "compressing" 2 flowers into 1 inventory slot! As a fun bonus, these flowers have a visually larger sparkle when planted, making them feel truly special.
 
 ### Perfect Item ID Codes
 
