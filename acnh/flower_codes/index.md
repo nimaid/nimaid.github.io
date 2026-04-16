@@ -497,7 +497,7 @@ Avoid using (and especially gifting) the flowers found on treasure islands; they
 
 If you want some of the feeling of accomplishment that comes with breeding all the colors of flowers yourself, but don't *actually* want to do all those convoluted steps, you might want to order some flowers from the Rainbow Flower Item Code Table!
 
-These flowers also have a valid genome for their color, in addition to the same breeding perks as the other ones. However, their genes were specifically chosen because they allow the flower to be cloned and then bred with itself to produce every possible color of that flower! It's like a flower lottery, keep watering them and try your luck for the colors of !
+These flowers also have a valid genome for their color, in addition to the same breeding perks as the other ones. However, their genes were specifically chosen because they allow the flower to be cloned and then bred with itself to produce every possible color of that flower! It's like a flower lottery, keep watering them and try your luck for the colors you want!
 
 ## Premade Order Commands
 
