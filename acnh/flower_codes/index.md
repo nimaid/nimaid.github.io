@@ -434,17 +434,93 @@ title: ACNH Perfect Flower Item Codes
 
 </details>
 
+<details>
+
+<summary>
+    <b style="font-size: 20px;">Magic Flower Item Code Table</b>
+</summary>
+
+<table>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Genome</th>
+            <th>Color</th>
+            <th>Item Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Rose</td>
+            <td>1-1-1-1</td>
+            <td>Pink</td>
+            <td>FFFF5500000F1C</td>
+        </tr>
+        <tr>
+            <td>Mum</td>
+            <td>1-1-1</td>
+            <td>Red</td>
+            <td>FFFF1500000F5C</td>
+        </tr>
+        <tr>
+            <td>Hyacinth</td>
+            <td>1-1-1</td>
+            <td>Yellow</td>
+            <td>FFFF1500000F48</td>
+        </tr>
+        <tr>
+            <td>Pansy</td>
+            <td>1-1-1</td>
+            <td>Orange</td>
+            <td>FFFF1500000F10</td>
+        </tr>
+        <tr>
+            <td>Windflower</td>
+            <td>1-1-1</td>
+            <td>Pink</td>
+            <td>FFFF1500000F40</td>
+        </tr>
+        <tr>
+            <td>Tulip</td>
+            <td>1-1-1</td>
+            <td>Yellow</td>
+            <td>FFFF1500000F00</td>
+        </tr>
+        <tr>
+            <td>Cosmo</td>
+            <td>1-1-1</td>
+            <td>Orange</td>
+            <td>FFFF1500000EF8</td>
+        </tr>
+        <tr>
+            <td>Lily</td>
+            <td>1-1-1</td>
+            <td>Yellow</td>
+            <td>FFFF1500000F32</td>
+        </tr>
+    </tbody>
+</table>
+
+</details>
+
 ## Simple Explanation
 
 Avoid using (and especially gifting) the flowers found on treasure islands; they almost always have invalid genomes. Get your flowers through an order bot instead. When you order, don't do it like this...
 
 <pre><code>!order blue-rose plant</code></pre>
 
-... as this gives a flower with an invalid genome. Instead, copy the code from the chart and order like this...
+... as this gives a flower with an invalid genome. Instead, copy the code from the Perfect Flower Item Code Tables and order like this...
 
 <pre><code>!ordercat FFFF3F00000F24</code></pre>
 
 ... as this will give you a flower with a valid genome in addition to a near 100% chance of cloning itself overnight when planted. Plus, the flower will be ridiculously shiny!
+
+
+## Magic Flowers Explanation
+
+If you want some of the feeling of accomplishment that comes with breeding all the colors of flower yourself, but don't *actually* want to do all those convoluted steps, you might want to order some of the codes from the Magic Flower Item Code Table!
+
+These flowers are also a valid genome for their color, and have all the same watering perks as the other ones. However, their genes were specially chosen for their unique ability to clone the flower and then breed it with itself to produce every possible color! It's like a flower lottery, keep watering them and try your luck for the colors you want!
 
 ## Premade Order Commands
 
