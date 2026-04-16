@@ -422,14 +422,15 @@ title: ACNH Perfect Flower Item Codes
 <details>
 
 <summary>
-    <b style="font-size: 20px;">Magic Flower Item Code Table</b>
+    <b style="font-size: 20px;">Rainbow Flower Item Code Table</b>
 </summary>
+
+All of these flowers have a genome of <code>1-1-1</code>, except for the rose which has a genome of <code>1-1-1-1</code>.
 
 <table>
     <thead>
         <tr>
             <th>Type</th>
-            <th>Genome</th>
             <th>Color</th>
             <th>Item Code</th>
         </tr>
@@ -437,49 +438,41 @@ title: ACNH Perfect Flower Item Codes
     <tbody>
         <tr>
             <td>Rose</td>
-            <td>1-1-1-1</td>
             <td>Pink</td>
             <td>FFFF5500000F1C</td>
         </tr>
         <tr>
             <td>Mum</td>
-            <td>1-1-1</td>
             <td>Red</td>
             <td>FFFF1500000F5C</td>
         </tr>
         <tr>
             <td>Hyacinth</td>
-            <td>1-1-1</td>
             <td>Yellow</td>
             <td>FFFF1500000F48</td>
         </tr>
         <tr>
             <td>Pansy</td>
-            <td>1-1-1</td>
             <td>Orange</td>
             <td>FFFF1500000F10</td>
         </tr>
         <tr>
             <td>Windflower</td>
-            <td>1-1-1</td>
             <td>Pink</td>
             <td>FFFF1500000F40</td>
         </tr>
         <tr>
             <td>Tulip</td>
-            <td>1-1-1</td>
             <td>Yellow</td>
             <td>FFFF1500000F00</td>
         </tr>
         <tr>
             <td>Cosmo</td>
-            <td>1-1-1</td>
             <td>Orange</td>
             <td>FFFF1500000EF8</td>
         </tr>
         <tr>
             <td>Lily</td>
-            <td>1-1-1</td>
             <td>Yellow</td>
             <td>FFFF1500000F32</td>
         </tr>
@@ -500,12 +493,11 @@ Avoid using (and especially gifting) the flowers found on treasure islands; they
 
 ... as this will give you a flower with a valid genome in addition to a near 100% chance of cloning itself overnight when planted. Plus, the flower will be ridiculously shiny!
 
+## Rainbow Flowers Explanation
 
-## Magic Flowers Explanation
+If you want some of the feeling of accomplishment that comes with breeding all the colors of flower yourself, but don't *actually* want to do all those convoluted steps, you might want to order some flowers from the Rainbow Flower Item Code Table!
 
-If you want some of the feeling of accomplishment that comes with breeding all the colors of flower yourself, but don't *actually* want to do all those convoluted steps, you might want to order some flowers from the Magic Flower Item Code Table!
-
-These flowers are also a valid genome for their color, and have all the same breeding perks as the other ones. However, their genes were specially chosen because they allow the flower to be cloned and then bred with itself to produce every possible color! It's like a flower lottery, keep watering them and try your luck for all the colors you want!
+These flowers also have a valid genome for their color, in addition to the same breeding perks as the other ones. However, their genes were specifically chosen because they allow the flower to be cloned and then bred with itself to produce every possible color of that flower! It's like a flower lottery, keep watering them and try your luck for the colors of !
 
 ## Premade Order Commands
 
