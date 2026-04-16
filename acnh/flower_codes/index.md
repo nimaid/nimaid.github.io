@@ -503,9 +503,9 @@ Avoid using (and especially gifting) the flowers found on treasure islands; they
 
 ## Magic Flowers Explanation
 
-If you want some of the feeling of accomplishment that comes with breeding all the colors of flower yourself, but don't *actually* want to do all those convoluted steps, you might want to order some of the codes from the Magic Flower Item Code Table!
+If you want some of the feeling of accomplishment that comes with breeding all the colors of flower yourself, but don't *actually* want to do all those convoluted steps, you might want to order some flowers from the Magic Flower Item Code Table!
 
-These flowers are also a valid genome for their color, and have all the same watering perks as the other ones. However, their genes were specially chosen for their unique ability to clone the flower and then breed it with itself to produce every possible color! It's like a flower lottery, keep watering them and try your luck for the colors you want!
+These flowers are also a valid genome for their color, and have all the same breeding perks as the other ones. However, their genes were specially chosen because they allow the flower to be cloned and then bred with itself to produce every possible color! It's like a flower lottery, keep watering them and try your luck for all the colors you want!
 
 ## Premade Order Commands
 
