@@ -26,6 +26,12 @@ summary {
     font-weight: bold;
 }
 
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
 #main {
     width: 50%;
     margin: 0 auto;
