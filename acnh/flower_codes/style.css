@@ -1,9 +1,12 @@
 html {
-    font-family: "Roboto";
+    font-family: 'Roboto';
 }
 
 body {
     font-size: 18px;
+    background-image:url('../background.png');
+    background-repeat:repeat;
+    background-size: 150px
 }
 
 h1 {
@@ -26,6 +29,12 @@ summary {
 #main {
     width: 50%;
     margin: 0 auto;
+    background-color: White;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border-radius: 75px;
 }
 
 pre { 
