@@ -29,6 +29,15 @@ pre {
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
+    background-color: LightYellow;
+    border-color: DarkKhaki;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+code {
+    font-family: "Courier New";
 }
 
 th {
