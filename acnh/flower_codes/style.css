@@ -45,10 +45,27 @@ code {
     font-family: monospace;
 }
 
-th {
+th, td {
     text-align: center;
+    padding: 5px;
+    border-width: 1px;
 }
-    
-td {
+
+table, td, th {
+    border-style: solid;
+}
+
+table {
+    border-width: 3px;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom-width: 2px;
+}
+
+.center {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
