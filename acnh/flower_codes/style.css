@@ -6,7 +6,8 @@ body {
     font-size: 20px;
     background-image:url('../background.png');
     background-repeat:repeat;
-    background-size: 150px
+    background-size: 150px;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -19,6 +20,7 @@ h2 {
 
 h3 {
     font-size: 20px;
+    font-weight: 800;
 }
 
 summary {
@@ -36,7 +38,9 @@ summary {
 
 #main {
     margin: 50px;
-    background-color: White;
+    background-color: #FFFAE5;
+    color: #675C48;
+    font-weight: 450;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 10px;
@@ -49,7 +53,7 @@ summary {
         margin: 0 auto;
         margin-top: 50px;
         margin-bottom: 50px;
-        width: 800px;
+        width: 900px;
     }
 }
 
@@ -62,8 +66,8 @@ pre {
 }
 
 .inline-code, pre {
-    background-color: LightYellow;
-    border-color: DarkKhaki;
+    background-color: #FEED9F;
+    border-color: #FFD103;
     border-width: 3px;
     border-style: solid;
     border-radius: 6px;
@@ -88,6 +92,7 @@ th, td {
 table {
     border-width: 3px;
     border-collapse: collapse;
+    background-color: White;
 }
 
 th {
