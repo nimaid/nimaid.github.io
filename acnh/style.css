@@ -4,7 +4,7 @@ html {
 
 body {
     font-size: 20px;
-    background-image:url('../background.png');
+    background-image:url('background.png');
     background-repeat:repeat;
     background-size: 150px;
     background-attachment: fixed;
