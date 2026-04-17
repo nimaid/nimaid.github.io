@@ -34,25 +34,30 @@ pre {
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
+}
+
+.inline-code, pre {
     background-color: LightYellow;
     border-color: DarkKhaki;
     border-width: 3px;
     border-style: solid;
-    border-radius: 3px;
+    border-radius: 6px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 code {
     font-family: monospace;
 }
 
+table, td, th {
+    border-style: solid;
+}
+
 th, td {
     text-align: center;
     padding: 5px;
     border-width: 1px;
-}
-
-table, td, th {
-    border-style: solid;
 }
 
 table {
