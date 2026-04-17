@@ -1,0 +1,20 @@
+summary {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+pre { 
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+th {
+    text-align: center;
+}
+    
+td {
+    text-align: center;
+}
