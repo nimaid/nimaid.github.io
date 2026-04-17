@@ -1,6 +1,6 @@
 ---
 layout: minimal
-title: Animal Crossing: New Horizons Stuff
+title: 'Animal Crossing: New Horizons Stuff'
 ---
 
 # Animal Crossing: New Horizons Stuff
