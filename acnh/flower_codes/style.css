@@ -4,10 +4,23 @@ html {
 
 body {
     font-size: 20px;
-    background-image:url('../background.png');
-    background-repeat:repeat;
-    background-size: 150px;
-    background-attachment: fixed;
+}
+
+/* Fixed container background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../background.png');
+  background-repeat:repeat;
+  background-size: 150px;
+  background-attachment: fixed;
+  z-index: -1;
+  /* Fix for some mobile browsers to prevent flickering */
+  will-change: transform;
 }
 
 h1 {
