@@ -1,4 +1,4 @@
-html {
+html, .copy-button {
     font-family: 'Roboto';
 }
 
@@ -36,10 +36,13 @@ summary {
     max-width: 100%;
 }
 
+#main, .copy-button {
+    color: #675C48;
+}
+
 #main {
     margin: 50px;
     background-color: #FFFAE5;
-    color: #675C48;
     font-weight: 450;
     padding-left: 50px;
     padding-right: 50px;
@@ -58,11 +61,15 @@ summary {
 }
 
 pre { 
+    /* Enable Word Wrapping */
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
+    /* Button Adjustments */
+    position: relative;
+    /*padding-top: 2rem;*/
 }
 
 .inline-code, pre {
@@ -73,6 +80,18 @@ pre {
     border-radius: 6px;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.copy-button {
+    position: absolute;
+    inset: 5px 5px auto auto;
+    cursor: pointer;
+    background-color: White;
+    border-style: none;
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
 code {
