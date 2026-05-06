@@ -1,0 +1,129 @@
+html, .copy-button {
+    font-family: 'Roboto';
+}
+
+body {
+    font-size: 20px;
+    /*background-image:url('assets/background.png');*/
+    background-repeat:repeat;
+    background-size: 150px;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+summary {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.center-fit {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#main, .copy-button {
+    color: #675C48;
+}
+
+#main {
+    margin: 50px;
+    background-color: #FFFAE5;
+    font-weight: 450;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border-radius: 75px;
+}
+
+@media (min-width: 1100px) {
+    #main {
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 900px;
+    }
+}
+
+pre { 
+    /* Enable Word Wrapping */
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    /* Button Adjustments */
+    position: relative;
+    /*padding-top: 2rem;*/
+}
+
+.inline-code, pre {
+    background-color: #FEED9F;
+    border-color: #FFD103;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 6px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.copy-button {
+    position: absolute;
+    inset: 0px 0px auto auto;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 4px;
+    padding: 0;
+    line-height: 1;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+code {
+    font-family: monospace;
+}
+
+table, td, th {
+    border-style: solid;
+}
+
+th, td {
+    text-align: center;
+    padding: 5px;
+    border-width: 2px;
+}
+
+table {
+    border-width: 4px;
+    border-collapse: collapse;
+    background-color: White;
+}
+
+th {
+    border-bottom-width: 3px;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
