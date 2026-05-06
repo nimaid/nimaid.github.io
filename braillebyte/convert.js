@@ -65,8 +65,45 @@ function decodeBraille(braille) {
 
 
 // Button Functions
+/**
+ * Enables or disables all buttons.
+ * 
+ * @param {Boolean} enable - What state to set the buttons to.
+ */
+function setButtonsState(enable) {
+    const allButtons = document.querySelectorAll('button');
+
+    allButtons.forEach(button => {
+        button.disabled = !enable;
+    });
+}
+
+
 function encodeButton() {
-    alert("Encode!")
+    const textArea = document.getElementById("encodedText");
+    
+    var input = document.createElement('input');
+    input.type = 'file';
+
+    input.onchange = e => {
+        var file = e.target.files[0];
+        
+        setButtonsState(false);
+        textArea.value = "<"
+        
+        if (file.name.includes(".")) {
+            var ext = file.name.slice((file.name.lastIndexOf(".") - 1 >>> 0) + 2);
+            
+            textArea.value += `${ext}|`
+        }
+        
+        // TODO
+        
+        textArea.value += ">"
+        setButtonsState(true);
+    }
+
+    input.click();
 }
 
 

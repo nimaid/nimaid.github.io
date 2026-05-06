@@ -47,6 +47,12 @@ button {
     border-color: #555;
 }
 
+button:disabled {
+    color: #999;
+    background-color: #777;
+    border-color: #999;
+}
+
 #encodedText {
     width: 100%;
     color: White;
