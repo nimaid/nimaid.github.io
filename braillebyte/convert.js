@@ -69,9 +69,23 @@ function encodeButton() {
     alert("Encode!")
 }
 
+
 function copyButton() {
-    alert("Copy!")
+    const textArea = document.getElementById("encodedText");
+    const softAlert = document.getElementById("softAlert");
+    
+    navigator.clipboard.writeText(textArea.value)
+    .then(() => {
+        softAlert.style.display = "block";
+        setTimeout(() => {
+            softAlert.style.display = "none";
+        }, 3000);
+    })
+    .catch(err => {
+        console.error("Failed to copy: ", err);
+    });
 }
+
 
 function decodeButton() {
     alert("Decode!")
