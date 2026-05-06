@@ -9,12 +9,12 @@
     <body>
         <div id="main">
             <h1 class="center">BrailleByte | Binary-to-Text Encoding</h1>
-            
-            <textarea id="encodedText" name="encodedText" rows="10" cols="50"></textarea>
+
+            <textarea autocomplete="off" id="encodedText" name="encodedText" rows="10" cols="50"></textarea>
             
             <br>
             
-            <div class="center">
+            <div class="center" id="buttons">
                 <button type="button" onClick="encodeButton()">Encode from File...</button>
                 &nbsp &nbsp &nbsp &nbsp
                 <button type="button" onClick="copyButton()">Copy Encoded Text</button>

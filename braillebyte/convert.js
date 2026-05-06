@@ -64,7 +64,7 @@ function decodeBraille(braille) {
 }
 
 
-
+// Button Functions
 function encodeButton() {
     alert("Encode!")
 }
@@ -79,7 +79,7 @@ function copyButton() {
         softAlert.style.display = "block";
         setTimeout(() => {
             softAlert.style.display = "none";
-        }, 3000);
+        }, 2000);
     })
     .catch(err => {
         console.error("Failed to copy: ", err);
