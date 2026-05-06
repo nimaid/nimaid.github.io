@@ -128,7 +128,7 @@ th {
     margin-right: auto;
 }
 
-textarea {
+#encodedText {
     width: 100%;
     resize: none;
 }
