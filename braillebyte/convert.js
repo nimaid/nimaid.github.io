@@ -63,3 +63,17 @@ function decodeBraille(braille) {
     return data
 }
 
+
+
+function encodeButton() {
+    alert("Encode!")
+}
+
+function copyButton() {
+    alert("Copy!")
+}
+
+function decodeButton() {
+    alert("Decode!")
+}
+

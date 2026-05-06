@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>BrailleByte Binary-to-Text Encoding</title>
+        <title>BrailleByte | Binary-to-Text Encoding</title>
         <link rel="stylesheet" href="style.css">
         <!-- <link rel="icon" type="image/x-icon" href="./assets/favicon.ico"> -->
     </head>
     
     <body>
         <div id="main">
-            <h1>BrailleByte Binary-to-Text Encoding</h1>
+            <h1 class="center">BrailleByte | Binary-to-Text Encoding</h1>
+            
+            <textarea id="encodedText" name="encodedText" rows="10" cols="50"></textarea>
+            
+            <br>
+            <div class="center">
+                <button type="button" onClick="encodeButton()">Encode from File...</button>
+                &nbsp &nbsp &nbsp &nbsp
+                <button type="button" onClick="copyButton()">Copy Encoded Text</button>
+                &nbsp &nbsp &nbsp &nbsp
+                <button type="button" onClick="decodeButton()">Decode to File...</button>
+            </div>
         </div>
     </body>
     
