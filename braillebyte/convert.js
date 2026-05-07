@@ -44,7 +44,7 @@ function decodeBraille(braille) {
     for (let i = 0; i < braille.length; i++) {
         var codePoint = braille.codePointAt(i)
         
-        if ((codePoint < BASE_ADDRESS) | (codePoint > 0x28FF)) {
+        if ((codePoint < BASE_ADDRESS) | (codePoint > MAX_ADDRESS)) {
             throw new Error(`String contains non-braille character(s): "${braille[i]}"`)
         }
         
@@ -82,17 +82,17 @@ function setButtonsState(enable) {
 function encodeButton() {
     const textArea = document.getElementById("encodedText");
     
-    var input = document.createElement('input');
+    const input = document.createElement('input');
     input.type = 'file';
 
     input.onchange = e => {
-        var file = e.target.files[0];
+        const file = e.target.files[0];
         
         setButtonsState(false);
         textArea.value = "<"
         
         if (file.name.includes(".")) {
-            var ext = file.name.slice((file.name.lastIndexOf(".") - 1 >>> 0) + 2);
+            const ext = file.name.slice((file.name.lastIndexOf(".") - 1 >>> 0) + 2);
             
             textArea.value += `${ext}|`
         }
