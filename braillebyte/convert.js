@@ -79,7 +79,7 @@ function setButtonsState(enable) {
 }
 
 
-function encodeButton() {
+async function encodeButton() {
     const textArea = document.getElementById("encodedText");
     
     const input = document.createElement('input');
@@ -97,7 +97,16 @@ function encodeButton() {
             textArea.value += `${ext}|`
         }
         
-        // TODO
+        const stream = file.stream();
+        const reader = stream.getReader();
+        
+         while (true) {
+            const { done, value } = await reader.read(); // value is a Uint8Array (chunk)
+            
+            if (done) break;
+            
+            console.log("Chunk size:", value.length)
+         }
         
         textArea.value += ">"
         setButtonsState(true);
@@ -107,7 +116,7 @@ function encodeButton() {
 }
 
 
-function copyButton() {
+async function copyButton() {
     const textArea = document.getElementById("encodedText");
     const softAlert = document.getElementById("softAlert");
     
@@ -124,7 +133,11 @@ function copyButton() {
 }
 
 
-function decodeButton() {
+async function decodeButton() {
     alert("Decode!")
 }
 
+
+document.getElementById('myButton').addEventListener('click', async () => {
+    await encodeButton();
+});
