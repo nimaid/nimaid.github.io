@@ -79,7 +79,7 @@ function setButtonsState(enable) {
 }
 
 
-async function encodeButton() {
+document.getElementById('encodeButton').addEventListener('click', async () => {
     const textArea = document.getElementById("encodedText");
     
     const input = document.createElement('input');
@@ -96,27 +96,36 @@ async function encodeButton() {
             
             textArea.value += `${ext}|`
         }
+
+        // Encode the file using the FileReader API
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            textArea.value += encodeBraille(new Uint8Array(reader.result))
+            
+            textArea.value += ">"
+            setButtonsState(true);
+        };
+        reader.readAsArrayBuffer(file);
         
+        /*
         const stream = file.stream();
         const reader = stream.getReader();
         
-         while (true) {
-            const { done, value } = await reader.read(); // value is a Uint8Array (chunk)
+        while (true) {
+            const { done, value } = await reader.read();  // Uncaught SyntaxError: await is only valid in async functions, async generators and modules
             
             if (done) break;
             
             console.log("Chunk size:", value.length)
-         }
-        
-        textArea.value += ">"
-        setButtonsState(true);
+        }
+        */
     }
 
     input.click();
-}
+});
 
 
-async function copyButton() {
+document.getElementById('copyButton').addEventListener('click', async () => {
     const textArea = document.getElementById("encodedText");
     const softAlert = document.getElementById("softAlert");
     
@@ -130,14 +139,9 @@ async function copyButton() {
     .catch(err => {
         console.error("Failed to copy: ", err);
     });
-}
+});
 
 
-async function decodeButton() {
+document.getElementById('decodeButton').addEventListener('click', async () => {
     alert("Decode!")
-}
-
-
-document.getElementById('myButton').addEventListener('click', async () => {
-    await encodeButton();
 });
