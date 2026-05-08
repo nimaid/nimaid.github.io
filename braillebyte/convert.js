@@ -94,6 +94,7 @@ document.getElementById('encodeButton').addEventListener('click', async () => {
         const file = e.target.files[0];
         
         setButtonsState(false);
+        textArea.readOnly = true;
         textArea.value = START_CHAR
         
         if (file.name.includes(".")) {
@@ -109,6 +110,7 @@ document.getElementById('encodeButton').addEventListener('click', async () => {
             
             textArea.value += END_CHAR
             setButtonsState(true);
+            textArea.readOnly = false;
         };
         reader.readAsArrayBuffer(file);
         
@@ -127,12 +129,16 @@ document.getElementById('encodeButton').addEventListener('click', async () => {
     }
 
     input.click();
+    
+    
 });
 
 
 document.getElementById('copyButton').addEventListener('click', async () => {
     const textArea = document.getElementById("encodedText");
     const softAlert = document.getElementById("softAlert");
+    
+    textArea.readOnly = true;
     
     navigator.clipboard.writeText(textArea.value)
     .then(() => {
@@ -144,11 +150,15 @@ document.getElementById('copyButton').addEventListener('click', async () => {
     .catch(err => {
         console.error("Failed to copy: ", err);
     });
+    
+    textArea.readOnly = false;
 });
 
 
 document.getElementById('decodeButton').addEventListener('click', async () => {
     const textArea = document.getElementById("encodedText");
+    
+    textArea.readOnly = true;
     
     if (textArea.value.trim().length === 0) {
         alert("Nothing to decode!");
@@ -186,9 +196,17 @@ document.getElementById('decodeButton').addEventListener('click', async () => {
         return;
     }
     
+    
+    var startIndex = textArea.value.indexOf("<") + 1;
+    var endIndex = textArea.value.indexOf(">");
+    var ext = "";
     if (textArea.value.includes(SEP_CHAR)) {
-        console.log("Has extension!")
-    } else {
-        console.log("No extension!")
+        const sepIndex = textArea.value.indexOf("|");
+        ext = textArea.value.substring(startIndex, sepIndex);
+        startIndex = sepIndex + 1;
     }
+    
+    console.log(ext, decodeBraille(textArea.value.substring(startIndex, endIndex)));
+    
+    textArea.readOnly = false;
 });
