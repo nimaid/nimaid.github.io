@@ -2,6 +2,11 @@
 const BASE_ADDRESS = 0x2800;
 const MAX_ADDRESS = 0x28FF;
 
+// BrailleByte Constants
+const START_CHAR = "<"
+const END_CHAR = ">"
+const SEP_CHAR = "|"
+
 
 // Base Functions
 /**
@@ -89,12 +94,12 @@ document.getElementById('encodeButton').addEventListener('click', async () => {
         const file = e.target.files[0];
         
         setButtonsState(false);
-        textArea.value = "<"
+        textArea.value = START_CHAR
         
         if (file.name.includes(".")) {
             const ext = file.name.slice((file.name.lastIndexOf(".") - 1 >>> 0) + 2);
             
-            textArea.value += `${ext}|`
+            textArea.value += `${ext}${SEP_CHAR}`
         }
 
         // Encode the file using the FileReader API
@@ -102,7 +107,7 @@ document.getElementById('encodeButton').addEventListener('click', async () => {
         reader.onloadend = () => {
             textArea.value += encodeBraille(new Uint8Array(reader.result))
             
-            textArea.value += ">"
+            textArea.value += END_CHAR
             setButtonsState(true);
         };
         reader.readAsArrayBuffer(file);
@@ -143,5 +148,47 @@ document.getElementById('copyButton').addEventListener('click', async () => {
 
 
 document.getElementById('decodeButton').addEventListener('click', async () => {
-    alert("Decode!")
+    const textArea = document.getElementById("encodedText");
+    
+    if (textArea.value.trim().length === 0) {
+        alert("Nothing to decode!");
+        return;
+    }
+    
+    if (!textArea.value.includes(START_CHAR)) {
+        alert(`Invalid format: Missing start character: "${START_CHAR}"`);
+        return;
+    }
+    if (!textArea.value.includes(END_CHAR)) {
+        alert(`Invalid format: Missing end character: "${END_CHAR}"`);
+        return;
+    }
+    
+    if (textArea.value.trim().indexOf(START_CHAR) !== 0) {
+        alert(`First character is not "${START_CHAR}"`);
+        return;
+    }
+    if (textArea.value.trim().lastIndexOf(END_CHAR) !== textArea.value.trim().length - 1) {
+        alert(`Last character is not "${END_CHAR}"`);
+        return;
+    }
+    
+    if ((textArea.value.match(new RegExp(RegExp.escape(START_CHAR), "g")) || []).length > 1) {
+        alert(`The start character "${START_CHAR}" is included more than once.`);
+        return;
+    }
+    if ((textArea.value.match(new RegExp(RegExp.escape(END_CHAR), "g")) || []).length > 1) {
+        alert(`The start character "${END_CHAR}" is included more than once.`);
+        return;
+    }
+    if ((textArea.value.match(new RegExp(RegExp.escape(SEP_CHAR), "g")) || []).length > 1) {
+        alert(`The format split character "${SEP_CHAR}" is included more than once.`);
+        return;
+    }
+    
+    if (textArea.value.includes(SEP_CHAR)) {
+        console.log("Has extension!")
+    } else {
+        console.log("No extension!")
+    }
 });
