@@ -3,9 +3,12 @@ const BASE_ADDRESS = 0x2800;
 const MAX_ADDRESS = 0x28FF;
 
 // BrailleByte Constants
-const START_CHAR = "<"
-const END_CHAR = ">"
-const SEP_CHAR = "|"
+const START_CHAR = "<";
+const END_CHAR = ">";
+const SEP_CHAR = "|";
+
+// Other Constants
+const DEFAULT_FILENAME = "Decoded";
 
 
 // Base Functions
@@ -206,7 +209,42 @@ document.getElementById('decodeButton').addEventListener('click', async () => {
         startIndex = sepIndex + 1;
     }
     
-    console.log(ext, decodeBraille(textArea.value.substring(startIndex, endIndex)));
+    // Direct download for now
+    const a = document.createElement("a");
+    const file = new Blob(
+        [decodeBraille(textArea.value.substring(startIndex, endIndex))],
+        { type: 'application/octet-stream' }
+    );
+    a.href = URL.createObjectURL(file);
+    if (ext) {
+        a.download = `${DEFAULT_FILENAME}.${ext}`;
+    } else {
+        a.download = `${DEFAULT_FILENAME}`;
+    }
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(a.href);
+    
+    /*
+    var handle;
+    try {
+        if (ext) {
+            handle = await window.showSaveFilePicker({
+                suggestedName: DEFAULT_FILENAME,
+                types: [{
+                    accept: {'application/octet-stream': [`.${ext}`]},
+                }],
+            });
+        } else {
+            handle = await window.showSaveFilePicker({
+                suggestedName: DEFAULT_FILENAME,
+            });
+        }
+    } catch (err) {
+        
+    }
+    */
     
     textArea.readOnly = false;
 });
