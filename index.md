@@ -3,6 +3,8 @@
 
 <a href="./backrooms">[THE NEW REVOLUTION RACEWAY] The original Backrooms blog post, fully restored.</a>
 
+<a href="./noctisiv">[NOCTIS: A DREAMABLE SPACE SIMULATION] The original Noctis IV manual, fully restored.</a>
+
 <a href="./tv">[tv.nimaid.com] Interdimensional Cable Box</a>
 
 
