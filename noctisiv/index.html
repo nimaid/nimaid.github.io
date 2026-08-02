@@ -4,7 +4,11 @@
 <title>NOCTIS: A DREAMABLE SPACE SIMULATION</title>
 </head>
 <body bgcolor="000000" text="999999" background="files/BACK.JPG">
-<bgsound src="files/RYAN_BURY_-_NOCTIS.MID" loop="infinite">
+<audio id="bg-audio" src="files/RYAN_BURY_-_NOCTIS.FLAC" autoplay loop></audio>
+<script>
+    var audio = document.getElementById("bg-audio");
+    audio.volume = 0.25;
+</script>
 <center>
 <img src="files/NOCTIS.GIF" border=0>
 <table border=1 cellpadding=5 cellspacing=0>
