@@ -1,9 +1,9 @@
 # Site Directory
+<a href="./noctisiv">[NOCTIS: A DREAMABLE SPACE SIMULATION] The original Noctis IV manual, updated and fixed for modern browsers.</a>
+
 <a href="./acnh">[Animal Crossing: New Horizons] My pages about Animal Crossing: New Horizons.</a>
 
 <a href="./backrooms">[THE NEW REVOLUTION RACEWAY] The original Backrooms blog post, fully restored.</a>
-
-<a href="./noctisiv">[NOCTIS: A DREAMABLE SPACE SIMULATION] The original Noctis IV manual, fully restored.</a>
 
 <a href="./tv">[tv.nimaid.com] Interdimensional Cable Box</a>
 
