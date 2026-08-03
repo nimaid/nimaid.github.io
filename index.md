@@ -1,5 +1,5 @@
 # Site Directory
-<a href="./noctisiv">[NOCTIS: A DREAMABLE SPACE SIMULATION] The original Noctis IV manual, updated and fixed for modern browsers.</a>
+<a href="./noctisiv">[NOCTIS: A DREAMABLE SPACE SIMULATION] The Noctis IV manual, updated and fixed for modern browsers.</a>
 
 <a href="./acnh">[Animal Crossing: New Horizons] My pages about Animal Crossing: New Horizons.</a>
 
