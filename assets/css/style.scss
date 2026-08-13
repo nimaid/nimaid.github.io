@@ -1,0 +1,14 @@
+---
+---
+@import "{{ site.theme }}";
+
+@font-face {
+  font-family: 'Microfont';
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/microfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, h1, h2, h3, h4, h5, h6, .page-heading, .site-title {
+  font-family: "Microfont", sans-serif;
+}
