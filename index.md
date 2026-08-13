@@ -13,6 +13,8 @@
 
 
 # My (Favorite) Projects
+<a href="https://github.com/nimaid/microfont">[3x5 Microfont] A Highly Legible 3x5 Pixel Font With Full ASCII Support (this page uses it!)</a>
+
 <a href="https://github.com/nimaid/binary-waterfall">[Binary Waterfall] A Raw Data Media Player</a>
 
 <a href="https://github.com/nimaid/pixelgreat">[Pixelgreat] A highly realistic RGB pixel filter for Python.</a>
