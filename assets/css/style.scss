@@ -5,8 +5,24 @@
 @font-face {
   font-family: 'Microfont';
   src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/Microfont.woff2') format('woff2');
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/Microfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Microfont-Mono';
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/Microfont-Mono.woff2') format('woff2');
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/Microfont-Mono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+code pre kbd samp {
+  font-family: "Microfont-Mono", sans-serif;
+  line-height: normal;
 }
 
 body, h1, h2, h3, h4, h5, h6, header h1, header h2 {
