@@ -32,6 +32,10 @@ body, h1, h2, h3, h4, h5, h6, header h1, header h2 {
   line-height: normal;
 }
 
+h1, h2, h3, h4, h5, h6, header h1, header h2 {
+  font-weight: normal !important;
+}
+
 header h1 {
   font-size: 48px;
 }
