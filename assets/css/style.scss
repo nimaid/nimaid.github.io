@@ -3,33 +3,33 @@
 @import "{{ site.theme }}";
 
 @font-face {
-  font-family: 'Microfont';
-  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/Microfont.woff2') format('woff2');
-  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/Microfont.woff') format('woff');
-  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/Microfont.ttf') format('truetype');
+  font-family: '3x5 Microfont';
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/3x5-Microfont.woff2') format('woff2');
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/3x5-Microfont.woff') format('woff');
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/3x5-Microfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Microfont Mono';
-  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/Microfont-Mono.woff2') format('woff2');
-  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/Microfont-Mono.woff') format('woff');
-  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/Microfont-Mono.ttf') format('truetype');
+  font-family: '3x5 Microfont Mono';
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/3x5-Microfont-Mono.woff2') format('woff2');
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/3x5-Microfont-Mono.woff') format('woff');
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/3x5-Microfont-Mono.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 code pre kbd samp {
-  font-family: "Microfont Mono", "Courier New", monospace;
+  font-family: "3x5 Microfont Mono", "Courier New", monospace;
   line-height: normal;
 }
 
 body, h1, h2, h3, h4, h5, h6, header h1, header h2 {
-  font-family: "Microfont", sans-serif;
-  line-height: normal;
+  font-family: "3x5 Microfont", sans-serif;
+  line-height: 0;
 }
 
 h1, h2, h3, h4, h5, h6, header h1, header h2 {
