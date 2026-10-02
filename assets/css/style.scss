@@ -27,6 +27,18 @@ code pre kbd samp {
   line-height: normal;
 }
 
+ul li {
+  list-style: none !important;
+  position: relative;
+  padding-left: 15px;
+}
+
+ul li::before {
+  content: ">> ";
+  font-family: "3x5 Microfont Mono", monospace;
+  color: #b5e853;
+}
+
 body, h1, h2, h3, h4, h5, h6, header h1, header h2 {
   font-family: "3x5 Microfont", sans-serif;
 }
