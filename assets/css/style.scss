@@ -29,8 +29,11 @@ code pre kbd samp {
 
 ul li {
   list-style: none !important;
-  position: relative;
-  padding-left: 15px;
+}
+
+ul:not(li ul) {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 }
 
 ul li::before {
