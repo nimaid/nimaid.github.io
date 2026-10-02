@@ -45,6 +45,7 @@ ul li::before {
 
 body, h1, h2, h3, h4, h5, h6, header h1, header h2 {
   font-family: "3x5 Microfont", sans-serif;
+  line-height: 1em !important;
 }
 
 h1, h2, h3, h4, h5, h6, header h1, header h2 {
@@ -69,5 +70,4 @@ header h2 {
 
 body {
   font-size: 24px !important;
-  line-height: 1em !important;
 }
