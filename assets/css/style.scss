@@ -30,14 +30,13 @@ ol li::marker {
   color: var(--highlight-color);
 }
 
-ul li {
-  list-style: none !important;
+li {
   line-height: 1em !important;
-  text-indent: -1.75em !important; 
 }
 
-ol li {
-  line-height: 1em !important;
+ul li {
+  list-style: none !important;
+  text-indent: -1.75em !important; 
 }
 
 ul:not(li ul) {
