@@ -26,6 +26,10 @@ code, pre, kbd, samp {
   font-family: "3x5 Microfont Mono", "Courier New", monospace;
 }
 
+ol li::marker {
+  color: var(--highlight-color);
+}
+
 ul li {
   list-style: none !important;
   line-height: 1em !important;
