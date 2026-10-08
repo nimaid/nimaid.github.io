@@ -36,6 +36,10 @@ ul li {
   text-indent: -1.75em !important; 
 }
 
+ol li {
+  line-height: 1em !important;
+}
+
 ul:not(li ul) {
   padding-left: 0 !important;
   margin-left: 0 !important;
