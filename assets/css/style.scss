@@ -79,3 +79,14 @@ header h2 {
 body {
   font-size: 24px !important;
 }
+
+i, em, address, var {
+  font-style: normal;
+  color: var(--highlight-color);
+}
+
+b, strong {
+  font-weight: normal;
+  color: var(--highlight-color);
+  text-decoration: underline;
+}
