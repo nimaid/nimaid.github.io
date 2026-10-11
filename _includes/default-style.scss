@@ -1,0 +1,94 @@
+@import "{{ site.theme }}";
+
+:root {
+  --highlight-color: #{$header};
+}
+
+@font-face {
+  font-family: '3x5 Microfont';
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/3x5-Microfont.woff2') format('woff2');
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/3x5-Microfont.woff') format('woff');
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/3x5-Microfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '3x5 Microfont Mono';
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/3x5-Microfont-Mono.woff2') format('woff2');
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/3x5-Microfont-Mono.woff') format('woff');
+  src: url('https://raw.githubusercontent.com/nimaid/microfont/refs/heads/main/3x5-Microfont-Mono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+code, pre, kbd, samp {
+  font-family: "3x5 Microfont Mono", "Courier New", monospace;
+}
+
+ol li::marker {
+  color: var(--highlight-color);
+}
+
+li {
+  line-height: 1em !important;
+}
+
+ul li {
+  list-style: none !important;
+  text-indent: -1.75em !important; 
+}
+
+ul:not(li ul) {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  padding-left: 1.75em !important;
+}
+
+ul li::before {
+  content: ">> ";
+  font-family: "3x5 Microfont Mono", monospace;
+  color: var(--highlight-color);
+  display: inline-block;
+  width: 1.75em;
+  text-indent: 0; 
+}
+
+body, h1, h2, h3, h4, h5, h6, header h1, header h2, ul li::marker {
+  font-family: "3x5 Microfont", sans-serif;
+  line-height: 1em !important;
+}
+
+h1, h2, h3, h4, h5, h6, header h1, header h2 {
+  font-weight: normal !important;
+}
+
+header h1 {
+  font-size: 48px !important;
+}
+
+h1 {
+  font-size: 40px !important;
+}
+
+h2 {
+  font-size: 32px !important;
+}
+
+body {
+  font-size: 24px !important;
+  padding-top: 1em;
+}
+
+i, em, address, var {
+  font-style: normal;
+  color: var(--highlight-color);
+}
+
+b, strong {
+  font-weight: normal;
+  color: var(--highlight-color);
+  text-decoration: underline;
+}
