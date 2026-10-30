@@ -1,22 +1,20 @@
 ---
 layout: default
-title: Nimaid's Pages
+title: Ella Jameson's Project Hub
 ---
 
-# Nimaid's Pages
-
-## Site Directory
+# Site Directory
 - <a href="./noctisiv"><i>[NOCTIS: A DREAMABLE SPACE SIMULATION]</i> The Noctis IV manual, updated and fixed for modern browsers.</a>
 - <a href="./acnh"><i>[Animal Crossing: New Horizons]</i> My pages about Animal Crossing: New Horizons.</a>
 - <a href="./backrooms"><i>[THE NEW REVOLUTION RACEWAY]</i> The original Backrooms blog post, fully restored.</a>
 - <a href="./tv"><i>[tv.nimaid.com]</i> Interdimensional Cable Box</a>
 
 
-## My Other Websites
+# My Other Websites
 - <a href="https://nimaid.blogspot.com/"><i>[nimaid's Blog]</i> I don't post here very often...</a>
 
 
-## My (Favorite) Projects
+# My (Favorite) Projects
 - <a href="https://github.com/nimaid/microfont"><i>[3x5 Microfont]</i> A Highly Legible 3x5 Pixel Font With Full ASCII Support (this page uses it!)</a>
 - <a href="https://github.com/nimaid/binary-waterfall"><i>[Binary Waterfall]</i> A Raw Data Media Player</a>
 - <a href="https://github.com/nimaid/pixelgreat"><i>[Pixelgreat]</i> A highly realistic RGB pixel filter for Python.</a>
