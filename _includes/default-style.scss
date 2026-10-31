@@ -2,6 +2,7 @@
 
 :root {
   --highlight-color: #{$header};
+  --body-color: #{$body-foreground};
 }
 
 @font-face {
@@ -100,4 +101,21 @@ b, strong {
   font-weight: normal;
   color: var(--highlight-color);
   text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.footer-ascii-art {
+  line-height: 0.8em !important;
+  font-size: 16px !important;
+  display: inline-block;
+  text-align: left;
+  color: var(--body-color);
+  background: transparent;
+  border: transparent;
+  padding: 0;
+  margin: 0;
 }
